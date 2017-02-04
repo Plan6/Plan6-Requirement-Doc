@@ -1,5 +1,5 @@
 # File to compile
-TARGET=Deliverable1_Template
+TARGET=Deliverable1
 
 
 all: pdf clean
