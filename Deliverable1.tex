@@ -16,23 +16,23 @@
 
 % Header and Footer
 %------------------------------------------------------------------------------
-\pagestyle{plain}  
-\renewcommand\headrulewidth{0.4pt}                                      
-\renewcommand\footrulewidth{0.4pt}                                    
+\pagestyle{plain}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
 %------------------------------------------------------------------------------
 
 % Title Details
 %------------------------------------------------------------------------------
 \title{Deliverable \#1 Template}
 \author{SE 3A04: Software Design II -- Large System Design}
-\date{}                               
+\date{}
 %------------------------------------------------------------------------------
 
 % Document
 %------------------------------------------------------------------------------
 \begin{document}
 
-\maketitle	
+\maketitle
 
 \section{Introduction}
 \label{sec:introduction}
@@ -118,7 +118,7 @@ This section of the SRS should describe the general factors that affect the prod
 	\item Textual or graphical methods can be used to show the different functions and their relationships
 	\begin{itemize}
 		\item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	\end{itemize} 
+	\end{itemize}
 \end{enumerate}
 % End SubSection
 
@@ -178,23 +178,35 @@ For example, if you wish to organization by business events:
 % It is assumed that we will take this approach.
 %
 \begin{enumerate}[{BE}1.]
-	\item A teacher must be able to create a course or delete an existing course. 
+	\item A teacher must be able to create a course or delete an existing course.
 	\begin{enumerate}[{VP1}.1]
-		\item Viewpoint
+		\item Student Viewpoint
 			\begin{enumerate}
-				\item Requirement
-				\item Requirement
-				\item \dots
+				\item Students must be able to enroll in a course created by a teacher.
 			\end{enumerate}
-		\item Viewpoint
+		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Requirement
-				\item Requirement
-				\item \dots
+				\item Teachers may choose to unenroll a student from their course.
+				\item A teacher is not enrolled in a course.
 			\end{enumerate}
-		\item \dots
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item All courses, course content, and any teacher student communication held on the CMS must be made visible to the School Board.
+			\end{enumerate}
 	\end{enumerate}
-	
+
 	\item A teacher must be able to add an assignment or delete an existing assignment.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -211,7 +223,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 	\item A teacher must be able view a submitted assignment. Then may choose to assign either a numerical or letter grade to the assignment.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -228,7 +240,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 	\item A teacher must be able to add a quiz or delete an existing quiz.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -245,7 +257,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 	\item The owner of a course, must be able to specify a time period for which a quiz or assignment is visible to all enrolled students.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -262,7 +274,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 	\item A student must be able to enroll within a course owned by a teacher.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -279,7 +291,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 	\item A student must be able to view all grades assigned to them for all assignments and quizzes for all courses in which the student is enrolled.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -296,7 +308,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 		\item A student must be able to view all assignments within a course in which they are enrolled provided that the owner of the course has marked them visible to be all students.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -313,7 +325,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 			\item A student may submit a file in response to a only if the assignment was made visible to all students and if a submission was allowed for that assignment.
 	\begin{enumerate}[{VP2}.1]
 		\item Viewpoint
@@ -330,12 +342,12 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 		\item \dots
 	\end{enumerate}
-	
+
 \end{enumerate}
 
 \underline{OR}, if you wish to organization by viewpoints:
 \begin{enumerate}[{VP}1.]
-	\item Viewpoint 
+	\item Viewpoint
 	\begin{enumerate}[{BE1}.1]
 		\item Business Event
 		\begin{enumerate}
@@ -382,7 +394,7 @@ For example, if you wish to organization by business events:
 \label{ssub:appearance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -390,7 +402,7 @@ For example, if you wish to organization by business events:
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -404,7 +416,7 @@ For example, if you wish to organization by business events:
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -412,7 +424,7 @@ For example, if you wish to organization by business events:
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -420,7 +432,7 @@ For example, if you wish to organization by business events:
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -428,7 +440,7 @@ For example, if you wish to organization by business events:
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -436,7 +448,7 @@ For example, if you wish to organization by business events:
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -450,7 +462,7 @@ For example, if you wish to organization by business events:
 \label{ssub:speed_and_latency_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -458,7 +470,7 @@ For example, if you wish to organization by business events:
 \label{ssub:safety_critical_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -466,7 +478,7 @@ For example, if you wish to organization by business events:
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -474,7 +486,7 @@ For example, if you wish to organization by business events:
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -482,7 +494,7 @@ For example, if you wish to organization by business events:
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -490,7 +502,7 @@ For example, if you wish to organization by business events:
 \label{ssub:capacity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -498,7 +510,7 @@ For example, if you wish to organization by business events:
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -506,7 +518,7 @@ For example, if you wish to organization by business events:
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -520,7 +532,7 @@ For example, if you wish to organization by business events:
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -528,7 +540,7 @@ For example, if you wish to organization by business events:
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -536,7 +548,7 @@ For example, if you wish to organization by business events:
 \label{ssub:productization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -544,7 +556,7 @@ For example, if you wish to organization by business events:
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -558,7 +570,7 @@ For example, if you wish to organization by business events:
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -566,7 +578,7 @@ For example, if you wish to organization by business events:
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -574,7 +586,7 @@ For example, if you wish to organization by business events:
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -588,7 +600,7 @@ For example, if you wish to organization by business events:
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -596,7 +608,7 @@ For example, if you wish to organization by business events:
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -604,7 +616,7 @@ For example, if you wish to organization by business events:
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -612,7 +624,7 @@ For example, if you wish to organization by business events:
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -620,7 +632,7 @@ For example, if you wish to organization by business events:
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -634,7 +646,7 @@ For example, if you wish to organization by business events:
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -642,7 +654,7 @@ For example, if you wish to organization by business events:
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -656,7 +668,7 @@ For example, if you wish to organization by business events:
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -664,7 +676,7 @@ For example, if you wish to organization by business events:
 \label{ssub:standards_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
