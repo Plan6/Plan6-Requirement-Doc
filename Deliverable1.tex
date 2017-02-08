@@ -178,52 +178,24 @@ For example, if you wish to organization by business events:
 % It is assumed that we will take this approach.
 %
 \begin{enumerate}[{BE}1.]
-	\item Description of Business Event
+	\item A teacher must be able to create a course and own it or delete an existing course the teacher owns.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item None
+				\item Students must be able to enroll in a course owned by a teacher.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
-
-	\item A teacher must be able to create a course or delete an existing course.
-	\begin{enumerate}[{VP1}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item Students must be able to enroll in a course created by a teacher.
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item Teachers may choose to unenroll a student from their course.
+				\item A teacher may choose to unenroll a student from a course that the teacher owns.
 				\item A teacher is not enrolled in a course.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item None
+				\item Should a parent wish to see their course progress or student performance, they are required to use the child's student account.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item None
+				\item The school administration may choose to either allow students and teachers to create their own accounts, or create accounts for all students and teachers.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -239,15 +211,16 @@ For example, if you wish to organization by business events:
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student enrolled in a course may view any content within the course provided the content is set visible by a teacher.
-				\item A student may submit a piece of content in response to a manual-evaluational content provided the manual-evaluational content is set visible.
-				\item A student may submit an automated evaluational content provided it is set visible.
+				\item A student enrolled in a course may view any content within the course provided the content is set visible by the owner of that course.
+				\item A student may submit a piece of content in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course.
+				\item A student may submit an automated evaluational content provided it is set visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
 				\item Non-evaluational content is any content for which students are given only the option to view the content.
 				\item Manual-evaluational content is any content where, in addition to viewing, students may post their own content in response, called a submitted assignment, to the content posted by the teacher.
-				\item Automated-evaluational content is any content that when accessed by students, allows students to interact with the content and the result of their interaction. The interaction is then evaluated upon an agreement of submission and a numerical grade is assigned to interaction between the automated-evaluational content and the student by the system.
+				\item Automated-evaluational content is any content that when accessed by students, allows students to interact with that content and the result of their interaction is marked by a previously defined success criteria defined by the owner of the course.
+				\item The student's performance in the exploration of automated-evaluational content is recorded and saved for future reference by the student and the teacher.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -534,6 +507,34 @@ For example, if you wish to organization by business events:
 		\item Teacher Viewpoint
 			\begin{enumerate}
 				\item All uploaded content or other forms of communication the teacher produces must be visible to all school administration accounts.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+	\item Description of Business Event
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item None
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
