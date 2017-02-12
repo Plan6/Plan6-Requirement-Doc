@@ -585,31 +585,28 @@ This section is void.
 
 % SCHOOL ADMINISTRATION BUSINESS EVENTS (4)
 
-	\item The school administration must be able to add a Teacher or a Student account or delete an existing Teacher or Student account.
+	\item The school administration adds a Teacher or a Student account or deletes an existing Teacher or Student account.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student recieves a Student ID and password to access their
-personal student account.
-				\item The system must force student and
+				\item The student recieves a Student ID and password to access their personal if a new student account.
+				\item The student must choose a new password upon first signing into the system.
+				\item If a student account is deleted, they are unenrolled from all courses. Furthermore, all grades, submitted student assignments and submitted student assessments are also deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item The teacher recieves a Teacher ID and password to access their
-personal teacher account.
+				\item The teacher recieves a Teacher ID and password to access their personal teacher account.
+				\item The teacher must choose a new password upon first signing into the system.
+				\item If a teacher account is deleted, students enrolled in courses owned by the teacher are unenrolled from the courses owned by that teacher. Furthermore, all courses owned by them are also deleted, and all course material, course assignment and course assessment content within courses owned by that teacher are also deleted.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should the parent require access to their child's account, the child
-is expected to login through their student account to allow the parent to
-inspect course progress or student performance.
+				\item Should the parent require access to their child's account, the child is expected to login through their student account to allow the parent to inspect course progress or student performance.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The School Administration must be able to create batch set of user
-names and passwords from a CSV file.
-				\item The passwords for the students and teachers are generated as follows
-DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
+				\item The School Administration must be able to create a set of usernames and passwords from a CSV file.
+				\item The passwords for the students and teachers are generated as follows DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -617,28 +614,20 @@ DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is expected that the responsibilities of monitoring communication
-is forwarded to the school administration. All enquiries are assumed to be
-forwarded to the school administration that are expected to use special access
-privileges to investigate issues regarding content or communication.
-				\item Should any content maliagn against board policies, the school
-administration are given access and privileges to hide, remove or track the
-origin of a piece of content or course.
+				\item It is expected that the responsibilities of monitoring communication is forwarded to the school administration. All enquiries are assumed to be forwarded to the school administration that are expected to use special access privileges to investigate issues regarding content or communication.
+				\item Should any content maliagn against board policies, the school administration are given access and privileges to hide, remove or track the origin of a piece of content or course.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration must be able to view a course created by a
-Teacher or delete an existing course created by a Teacher.
+	\item The school administration views a course owned by a Teacher or deletes an existing course owned by a Teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item If a course is deleted by the administration, all student data
-associated with that course is also deleted.
+				\item A student is unenrolled from a course that is deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item If a course is deleted by the administration, all teacher data
-associated with that course is also deleted.
+				\item A teacher does not own a deleted course.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -646,9 +635,9 @@ associated with that course is also deleted.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration account is given a warning after a course
-deletion request is made. The course is deleted if and only if a course deletion
-request is made a second time following the warning.
+				\item A course is deleted when all students enrolled in that course are unenrolled from that course and all course material, course assignment, course assessment, student assignment, and student assessment content within that course is also deleted.
+				\item The school administration account is given a warning after a course deletion request is made. The course is deleted if and only if a course deletion request is made a second time following the warning.
+				\item Course material, course assignment, course assessment, student assignment, and student assessment content within that course and student grades are all visible to the School Administration account.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -656,70 +645,68 @@ request is made a second time following the warning.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is assumed that the school administration will consult policies and
-procedures regarding the handling of student data.
+				\item It is assumed that the school administration will consult policies and procedures regarding the handling of student data.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration must be able to view all communication that
-occurs within the system between student and teachers, between student and
-school administration or between school administration and teachers.
-	\begin{enumerate}[{VP1}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item All uploaded content or other forms of communication the student
-produces must be visible to all school administration accounts.
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item All uploaded content or other forms of communication the teacher
-produces must be visible to all school administration accounts.
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
+% 	\item The school administration views all UNICODE communication that occurs within the system between student and teachers, between student and
+% school administration or between school administration and teachers.
+% 	\begin{enumerate}[{VP1}.1]
+% 		\item Student Viewpoint
+% 			\begin{enumerate}
+% 				\item All uploaded content or other forms of communication the student
+% produces must be visible to all school administration accounts.
+% 			\end{enumerate}
+% 		\item Teacher Viewpoint
+% 			\begin{enumerate}
+% 				\item All uploaded content or other forms of communication the teacher
+% produces must be visible to all school administration accounts.
+% 			\end{enumerate}
+% 		\item Parent Viewpoint
+% 			\begin{enumerate}
+% 				\item None
+% 			\end{enumerate}
+% 		\item School Administration Viewpoint
+% 			\begin{enumerate}
+% 				\item None
+% 			\end{enumerate}
+% 		\item Information Technology Team Viewpoint
+% 			\begin{enumerate}
+% 				\item None
+% 			\end{enumerate}
+% 		\item Government \& School Board Viewpoint
+% 			\begin{enumerate}
+% 				\item None
+% 			\end{enumerate}
+% 	\end{enumerate}
 
-	\item Description of Business Event
-	\begin{enumerate}[{VP1}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
+	% \item Description of Business Event
+	% \begin{enumerate}[{VP1}.1]
+	% 	\item Student Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% 	\item Teacher Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% 	\item Parent Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% 	\item School Administration Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% 	\item Information Technology Team Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% 	\item Government \& School Board Viewpoint
+	% 		\begin{enumerate}
+	% 			\item None
+	% 		\end{enumerate}
+	% \end{enumerate}
 
 \end{enumerate}
 
