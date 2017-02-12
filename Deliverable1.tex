@@ -13,9 +13,9 @@
 \usepackage{extarrows}
 \usepackage{setspace}
 
-% \renewcommand*\familydefault{\sfdefault}
+\renewcommand*\familydefault{\sfdefault}
 % \usepackage{cmbright}
-% \usepackage{helvet}
+\usepackage{helvet}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -27,8 +27,23 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Erudite-CMS}
-\author{SE 3A04: Software Design II -- Large System Design}
+\title{
+  Erudite\\
+  \large \emph An educational content management system
+}
+
+\author{
+  SE 3A04: Software Design II -- Large System Design\\
+  \\
+  \begin{tabular}{ l l }
+    Kelvin Lin*   & STUDENT-NUM \\
+    Danish Khan   & STUDENT-NUM \\
+    Puru Jetly    & STUDENT-NUM \\
+    Terrance Yip  & STUDENT-NUM \\
+    Varun Hooda   & STUDENT-NUM \\
+  \end{tabular}
+}
+
 \date{}
 %------------------------------------------------------------------------------
 
@@ -38,19 +53,17 @@
 
 \maketitle
 
+
 \section{Introduction}
 \label{sec:introduction}
-% Begin Section
-
-This section outlines the purpose and scope of the Erudite-CMS project;
-definitions, acronyms and abbreviations used within this document; and an
-overview of the contents and organization of this software requirements
+This section outlines the purpose and scope of the Erudite project; along with
+definitions, acronyms and abbreviations used within this document; and finally
+an overview of the contents and organization of this software requirements
 document.
+
 
 \subsection{Purpose}
 \label{sub:purpose}
-% Begin SubSection
-
 This document's purpose is to outline the engineering and business decisions
 made in the design portion of the Erudite-CMS project. This document will be
 used to maintain a record of project's scope, constraints, assumptions,
@@ -61,18 +74,9 @@ The target audience for this document are the stakeholders (Dr. Ridha Khedri,
 Andrew Le Clair and Michael Liut), and any current or future architects,
 designers and developers of this project.
 
-% End SubSection
 
 \subsection{Scope}
 \label{sub:scope}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Identify the software product(s) to be produced by name (e.g., Host DBMS, Report Generator, etc.)
-	\item Explain what the software product(s) will, and, if necessary, will not do
-	\item Describe the application of the software being specified, including relevant benefits, objectives, and goals
-	\item Be consistent with similar statements in higher-level specifications (e.g., the system requirements specification), if they exist
-\end{enumerate}
-
 This project will produce the following software products:
 \begin{itemize}
   \item Android Client Application
@@ -84,42 +88,85 @@ The aforementioned products preform the following:
 \begin{itemize}
   \item Provide users with a graphical client-side application for creating,
     modifying and viewing server hosted content.
-  \item Provide an API for retrieving and sending data between the front-end
+  \item Provide a means of retrieving and sending data between the front-end
     client and back-end web server.
   \item Provide a means of persistent storage and retrieval of content.
+\end{itemize}
+
+The aforementioned products do not preform the following:
+\begin{itemize}
+  \item Generate content.
 \end{itemize}
 
 These software products will combine to provide a content management system for
 teachers and students in an educational environment. Benefits include quick
 accesses to educational content, efficient management of content, portability
 and ease of access to content, and Ease of grading of assessable contents
-(quizzes). % Todo: Goals, objectives
+(quizzes). The goals include providing students and teachers with a smilier
+interface to access and add content, all the while reducing any additional
+overhead of maintaining a system, and providing easy accessibility to all
+users.
 
-% End SubSection
+
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS
-\end{enumerate}
-% End SubSection
+\begin{description}
+  \item [Access Rights] See Permissions.
+
+  \item [Android] a mobile operating system developed by Google Inc.  primarily
+    for touchscreen mobile devices.
+
+  \item [Classroom Operations] The set of typical actions performed in a
+    classroom.
+
+  \item [CMS] A system capable of hosting, managing and delivering digital
+    content to user.
+
+  \item [LMS] Learning Management System. A specific instance of a Content
+    Management System with am emphasis on educational or learning materials and
+    institutions.
+
+  \item [Mechanism of Assessment] Assignments, Quizzes, and other ways of
+    assessing and evaluating a students knowledge
+
+  \item [Metric of Success] Means of measuring a student's knowledge (grades,
+    points, stars, percentage, etc.)
+
+  \item [Permissions] The allowed set of actions a user is able to perform.
+
+  \item [Smartphone] An embedded electronic device capable of serving as a
+    general purpose computer in addition to providing mobile telephone
+    functionality such as phone calls and text messaging.
+
+  \item [Teaching Methods] Ways of teaching including but not limited to
+    assignments, examinations and tests.
+
+  \item [User Role] Categorization of the user into a set of possible
+    institutional roles (administration, teacher, student).
+\end{description}
+
 
 \subsection{References}
 \label{sub:references}
-
 void
+
 
 \subsection{Overview}
 \label{sub:overview}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Describe what the rest of the SRS contains
-	\item Explain how the SRS is organized
-\end{enumerate}
-% End SubSection
+The rest of this documents contains detailed descriptions of this projects
+design decisions: assumptions, functionality, functional requirements and
+non-functional requirements.\\
+
+The other sections are organized into logical subsections. Specifically section
+2 outlines the overall product description with various subsections. Then the
+following sections list the requirements. The functional requirements are
+organized by business events and viewpoints. Non-functional requirements are
+organized, also, into logical subsections.
+
 
 % End Section
+
 
 \section{Overall Description}
 \label{sec:overall_description}
