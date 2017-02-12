@@ -145,23 +145,23 @@ users.
   \item [User Role] Categorization of the user into a set of possible
     institutional roles (administration, teacher, student).
 
-	\item [Course] A collection of \textbf{course content}, student content and student grades.
+	\item [Course] A collection of \textbf{course content}, \textbf{student content} and student grades.
 
-	\item [Course Content] Content that is one of three types; \textbf{Course Material}, \textbf{Course Assignment} or \textbf{Course Assessment}.
+	\item [Course Content] Content that is one of three types; \textbf{course material}, \textbf{course assignment} or \textbf{course assessment}.
 
-	\item [Student Content] Content that is one of two types; \textbf{Student Asssignment}, \textbf{Student Assessment}
+	\item [Student Content] Content that is one of two types; \textbf{student assignment}, \textbf{student assessment}
 
 	\item [Course Material] All course content to which students cannot submit content in reply. This type of course content typically consists of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time.
 
-	\item [Course Assignement] Course content to which students may submit content in reply. Content submitted in reply is called a submitted \textbf{Student Asssignment}. Course assignments are typically of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time.
+	\item [Course Assignment] Course content to which students may submit content in reply. Content submitted in reply is called a submitted \textbf{student assignment}. Course assignments are typically of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time.
 
-	\item [Course Assessment] Course content which students may submit. A submitted Course Assessment is called a \textbf{Student Assessment}. Course assessments are specialized .txt
+	\item [Course Assessment] Course content which students may submit. A submitted Course Assessment is called a \textbf{student assessment}. Course assessments are specialized .txt
 
 	\item [Student Assignment] Content that the student submits in reply to a Course Assignment type content.
 
-	\item [Student Assessment] Content in which a download option is not provided. This type of content typically consists of a questionaire in which every question has atleast two possibly correct choices. Students answer the questionaire by picking atleast on of the available options and submit before a specified time or submit automatically after a specified amount of time. The results are evaluated by the system and a student performance is recorded. 
+	\item [Student Assessment] Content in which a download option is not provided. This type of content typically consists of a questionnaire in which every question has at least two possibly correct choices. Students answer the questionnaire by picking at least on of the available options and submit before a specified time or submit automatically after a specified amount of time. The results are evaluated by the system and a student performance is recorded.
 
-	\item [Visible] An attribute that can be assigned to a course, course content or student content. If assigned to a a course, that course becomes open to all students for enrollment. If assigned to course content or student content, that content is then made available to be viewed to all students enrolled within that course.
+	\item [Visible] An attribute that can be assigned to a course, course content or student content. If assigned to a a course, that course becomes open to all students for enrolment. If assigned to course content or student content, that content is then made available to be viewed to all students enrolled within that course.
 
 \end{description}
 
@@ -322,18 +322,6 @@ This section is void.
 
 \section{Functional Requirements}
 \label{sec:functional_requirements}
-	% Begin Section
-	% This section of the SRS should contain all of the software requirements to a level of detail sufficient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisfies those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output.
-
-	% You normally have two options for organizing your functional requirements:
-	%\begin{enumerate}
-	%	\item Organize first by \emph{business events}, then by \emph{viewpoints}
-	%	\item Organize first by \emph{viewpoints}, then by \emph{business events}
-	%\end{enumerate}
-	%Choose the one which makes the most sense.
-
-% For example, if you wish to organization by business events:
-
 % TEACHER BUSINESS EVENTS (5)
 
 \begin{enumerate}[{BE}1.]
@@ -341,7 +329,7 @@ This section is void.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Students must be able to enroll in an existing course owned by the teacher provided the course is set visible.
+				\item Students must be able to enrol in an existing course owned by the teacher provided the course is set visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -608,13 +596,13 @@ This section is void.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student recieves a Student ID and password to access their personal if a new student account.
+				\item The student receives a Student ID and password to access their personal if a new student account.
 				\item The student must choose a new password upon first signing into the system.
 				\item If a student account is deleted, they are unenrolled from all courses. Furthermore, all grades, submitted student assignments and submitted student assessments are also deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item The teacher recieves a Teacher ID and password to access their personal teacher account.
+				\item The teacher receives a Teacher ID and password to access their personal teacher account.
 				\item The teacher must choose a new password upon first signing into the system.
 				\item If a teacher account is deleted, students enrolled in courses owned by the teacher are unenrolled from the courses owned by that teacher. Furthermore, all courses owned by them are also deleted, and all course material, course assignment and course assessment content within courses owned by that teacher are also deleted.
 			\end{enumerate}
@@ -634,7 +622,7 @@ This section is void.
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
 				\item It is expected that the responsibilities of monitoring communication is forwarded to the school administration. All enquiries are assumed to be forwarded to the school administration that are expected to use special access privileges to investigate issues regarding content or communication.
-				\item Should any content maliagn against board policies, the school administration are given access and privileges to hide, remove or track the origin of a piece of content or course.
+				\item Should any content malign against board policies, the school administration are given access and privileges to hide, remove or track the origin of a piece of content or course.
 			\end{enumerate}
 	\end{enumerate}
 
@@ -842,7 +830,7 @@ that it has to offer the user
 \label{ssub:safety_critical_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -850,7 +838,7 @@ that it has to offer the user
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item 
+	\item
 \end{enumerate}
 % End SubSubSection
 
@@ -858,7 +846,7 @@ that it has to offer the user
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be available 
+	\item The application shall be available
 \end{enumerate}
 % End SubSubSection
 
@@ -866,7 +854,7 @@ that it has to offer the user
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall not 
+	\item The application shall not
 \end{enumerate}
 % End SubSubSection
 
@@ -946,7 +934,7 @@ add new features
 	\item The software will not be in maintenance for more than 3 hours.
 \end{enumerate}
 \begin{enumerate}[{MS}2. ]
-	\item The software will be maintained at night time to effect the least amount of users. 
+	\item The software will be maintained at night time to effect the least amount of users.
 \end{enumerate}
 % End SubSubSection
 
@@ -954,7 +942,7 @@ add new features
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item Every registered user will have access to our help site via the Internet.  
+	\item Every registered user will have access to our help site via the Internet.
 \end{enumerate}
 % End SubSubSection
 
@@ -993,7 +981,7 @@ add new features
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The software will not allow other students to see marks of their colleagues. 
+	\item The software will not allow other students to see marks of their colleagues.
 \end{enumerate}
 \begin{enumerate}[{SR}2. ]
 	\item The application shall not store any personal information about the users.
@@ -1029,7 +1017,7 @@ add new features
 \label{ssub:cultural_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item The product shall not be offensive to religious or ethnic groups. 
+	\item The product shall not be offensive to religious or ethnic groups.
 \end{enumerate}
 % End SubSubSection
 
