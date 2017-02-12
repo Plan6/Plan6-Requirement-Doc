@@ -6,6 +6,7 @@
 \usepackage{amstext}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{color}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
 \usepackage[margin=1in]{geometry}
@@ -98,7 +99,8 @@ This project will produce the following software products:
   \item Generate content.
 \end{itemize}
 
-\noindent These software products will combine to provide a content management system for
+\noindent These software products will combine to provide a content management 
+system for
 teachers and students in an educational environment. Benefits include quick
 accesses to educational content, efficient management of content, portability
 and ease of access to content, and Ease of grading of assessable contents
@@ -121,7 +123,8 @@ users.
   \item [Classroom Operations] The set of typical actions performed in a
     classroom.
 
-  \item [CMS] Content Management System. A system capable of hosting, managing and delivering digital
+  \item [CMS] Content Management System. A system capable of hosting, managing 
+and delivering digital
     content to user.
 
   \item [LMS] Learning Management System. A specific instance of a Content
@@ -137,7 +140,8 @@ users.
   \item [Permissions] The set of allowed actions a user is able to perform.
 
   \item [Smartphone] An embedded electronic device capable of serving as a
-    general purpose, internet-enabled computer in addition to providing mobile telephone
+    general purpose, internet-enabled computer in addition to providing mobile 
+telephone
     functionality such as phone calls and text messaging.
 
   \item [Teaching Methods] Ways of teaching including but not limited to
@@ -146,23 +150,47 @@ users.
   \item [User Role] Categorization of the user into a set of possible
     institutional roles (administration, teacher, student).
 
-	\item [Course] A collection of course content, student content and student grades.
+	\item [Course] A collection of course content, student content and student 
+grades.
 
-	\item [Course Content] Content that is one of three types; course material, course assignment or course assessment.
+	\item [Course Content] Content that is one of three types; course material, 
+course assignment or course assessment.
 
-	\item [Student Content] Content that is one of two types; student assignment, student assessment
+	\item [Student Content] Content that is one of two types; student assignment, 
+student assessment
 
-	\item [Course Material] All course content to which students cannot submit content in reply. This type of course content consists of but is not limited to .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time. Non-evaluational content and course material are synonymous.
+	\item [Course Material] All course content to which students cannot submit 
+content in reply. This type of course content consists of but is not limited to 
+.pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible 
+for a specified duration of time. Non-evaluational content and course material 
+are synonymous.
 
-	\item [Course Assignment] Course content to which students may submit content in reply. Content submitted in reply is called a submitted student assignment. Course assignments are of but is not limited to .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time. Manual-evaluational content and course assignment are synonymous.
+	\item [Course Assignment] Course content to which students may submit content 
+in reply. Content submitted in reply is called a submitted student assignment. 
+Course assignments are of but is not limited to .pdf, .tex, .ppt, .txt file 
+types. This content may be set visible or invisible for a specified duration of 
+time. Manual-evaluational content and course assignment are synonymous.
 
-	\item [Course Assessment] Course content which students may submit. A submitted Course Assessment is called a student assessment. Course assessments may be in the form of text files. Automated-evaluational content and course assessment are synonymous.
+	\item [Course Assessment] Course content which students may submit. A submitted 
+Course Assessment is called a student assessment. Course assessments may be in 
+the form of text files. Automated-evaluational content and course assessment are 
+synonymous.
 
-	\item [Student Assignment] Content that the student submits in reply to a course assignment type content.
+	\item [Student Assignment] Content that the student submits in reply to a 
+course assignment type content.
 
-	\item [Student Assessment] Content in which a download option is not provided. This type of content typically consists of a questionnaire in which every question has at least two possibly correct choices. Students answer the questionnaire by picking at least on of the available options and submit before a specified time or submit automatically after a specified amount of time. The results are evaluated by the system and a student performance is recorded.
+	\item [Student Assessment] Content in which a download option is not provided. 
+This type of content typically consists of a questionnaire in which every 
+question has at least two possibly correct choices. Students answer the 
+questionnaire by picking at least on of the available options and submit before 
+a specified time or submit automatically after a specified amount of time. The 
+results are evaluated by the system and a student performance is recorded.
 
-	\item [Visible] An attribute that can be assigned to a course, course content or student content. If assigned to a a course, that course becomes open to all students for enrolment. If assigned to course content or student content, that content is then made available to be viewed to all students enrolled within that course.
+	\item [Visible] An attribute that can be assigned to a course, course content 
+or student content. If assigned to a a course, that course becomes open to all 
+students for enrolment. If assigned to course content or student content, that 
+content is then made available to be viewed to all students enrolled within that 
+course.
 
 \end{description}
 
@@ -222,7 +250,8 @@ external interfaces follow:
 Erudite is designed to facilitate students, teachers, and administration
 with common classroom operations.
 
-As a \underline{LMS}, Erudite will allow teachers to upload a variety of documents for
+As a \underline{LMS}, Erudite will allow teachers to upload a variety of 
+documents for
 the purpose of education. Teachers are then able to set the duration that the
 documents are available, as well as the the \underline{access rights} users
 have over the document.
@@ -242,11 +271,16 @@ instructed to do so, the LMS will also be able to automatically assess students
 based on primitive assessment schemes provided by the teacher.
 
 Erudite will allow teachers to view statistics associated with each
-\underline{mechanism of assessment}. It will create visualizations of data generated from
+\underline{mechanism of assessment}. It will create visualizations of data 
+generated from
 the results of the assessment scheme and display them to the teacher. Statistics
 to be displayed to the teacher include but is not limited to the statistical
 mean, the statistical mode, the variance, the standard deviation, the point
-biserial, and the discrimination index.
+biserial, and the discrimination index. \color{blue}
+An innovative feature of Erudite is that it will also keep track of the number 
+of students who have yet to submit relevant work to each mechanism of assessment 
+so that teachers may be able to contact the class to remind them of the due 
+date, or extend the due date.\color{black}
 
 On the other hand, Erudite will allow students to view documents uploaded by
 the teacher. The students will be able to save a copy of the document if it is
@@ -257,6 +291,12 @@ assessments created by their teacher. The LMS will allow students to submit the
 appropriate information in order to successfully complete the mechanism of
 assessment. The LMS will show the student a \underline{metric of success} when
 authorized by the teacher.
+
+\color{blue}Erudite will allow students and teachers to customize their own user 
+interface such that information each user considers relevant will be displayed 
+in a convenient location. Users will also have the option of adding other data 
+including but not limited to weather information, traffic information, and the 
+current time.\color{black}
 
 Finally, Erudite will allow administration to add or remove students from
 certain domains. The LMS will allow administration to modify the
@@ -274,7 +314,8 @@ Teachers are assumed to be adult users with the functional capacity of an
 average person who is between the ages of 16 and 80. Teachers are assumed to be
 fluent in written English, and have at least a basic understanding of
 mathematics and statistics. Moreover, teachers are assumed to have a strong
-understanding of \underline{teaching methods}; however, teachers are not assumed to be
+understanding of \underline{teaching methods}; however, teachers are not assumed 
+to be
 well-versed in technology. Teachers should know how to use an Android platform
 - including typing and selecting elements on the screen - however, they are not
 expected to know how to know advanced features of the phone.
@@ -307,9 +348,13 @@ specifications provided.
 \subsection{Assumptions and Dependencies}
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
-It is assumed that the school using the system will have the necessary infrastructure to support the system. The school will provide the required hardware in order to reasonably ensure the security of the data, and to handle the data capacity requirement.
+It is assumed that the school using the system will have the necessary 
+infrastructure to support the system. The school will provide the required 
+hardware in order to reasonably ensure the security of the data, and to handle 
+the data capacity requirement.
 
-Moreover, it is assumed that each user will have access to an Android platform that is internet enabled.
+Moreover, it is assumed that each user will have access to an Android platform 
+that is internet enabled.
 % End SubSection
 
 \subsection{Apportioning of Requirements}
@@ -323,29 +368,35 @@ This section is void.
 \section{Functional Requirements}
 \label{sec:functional_requirements}
 
-Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definitions of \textbf{key} terms.
+Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a 
+definitions of \textbf{key} terms.
 
 % TEACHER BUSINESS EVENTS (5)
 
 \begin{enumerate}[{BE}1.]
-	\item A teacher creates a course and owns it or deletes an existing course the teacher owns.
+	\item A teacher creates a course and owns it or deletes an existing course the 
+teacher owns.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Students must be able to enrol in an existing course owned by the teacher provided the course is set visible.
+				\item Students must be able to enrol in an existing course owned by the 
+teacher provided the course is set visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to choose to unenrol a student from a course that the teacher owns.
+				\item A teacher must be able to choose to unenrol a student from a course 
+that the teacher owns.
 				\item A teacher is not enrolled in a course.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should a parent wish to see course progress or student performance, they are required to use the child's student account.
+				\item Should a parent wish to see course progress or student performance, 
+they are required to use the child's student account.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration choose to either allow students and teachers to create their own accounts, or create accounts for all students and teachers.
+				\item The school administration choose to either allow students and teachers 
+to create their own accounts, or create accounts for all students and teachers.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -353,25 +404,44 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item All courses, course content, student content and any teacher student communication held on the on the system must be made visible to the school board.
+				\item All courses, course content, student content and any teacher student 
+communication held on the on the system must be made visible to the school 
+board.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher adds non-evaluational, manual-evaluational or automated-evaluational content to a course owned by that teacher.
+	\item A teacher adds non-evaluational, manual-evaluational or 
+automated-evaluational content to a course owned by that teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student enrolled in a course must be able to view any content within the course provided the content is set visible by the owner of that course.
-				\item A student must be able to submit a \textbf{student assignment}; a piece of content uploaded in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
-				\item A student must be able to submit an automated-evaluational content provided it is set visible by the owner of that course.
+				\item A student enrolled in a course must be able to view any content within 
+the course provided the content is set visible by the owner of that course.
+				\item A student must be able to submit a \textbf{student assignment}; a 
+piece of content uploaded in response to a manual-evaluational content provided 
+the manual-evaluational content is set visible by the owner of that course and 
+file submission is enabled.
+				\item A student must be able to submit an automated-evaluational content 
+provided it is set visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Non-evaluational content is any content for which students are given only the option to view the content or download the content.
-				\item Manual-evaluational content is any content where, in addition to viewing, students must be able to post their own content in response, called a \textbf{student assignemnt}, to the content posted by the teacher provided file submission for that manual-evaluational content is enabled.
-				\item If file submission for a manual-evalational content is enabled, the teacher must specify also a time period for which file submission is accepted by the manual-evaluational piece of content.
-				\item Automated-evaluational content is any content that when accessed by students, allows students to interact with that content and the result of their interaction is marked by a previously defined success criteria specified by the owner of the course.
-				\item The student's performance in the exploration of automated-evaluational content is recorded and saved for future reference by the student, teacher and school administration.
+				\item Non-evaluational content is any content for which students are given 
+only the option to view the content or download the content.
+				\item Manual-evaluational content is any content where, in addition to 
+viewing, students must be able to post their own content in response, called a 
+\textbf{student assignemnt}, to the content posted by the teacher provided file 
+submission for that manual-evaluational content is enabled.
+				\item If file submission for a manual-evalational content is enabled, the 
+teacher must specify also a time period for which file submission is accepted by 
+the manual-evaluational piece of content.
+				\item Automated-evaluational content is any content that when accessed by 
+students, allows students to interact with that content and the result of their 
+interaction is marked by a previously defined success criteria specified by the 
+owner of the course.
+				\item The student's performance in the exploration of automated-evaluational 
+content is recorded and saved for future reference by the student, teacher and 
+school administration.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -395,15 +465,24 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A Student must be able to submit a \textbf{student assignment} multiple times in response to a manual-evaluational content posted by the course owner provided the manual-evaluational content is set visible by the course owner and file submission is enabled for that manual-evaluational content.
+				\item A Student must be able to submit a \textbf{student assignment} 
+multiple times in response to a manual-evaluational content posted by the course 
+owner provided the manual-evaluational content is set visible by the course 
+owner and file submission is enabled for that manual-evaluational content.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to assign a numerical decimal weight between 0.001 to 1.0 and either a numerical or letter grade to the \textbf{student assignment}.
-				\item A teacher must be able to change an assigned weight or grade to a \textbf{student assignment}.
-				\item A teacher is given a warning if the numerical weights assigned for manual-evaluational content exceeds 1.0.
-				\item A teacher must be able to leave a comment regarding the assigned grade.
-				\item The teacher must define the numerical value of each letter grade. The values of each letter grade can be redefined by the teacher.
+				\item A teacher must be able to assign a numerical decimal weight between 
+0.001 to 1.0 and either a numerical or letter grade to the \textbf{student 
+assignment}.
+				\item A teacher must be able to change an assigned weight or grade to a 
+\textbf{student assignment}.
+				\item A teacher is given a warning if the numerical weights assigned for 
+manual-evaluational content exceeds 1.0.
+				\item A teacher must be able to leave a comment regarding the assigned 
+grade.
+				\item The teacher must define the numerical value of each letter grade. The 
+values of each letter grade can be redefined by the teacher.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -423,17 +502,23 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher adds automated-evaluational content or deletes an existing automated-evaluational content.
+	\item A teacher adds automated-evaluational content or deletes an existing 
+automated-evaluational content.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Automated-evaluational content is made visible to students only if the automated-evaluational content is set visible by the owner of the course.
-				\item Automated-evaluational content made visible for students can be opened by students for a predefined period of time specified by the course owner.
-				\item Opened automated-evaluational content can be submitted either within the predefined period of time specified by the course owner or automatically at the end of the predefined period of time specified by the course owner.
+				\item Automated-evaluational content is made visible to students only if the 
+automated-evaluational content is set visible by the owner of the course.
+				\item Automated-evaluational content made visible for students can be opened 
+by students for a predefined period of time specified by the course owner.
+				\item Opened automated-evaluational content can be submitted either within 
+the predefined period of time specified by the course owner or automatically at 
+the end of the predefined period of time specified by the course owner.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Automated-evaluational content is set visible for a time period specified by the owner of the course. A quiz is set not visible otherwise.
+				\item Automated-evaluational content is set visible for a time period 
+specified by the owner of the course. A quiz is set not visible otherwise.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -453,16 +538,20 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The owner of a course specifies a time period for which non-evaluational content, manual-evaluational content, automated-evaluational content or a course is set visible for all enrolled students.
+	\item The owner of a course specifies a time period for which non-evaluational 
+content, manual-evaluational content, automated-evaluational content or a course 
+is set visible for all enrolled students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
 				\item A student is unenrolled from a course that is set not visible.
-				\item An enrolled student must not be able to view a course or \textbf{course content} which is not made visible by the owner of that course.
+				\item An enrolled student must not be able to view a course or 
+\textbf{course content} which is not made visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to permanently remove \textbf{course content} from a course owned by them.
+				\item A teacher must be able to permanently remove \textbf{course content} 
+from a course owned by them.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -484,19 +573,25 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 
 % STUDENT BUSINESS EVENTS (4)
 
-	\item A student enrols within a course that is set visible by the owner of that course.
+	\item A student enrols within a course that is set visible by the owner of that 
+course.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
 				\item A student must be able view all courses in which they are enrolled.
-				\item A student must not be able to self withdraw from a course in which he or she is enrolled.
-				\item A student that is dismissed from a course is no longer enrolled in that course.
-				\item A dismissed student cannot self enroll in a course from which he or she was dismissed.
-				\item A student whom is not enrolled in a course has no access to \textbf{course content} found within that course.
+				\item A student must not be able to self withdraw from a course in which he 
+or she is enrolled.
+				\item A student that is dismissed from a course is no longer enrolled in 
+that course.
+				\item A dismissed student cannot self enroll in a course from which he or 
+she was dismissed.
+				\item A student whom is not enrolled in a course has no access to 
+\textbf{course content} found within that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to dismiss an enrolled student from a course owned by that teacher.
+				\item A teacher must be able to dismiss an enrolled student from a course 
+owned by that teacher.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -504,7 +599,8 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration must be able to dismiss an enrolled student from a course.
+				\item The school administration must be able to dismiss an enrolled student 
+from a course.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -516,13 +612,19 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student checks all the grades assigned to them for all submitted student assignments and student assessments for all courses in which the student is enrolled.
+	\item A student checks all the grades assigned to them for all submitted 
+student assignments and student assessments for all courses in which the student 
+is enrolled.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The system calculates and displays an overall grade for a given course and an overall grade point average for all courses.
-				\item If no grades are assigned, the system does not display an overall grade for a given course.
-				\item if the student is not enrolled in any courses or no grades are assigned for every course the student is enrolled in, an overall grade point average for all courses is not displayed.
+				\item The system calculates and displays an overall grade for a given course 
+and an overall grade point average for all courses.
+				\item If no grades are assigned, the system does not display an overall 
+grade for a given course.
+				\item if the student is not enrolled in any courses or no grades are 
+assigned for every course the student is enrolled in, an overall grade point 
+average for all courses is not displayed.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -546,11 +648,17 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student enrolled in a course submits a \textbf{student assignment} in response to manual-evaluational content made visible to all students enrolled in that course and if a submission was allowed for that manual-evaluational content.
+	\item A student enrolled in a course submits a \textbf{student assignment} in 
+response to manual-evaluational content made visible to all students enrolled in 
+that course and if a submission was allowed for that manual-evaluational 
+content.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student must be able to submit a \textbf{student assignment} multiple times provided the manual-evaluational content is set visible by the owner of that course and file submission for that manual-evaluational content is enabled.
+				\item The student must be able to submit a \textbf{student assignment} 
+multiple times provided the manual-evaluational content is set visible by the 
+owner of that course and file submission for that manual-evaluational content is 
+enabled.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -574,11 +682,13 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student enrolled within a course views all \textbf{course content} provided that the owner of the course has marked them visible to all students.
+	\item A student enrolled within a course views all \textbf{course content} 
+provided that the owner of the course has marked them visible to all students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The system displays the time remaining untill a manual-evaluational content file submission expires.
+				\item The system displays the time remaining untill a manual-evaluational 
+content file submission expires.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -604,28 +714,43 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 
 % SCHOOL ADMINISTRATION BUSINESS EVENTS (4)
 
-	\item The school administration adds a Teacher or a Student account or deletes an existing Teacher or Student account.
+	\item The school administration adds a Teacher or a Student account or deletes 
+an existing Teacher or Student account.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student receives a Student ID and password to access their personal if a new student account.
-				\item The student must choose a new password upon first signing into the system.
-				\item If a student account is deleted, they are unenrolled from all courses. Furthermore, all grades, submitted student assignments and submitted student assessments are also deleted.
+				\item The student receives a Student ID and password to access their 
+personal if a new student account.
+				\item The student must choose a new password upon first signing into the 
+system.
+				\item If a student account is deleted, they are unenrolled from all courses. 
+Furthermore, all grades, submitted student assignments and submitted student 
+assessments are also deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item The teacher receives a Teacher ID and password to access their personal teacher account.
-				\item The teacher must choose a new password upon first signing into the system.
-				\item If a teacher account is deleted, students enrolled in courses owned by the teacher are unenrolled from the courses owned by that teacher. Furthermore, all courses owned by them are also deleted, and all course material, course assignment and course assessment content within courses owned by that teacher are also deleted.
+				\item The teacher receives a Teacher ID and password to access their 
+personal teacher account.
+				\item The teacher must choose a new password upon first signing into the 
+system.
+				\item If a teacher account is deleted, students enrolled in courses owned by 
+the teacher are unenrolled from the courses owned by that teacher. Furthermore, 
+all courses owned by them are also deleted, and all course material, course 
+assignment and course assessment content within courses owned by that teacher 
+are also deleted.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should the parent require access to their child's account, the child is expected to login through their student account to allow the parent to inspect course progress or student performance.
+				\item Should the parent require access to their child's account, the child 
+is expected to login through their student account to allow the parent to 
+inspect course progress or student performance.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The School Administration must be able to create a set of usernames and passwords from a CSV file.
-				\item The passwords for the students and teachers are generated as follows DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
+				\item The School Administration must be able to create a set of usernames 
+and passwords from a CSV file.
+				\item The passwords for the students and teachers are generated as follows 
+DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -633,12 +758,18 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is expected that the responsibilities of monitoring communication is forwarded to the school administration. All enquiries are assumed to be forwarded to the school administration that are expected to use special access privileges to investigate issues regarding content or communication.
-				\item Should any content malign against board policies, the school administration are given access and privileges to hide, remove or track the origin of a piece of content or course.
+				\item It is expected that the responsibilities of monitoring communication 
+is forwarded to the school administration. All enquiries are assumed to be 
+forwarded to the school administration that are expected to use special access 
+privileges to investigate issues regarding content or communication.
+				\item Should any content malign against board policies, the school 
+administration are given access and privileges to hide, remove or track the 
+origin of a piece of content or course.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration views a course owned by a Teacher or deletes an existing course owned by a Teacher.
+	\item The school administration views a course owned by a Teacher or deletes an 
+existing course owned by a Teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
@@ -654,9 +785,16 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item A course is deleted when all students enrolled in that course are unenrolled from that course and all course material, course assignment, course assessment, student assignment, and student assessment content within that course is also deleted.
-				\item The school administration account is given a warning after a course deletion request is made. The course is deleted if and only if a course deletion request is made a second time following the warning.
-				\item Course material, course assignment, course assessment, student assignment, and student assessment content within that course and student grades are all visible to the School Administration account.
+				\item A course is deleted when all students enrolled in that course are 
+unenrolled from that course and all course material, course assignment, course 
+assessment, student assignment, and student assessment content within that 
+course is also deleted.
+				\item The school administration account is given a warning after a course 
+deletion request is made. The course is deleted if and only if a course deletion 
+request is made a second time following the warning.
+				\item Course material, course assignment, course assessment, student 
+assignment, and student assessment content within that course and student grades 
+are all visible to the School Administration account.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -664,11 +802,13 @@ Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definiti
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is assumed that the school administration will consult policies and procedures regarding the handling of student data.
+				\item It is assumed that the school administration will consult policies and 
+procedures regarding the handling of student data.
 			\end{enumerate}
 	\end{enumerate}
 
-% 	\item The school administration views all UNICODE communication that occurs within the system between student and teachers, between student and
+% 	\item The school administration views all UNICODE communication that occurs 
+within the system between student and teachers, between student and
 % school administration or between school administration and teachers.
 % 	\begin{enumerate}[{VP1}.1]
 % 		\item Student Viewpoint
@@ -810,7 +950,8 @@ to see on the front page of the application.
 \label{ssub:understandability_and_politeness_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item The application shall prompt the user to try again when incorrect information is entered.
+	\item The application shall prompt the user to try again when incorrect 
+information is entered.
 	\item The application shall have intuitive icons as well as appropriate names
 to describe the function of the button
 \end{enumerate}
@@ -820,7 +961,8 @@ to describe the function of the button
 \label{ssub:accessibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item The application shall have a font size large enough to allow for better readability
+	\item The application shall have a font size large enough to allow for better 
+readability
 	\item The application shall be usable by colour blind users
 \end{enumerate}
 % End SubSubSection
@@ -861,7 +1003,8 @@ to describe the function of the button
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be available for use 24 hours per day, throughout the school year
+	\item The application shall be available for use 24 hours per day, throughout 
+the school year
 	\item The application shall achieve 95\% up time
 \end{enumerate}
 % End SubSubSection
@@ -870,8 +1013,10 @@ to describe the function of the button
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application show the user an error when and unknown file format is submitted
-	\item The application shall show the users local content when internet connect is not present
+	\item The application show the user an error when and unknown file format is 
+submitted
+	\item The application shall show the users local content when internet connect 
+is not present
 	\item The application shall not crash when internet is not available
 \end{enumerate}
 % End SubSubSection
@@ -881,7 +1026,8 @@ to describe the function of the button
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
 	\item The application shall only allow 1 user/account per device at a time.
-	\item The application shall allow all students and teachers access their information on their own devices simultaneously.
+	\item The application shall allow all students and teachers access their 
+information on their own devices simultaneously.
 \end{enumerate}
 % End SubSubSection
 
@@ -889,7 +1035,8 @@ to describe the function of the button
 \label{ssub:scalability_or_extensibility_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be able to scale with the size of the school with no noticeable slow down within the application.
+	\item The application shall be able to scale with the size of the school with 
+no noticeable slow down within the application.
 \end{enumerate}
 % End SubSubSection
 
@@ -953,7 +1100,8 @@ add new features
 	\item The software will not be in maintenance for more than 3 hours.
 \end{enumerate}
 \begin{enumerate}[{MS}2. ]
-	\item The software will be maintained at night time to effect the least amount of users.
+	\item The software will be maintained at night time to effect the least amount 
+of users.
 \end{enumerate}
 % End SubSubSection
 
@@ -983,7 +1131,8 @@ add new features
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The student, teacher, and school administration will have access to this software.
+	\item The student, teacher, and school administration will have access to this 
+software.
 \end{enumerate}
 % End SubSubSection
 
@@ -1000,7 +1149,8 @@ add new features
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The software will not allow other students to see marks of their colleagues.
+	\item The software will not allow other students to see marks of their 
+colleagues.
 \end{enumerate}
 \begin{enumerate}[{SR}2. ]
 	\item The application shall not store any personal information about the users.
@@ -1011,10 +1161,12 @@ add new features
 \label{ssub:audit_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The application shall collect, organize, summarize, and regularly report the status of its security mechanisms.
+	\item The application shall collect, organize, summarize, and regularly report 
+the status of its security mechanisms.
 \end{enumerate}
 \begin{enumerate}[{SR}2. ]
-	\item There will be a log of authenticated access, non-authenticated access, authorised access, and non-authorised access.
+	\item There will be a log of authenticated access, non-authenticated access, 
+authorised access, and non-authorised access.
 \end{enumerate}
 % End SubSubSection
 
@@ -1022,7 +1174,8 @@ add new features
 \label{ssub:immunity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The application shall notify the security administrator and the associated user if it detects a harmful program during a scan.
+	\item The application shall notify the security administrator and the 
+associated user if it detects a harmful program during a scan.
 \end{enumerate}
 % End SubSubSection
 
@@ -1044,7 +1197,8 @@ add new features
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item The software will not use any text, images, or media that will offend the countries that purchase it.
+	\item The software will not use any text, images, or media that will offend the 
+countries that purchase it.
 
 \end{enumerate}
 % End SubSubSection
@@ -1123,3 +1277,4 @@ you are including.
 
 \end{document}
 %------------------------------------------------------------------------------
+
