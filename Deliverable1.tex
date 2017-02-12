@@ -12,6 +12,10 @@
 \usepackage{graphicx}
 \usepackage{extarrows}
 \usepackage{setspace}
+
+% \renewcommand*\familydefault{\sfdefault}
+% \usepackage{cmbright}
+% \usepackage{helvet}
 %------------------------------------------------------------------------------
 
 % Header and Footer
@@ -23,8 +27,23 @@
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#1 Template}
-\author{SE 3A04: Software Design II -- Large System Design}
+\title{
+  Erudite\\
+  \large \emph{An educational content management system}
+}
+
+\author{
+  SE 3A04: Software Design II -- Large System Design\\
+  \\
+  \begin{tabular}{ l l }
+    Kelvin Lin*   & STUDENT-NUM \\
+    Danish Khan   & STUDENT-NUM \\
+    Puru Jetly    & STUDENT-NUM \\
+    Terrance Yip  & STUDENT-NUM \\
+    Varun Hooda   & STUDENT-NUM \\
+  \end{tabular}
+}
+
 \date{}
 %------------------------------------------------------------------------------
 
@@ -34,73 +53,147 @@
 
 \maketitle
 
+
 \section{Introduction}
 \label{sec:introduction}
-% Begin Section
+This section outlines the purpose and scope of the Erudite project; along with
+definitions, acronyms and abbreviations used within this document; and finally
+an overview of the contents and organization of this software requirements
+document.
 
-This section of the SRS should provide an overview of the entire SRS.
 
 \subsection{Purpose}
 \label{sub:purpose}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Delineate the purpose of the SRS
-	\item Specify the intended audience for the SRS
-\end{enumerate}
-% End SubSection
+This document's purpose is to outline the engineering and business decisions
+made in the design portion of the Erudite-CMS project. This document will be
+used to maintain a record of project's scope, constraints, assumptions,
+dependencies, functional requirements, non-functional requirements and any
+other design decision made over the life of this project.
+
+The target audience for this document are the stakeholders (Dr. Ridha Khedri,
+Andrew Le Clair and Michael Liut), and any current or future architects,
+designers and developers of this project.
+
 
 \subsection{Scope}
 \label{sub:scope}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Identify the software product(s) to be produced by name (e.g., Host DBMS, Report Generator, etc.)
-	\item Explain what the software product(s) will, and, if necessary, will not do
-	\item Describe the application of the software being specified, including relevant benefits, objectives, and goals
-	\item Be consistent with similar statements in higher-level specifications (e.g., the system requirements specification), if they exist
-\end{enumerate}
-% End SubSection
+This project will produce the following software products:
+\begin{itemize}
+  \item Android Client Application
+  \item Back-end Web Server
+  \item Back-end Database Server
+\end{itemize}
+
+The aforementioned products preform the following:
+\begin{itemize}
+  \item Provide users with a graphical client-side application for creating,
+    modifying and viewing server hosted content.
+  \item Provide a means of retrieving and sending data between the front-end
+    client and back-end web server.
+  \item Provide a means of persistent storage and retrieval of content.
+\end{itemize}
+
+The aforementioned products do not preform the following:
+\begin{itemize}
+  \item Generate content.
+\end{itemize}
+
+These software products will combine to provide a content management system for
+teachers and students in an educational environment. Benefits include quick
+accesses to educational content, efficient management of content, portability
+and ease of access to content, and Ease of grading of assessable contents
+(quizzes). The goals include providing students and teachers with a smilier
+interface to access and add content, all the while reducing any additional
+overhead of maintaining a system, and providing easy accessibility to all
+users.
+
+
 
 \subsection{Definitions, Acronyms, and Abbreviations}
 \label{sub:definitions_acronyms_and_abbreviations}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the SRS
-\end{enumerate}
-% End SubSection
+\begin{description}
+  \item [Access Rights] See Permissions.
+
+  \item [Android] a mobile operating system developed by Google Inc.  primarily
+    for touchscreen mobile devices.
+
+  \item [Classroom Operations] The set of typical actions performed in a
+    classroom.
+
+  \item [CMS] A system capable of hosting, managing and delivering digital
+    content to user.
+
+  \item [LMS] Learning Management System. A specific instance of a Content
+    Management System with am emphasis on educational or learning materials and
+    institutions.
+
+  \item [Mechanism of Assessment] Assignments, Quizzes, and other ways of
+    assessing and evaluating a students knowledge
+
+  \item [Metric of Success] Means of measuring a student's knowledge (grades,
+    points, stars, percentage, etc.)
+
+  \item [Permissions] The allowed set of actions a user is able to perform.
+
+  \item [Smartphone] An embedded electronic device capable of serving as a
+    general purpose computer in addition to providing mobile telephone
+    functionality such as phone calls and text messaging.
+
+  \item [Teaching Methods] Ways of teaching including but not limited to
+    assignments, examinations and tests.
+
+  \item [User Role] Categorization of the user into a set of possible
+    institutional roles (administration, teacher, student).
+\end{description}
+
 
 \subsection{References}
 \label{sub:references}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a complete list of all documents referenced elsewhere in the SRS
-	\item Identify each document by title, report number (if applicable), date, and publishing organization
-	\item Specify the sources from which the references can be obtained
-\end{enumerate}
-% End SubSection
+void
+
 
 \subsection{Overview}
 \label{sub:overview}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Describe what the rest of the SRS contains
-	\item Explain how the SRS is organized
-\end{enumerate}
-% End SubSection
+The rest of this documents contains detailed descriptions of this projects
+design decisions: assumptions, functionality, functional requirements and
+non-functional requirements.
+
+The other sections are organized into logical subsections. Specifically, section
+2 outlines the overall product description with various subsections. Then the
+following sections list the requirements. The functional requirements are
+organized by business events and viewpoints. Non-functional requirements are
+organized, also, into logical subsections.
+
 
 % End Section
+
 
 \section{Overall Description}
 \label{sec:overall_description}
 % Begin Section
 
-This section of the SRS should describe the general factors that affect the product and its requirements. It does not state specific requirements; it provides a background for those requirements and makes them easier to understand.
+This section of the SRS should describe the general factors that affect the
+product and its requirements. It does not state specific requirements; it
+provides a background for those requirements and makes them easier to
+understand.
 
 \subsection{Product Perspective}
 \label{sub:product_perspective}
 % Begin SubSection
+<<<<<<< HEAD
 Plan 6 is a distributed learning management system designed to facilitate teachers and students with everyday classroom operations. Plan 6 is a distributed, self-contained system with several components running on different end-user devices. Plan 6 is akin to other learning management systems, such as McMaster's Avenue2Learn; however, Plan 6 will focus on providing a Learning Management System for early learners and educators with low levels of technical expertise.
+=======
+Plan 6 is a distributed learning management system designed to facilitate
+teachers and students with everyday classroom operations. Plan 6 is a
+distributed, self-contained system with several components running on different
+end-user devices. Plan 6 is akin to other learning management systems, such as
+McMaster's Avenue2Learn; however, Plan 6 will focus on providing a Learning
+Management System for early learners and educators with low levels of technical
+expertise.
+>>>>>>> d3df236879900bfcfaff74b6f2bdea2d0fb16a93
 
-A block diagram denoting the major components of system as well as their external interfaces follow:
+A block diagram denoting the major components of system as well as their
+external interfaces follow:
 
 \begin{center}
 \includegraphics[scale=0.7]{A1_Assets/2-1_Product_Perspective_Diagram.jpg}
@@ -111,54 +204,102 @@ A block diagram denoting the major components of system as well as their externa
 \subsection{Product Functions}
 \label{sub:product_functions}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a summary of the major functions that the software will perform.
-	\begin{itemize}
-		\item \textbf{Example}: An SRS for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-	\end{itemize}
-	\item Functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time
-	\item Textual or graphical methods can be used to show the different functions and their relationships
-	\begin{itemize}
-		\item Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables
-	\end{itemize}
-\end{enumerate}
+Edurite-LMS is designed to facilitate students, teachers, and administration
+with common classroom operations.
+
+As a LMS, Edurite-LMS will allow teachers to upload a variety of documents for
+the purpose of education. Teachers are then able to set the duration that the
+documents are available, as well as the the access rights users have over the
+document.
+
+Moreover, Edurite-LMS will allow teachers to create virtual mechanisms of
+assessment including but not limited to quizzes, and electronic assignment
+submission boxes. With virtual quizzes, teachers will be allowed to create their
+own questions and solutions.
+
+Teachers will also be able to configure settings related to these mechanisms of
+assessment including but not limited to the availability of the mechanism,
+functionalities available while users are participating in the mechanism of
+assessment, and the assessment scheme associated with the mechanism.
+
+The LMS will also allow teachers to enter success metrics for each student. If
+instructed to do so, the LMS will also be able to automatically assess students
+based on primitive assessment schemes provided by the teacher.
+
+Edurite-LMS will allow teachers to view statistics associated with each
+mechanism of assessment. It will create visualizations of data generated from
+the results of the assessment scheme and display them to the teacher. Statistics
+to be displayed to the teacher include but is not limited to the statistical
+mean, the statistical mode, the variance, the standard deviation, the point
+biserial, and the discrimination index.
+
+On the other hand, Edurite-LMS will allow students to view documents uploaded by
+the teacher. The students will be able to save a copy of the document if it is
+allowed by the teacher.
+
+Moreover, Edurite-LMS will allow students to complete virtual mechanisms of
+assessments created by their teacher. The LMS will allow students to submit the
+appropriate information in order to successfully complete the mechanism of
+assessment. The LMS will show the student a metric of success when authorized by
+the teacher.
+
+Finally, Edurite-LMS will allow administration to add or remove students from
+certain domains. The LMS will allow administration to modify the user roles and
+to control what permissions each role has over the system.
 % End SubSection
 
 \subsection{User Characteristics}
 \label{sub:user_characteristics}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Describe those general characteristics of the intended users of the product including educational level, experience, and technical expertise
-	\item Do not state specific requirements, but rather provide the reasons why certain specific requirements are later specified
-\end{enumerate}
+Edurite-LMS is intended for 3 primary groups of users: teachers, students, and
+administration.
+
+Teachers are assumed to be adult users with the functional capacity of an
+average person who is between the ages of 16 and 80. Teachers are assumed to be
+fluent in written English, and have at least a basic understanding of
+mathematics and statistics. Moreover, teachers are assumed to have a strong
+understanding of teaching methods; however, teachers are not assumed to be
+well-versed in technology. Teachers should know how to use an Android platform
+- including typing and selecting elements on the screen - however, they are not
+expected to know how to know advanced features of the phone.
+
+Students are assumed to be child users of ages 6 to 13, who are enrolled in a
+Canadian, American, or equivalent elementary school. Students are assumed to
+understand basic written English at the Ontario Senior Kindergarten/Grade 1
+level. Students are expected to have vision and are able to use the basic
+functions of the Android platform, albeit at a lower level than teachers and
+administrations. At a minimum, students are assumed to know how to select
+elements on the screen. No other prior knowledge is assumed of the student.
+
+The administration is assumed to be adult users with the functional capacity of
+an average person who is between the ages of 16 to 80. The administration is
+assumed to be fluent in written English, and have a good understanding of
+mathematics and statistics. The administration is also assumed to have basic
+computer knowledge, including basic troubleshooting, IT, and data entry skills.
+The administration is assumed to have an intermediate understanding of common
+Android platform usage, and are able to preform more advanced tasks such as
+set-up, installation, and troubleshooting on such platforms.
 % End SubSection
 
 \subsection{Constraints}
 \label{sub:constraints}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a general description of any other items that will limit the developer's options
-\end{enumerate}
+The application must run on the native Android platform, as per the project
+specifications provided.
 % End SubSection
 
 \subsection{Assumptions and Dependencies}
 \label{sub:assumptions_and_dependencies}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item List each of the factors that affect the requirements stated in the SRS
-	\item These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS
-	\begin{itemize}
-		\item \textbf{Example}: An assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly.
-	\end{itemize}
-\end{enumerate}
+It is assumed that the school using the system will have the necessary infrastructure to support the system. The school will provide the required hardware in order to reasonably ensure the security of the data, and to handle the data capacity requirement.
+
+Moreover, it is assumed that each user will have access to an Android platform that is internet enabled.
 % End SubSection
 
 \subsection{Apportioning of Requirements}
 \label{sub:apportioning_of_requirements}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Identify requirements that may be delayed until future versions of the system
-\end{enumerate}
+This section is void.
 % End SubSection
 
 % End Section
@@ -205,7 +346,8 @@ A block diagram denoting the major components of system as well as their externa
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item All courses, course content, and any teacher student communication held on the CMS must be made visible to the School Board.
+				\item All courses, course content, and any teacher student communication
+held on the CMS must be made visible to the School Board.
 			\end{enumerate}
 	\end{enumerate}
 
@@ -450,21 +592,27 @@ A block diagram denoting the major components of system as well as their externa
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student recieves a Student ID and password to access their personal student account.
+				\item The student recieves a Student ID and password to access their
+personal student account.
 				\item The system must force student and
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item The teacher recieves a Teacher ID and password to access their personal teacher account.
+				\item The teacher recieves a Teacher ID and password to access their
+personal teacher account.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should the parent require access to their child's account, the child is expected to login through their student account to allow the parent to inspect course progress or student performance.
+				\item Should the parent require access to their child's account, the child
+is expected to login through their student account to allow the parent to
+inspect course progress or student performance.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The School Administration must be able to create batch set of user names and passwords from a CSV file.
-				\item The passwords for the students and teachers are generated as follows DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
+				\item The School Administration must be able to create batch set of user
+names and passwords from a CSV file.
+				\item The passwords for the students and teachers are generated as follows
+DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -472,20 +620,28 @@ A block diagram denoting the major components of system as well as their externa
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is expected that the responsibilities of monitoring communication is forwarded to the school administration. All enquiries are assumed to be forwarded to the school administration that are expected to use special access privileges to investigate issues regarding content or communication.
-				\item Should any content maliagn against board policies, the school administration are given access and privileges to hide, remove or track the origin of a piece of content or course.
+				\item It is expected that the responsibilities of monitoring communication
+is forwarded to the school administration. All enquiries are assumed to be
+forwarded to the school administration that are expected to use special access
+privileges to investigate issues regarding content or communication.
+				\item Should any content maliagn against board policies, the school
+administration are given access and privileges to hide, remove or track the
+origin of a piece of content or course.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration must be able to view a course created by a Teacher or delete an existing course created by a Teacher.
+	\item The school administration must be able to view a course created by a
+Teacher or delete an existing course created by a Teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item If a course is deleted by the administration, all student data associated with that course is also deleted.
+				\item If a course is deleted by the administration, all student data
+associated with that course is also deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item If a course is deleted by the administration, all teacher data associated with that course is also deleted.
+				\item If a course is deleted by the administration, all teacher data
+associated with that course is also deleted.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -493,7 +649,9 @@ A block diagram denoting the major components of system as well as their externa
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration account is given a warning after a course deletion request is made. The course is deleted if and only if a course deletion request is made a second time following the warning.
+				\item The school administration account is given a warning after a course
+deletion request is made. The course is deleted if and only if a course deletion
+request is made a second time following the warning.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -501,19 +659,24 @@ A block diagram denoting the major components of system as well as their externa
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is assumed that the school administration will consult policies and procedures regarding the handling of student data.
+				\item It is assumed that the school administration will consult policies and
+procedures regarding the handling of student data.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration must be able to view all communication that occurs within the system between student and teachers, between student and school administration or between school administration and teachers.
+	\item The school administration must be able to view all communication that
+occurs within the system between student and teachers, between student and
+school administration or between school administration and teachers.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item All uploaded content or other forms of communication the student produces must be visible to all school administration accounts.
+				\item All uploaded content or other forms of communication the student
+produces must be visible to all school administration accounts.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item All uploaded content or other forms of communication the teacher produces must be visible to all school administration accounts.
+				\item All uploaded content or other forms of communication the teacher
+produces must be visible to all school administration accounts.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -579,11 +742,13 @@ A block diagram denoting the major components of system as well as their externa
 	\item The application shall look aesthetically pleasing
 	\item The application shall be simplistic enough for anyone to be able to use
 	\item The application shall use standard fonts
-	\item The application shall not have clashing colour that would make readability hard for the user
+	\item The application shall not have clashing colour that would make
+readability hard for the user
 	\item The application shall look professional
 	\item The application shall highlight important areas
 	\item The application shall grey out choices that the user cannot make
-	\item The application shall have intuitive icons as well as appropriate names to describe the function of the button
+	\item The application shall have intuitive icons as well as appropriate names
+to describe the function of the button
 \end{enumerate}
 % End SubSubSection
 
@@ -591,9 +756,8 @@ A block diagram denoting the major components of system as well as their externa
 \label{ssub:style_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LF}1. ]
-	\item The application shall have an appropriate style for use in the classroom/professional environments
-	\item The application shall be appropriate in a professional setting for teachers
-	\item The application shall appeal to children
+	\item The application shall have an appropriate style for use in the
+classroom/professional environments
 \end{enumerate}
 % End SubSubSection
 
@@ -607,10 +771,13 @@ A block diagram denoting the major components of system as well as their externa
 \label{ssub:ease_of_use_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item The application shall make the important features stand out and easily accessible
-	\item The application shall allow the user to get to the important information with no more than 2 taps of the screen
-	\item The application shall have the main feautures on the main screen where it is easy to access
-	\item returning to the main screen shal
+	\item The application shall make the important features stand out and easily
+accessible
+	\item The application shall allow the user to get to the important information
+with no more than 2 taps of the screen
+	\item The application shall have the main features on the main screen where it
+is easy to access
+	\item returning to the main screen shall take no less than 2 taps
 \end{enumerate}
 % End SubSubSection
 
@@ -618,12 +785,18 @@ A block diagram denoting the major components of system as well as their externa
 \label{ssub:personalization_and_internationalization_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-	\item The application shall allow the user to change the language of the application to their native language.
-	\item The application shall allow the user to adjust what they want to see on the front page of the application.
+	\item The application shall allow the user to change the language of the
+application to English or French.
+	\item The application shall allow the user to adjust what information they want
+to see on
+the front page of the application.
 	\item The application shall allow the user to adjust the order of their class
+<<<<<<< HEAD
 	\item The application shall allow the user to personalize their home page on the app
 	\item The application shall allow the admin to change the theme of the application to appeal to teachers or students
 	\item The application shall allow the user to change the language
+=======
+>>>>>>> d3df236879900bfcfaff74b6f2bdea2d0fb16a93
 \end{enumerate}
 % End SubSubSection
 
@@ -631,7 +804,8 @@ A block diagram denoting the major components of system as well as their externa
 \label{ssub:learning_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{UH}1. ]
-		\item The application shall have a tutorial to outline all of the features that it has to offer the user
+		\item The application shall have a tutorial to outline all of the features
+that it has to offer the user
 \end{enumerate}
 % End SubSubSection
 
@@ -662,7 +836,8 @@ A block diagram denoting the major components of system as well as their externa
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
 	\item The application shall take less than 2 seconds to start up.
-	\item Moving in between different parts of the application shall take less than 1 second.
+	\item Moving in between different parts of the application shall take less than
+1 second.
 \end{enumerate}
 % End SubSubSection
 
@@ -718,7 +893,8 @@ A block diagram denoting the major components of system as well as their externa
 \label{ssub:longevity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be supported and updated regularly to fix bugs and add new features
+	\item The application shall be supported and updated regularly to fix bugs and
+add new features
 \end{enumerate}
 % End SubSubSection
 
@@ -888,19 +1064,29 @@ A block diagram denoting the major components of system as well as their externa
 \section{Division of Labour}
 \label{sec:division_of_labour}
 % Begin Section
-Include a Division of Labour sheet which indicates the contributions of each team member. This sheet must be signed by all team members.
+Include a Division of Labour sheet which indicates the contributions of each
+team member. This sheet must be signed by all team members.
 % End Section
 
 \newpage
 \section*{IMPORTANT NOTES}
 \begin{itemize}
-	\item Be sure to include all sections of the template in your document regardless whether you have something to write for each or not
+	\item Be sure to include all sections of the template in your document
+regardless whether you have something to write for each or not
 	\begin{itemize}
-		\item If you do not have anything to write in a section, indicate this by the \emph{N/A}, \emph{void}, \emph{none}, etc.
+		\item If you do not have anything to write in a section, indicate this by the
+\emph{N/A}, \emph{void}, \emph{none}, etc.
 	\end{itemize}
-	\item Uniquely number each of your requirements for easy identification and cross-referencing
-	\item Highlight terms that are defined in Section~1.3 (\textbf{Definitions, Acronyms, and Abbreviations}) with \textbf{bold}, \emph{italic} or \underline{underline}
-	\item For Deliverable 1, please highlight, in some fashion, all (you may have more than one) creative and innovative features. Your creative and innovative features will generally be described in Section~2.2 (\textbf{Product Functions}), but it will depend on the type of creative or innovative features you are including.
+	\item Uniquely number each of your requirements for easy identification and
+cross-referencing
+	\item Highlight terms that are defined in Section~1.3 (\textbf{Definitions,
+Acronyms, and Abbreviations}) with \textbf{bold}, \emph{italic} or
+\underline{underline}
+	\item For Deliverable 1, please highlight, in some fashion, all (you may have
+more than one) creative and innovative features. Your creative and innovative
+features will generally be described in Section~2.2 (\textbf{Product
+Functions}), but it will depend on the type of creative or innovative features
+you are including.
 \end{itemize}
 
 
