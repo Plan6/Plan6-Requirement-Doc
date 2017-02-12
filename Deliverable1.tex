@@ -165,26 +165,26 @@ A block diagram denoting the major components of system as well as their externa
 
 \section{Functional Requirements}
 \label{sec:functional_requirements}
-% Begin Section
-% This section of the SRS should contain all of the software requirements to a level of detail sufficient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisfies those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output.
+	% Begin Section
+	% This section of the SRS should contain all of the software requirements to a level of detail sufficient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisfies those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output.
 
-% You normally have two options for organizing your functional requirements:
-%\begin{enumerate}
-%	\item Organize first by \emph{business events}, then by \emph{viewpoints}
-%	\item Organize first by \emph{viewpoints}, then by \emph{business events}
-%\end{enumerate}
-%Choose the one which makes the most sense.
+	% You normally have two options for organizing your functional requirements:
+	%\begin{enumerate}
+	%	\item Organize first by \emph{business events}, then by \emph{viewpoints}
+	%	\item Organize first by \emph{viewpoints}, then by \emph{business events}
+	%\end{enumerate}
+	%Choose the one which makes the most sense.
 
-For example, if you wish to organization by business events:
+% For example, if you wish to organization by business events:
 
-% It is assumed that we will take this approach.
-%
+% TEACHER BUSINESS EVENTS (5)
+
 \begin{enumerate}[{BE}1.]
-	\item A teacher must be able to create a course and own it or delete an existing course the teacher owns.
+	\item A teacher creates a course and owns it or deletes an existing course the teacher owns.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Students must be able to enroll in a course owned by a teacher.
+				\item Students must be able to enroll in an existing course owned by the teacher provided the course is set visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -209,12 +209,12 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher must be able to add non-evaluational, manual-evaluational and automated-evaluational content to a course created by that teacher.
+	\item A teacher adds non-evaluational, manual-evaluational or automated-evaluational content to a course owned by that teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
 				\item A student enrolled in a course must be able to view any content within the course provided the content is set visible by the owner of that course.
-				\item A student must be able to submit a piece of content in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course.
+				\item A student must be able to submit an \textbf{student assignment}; a piece of content uploaded in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course.
 				\item A student must be able to submit an automated evaluational content provided it is set visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
@@ -242,7 +242,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher must be able view a submitted assignment.
+	\item A teacher views a submitted student assignment.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
@@ -270,15 +270,15 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher must be able to add a quiz or delete an existing quiz.
+	\item A teacher adds a quiz or deletes an existing quiz.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item None
+				\item Quizzes are made visible to students only if they are set visible by the owner of the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item None
+				\item A quiz is set visible for a time period specified by the owner of the course. A quiz is set not visible otherwise.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -298,15 +298,16 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The owner of a course must be able to specify a time period for which a non-evaluational, automated-evaluational, manual-evaluational or a course is visible for to all enrolled students.
+	\item The owner of a course specifies a time period for which course material, course assignments, course assessments or a course is set visible for all enrolled students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item An enrolled student must not be able to view content which is not made visible by the owner of the course.
+				\item A student is unenrolled from a course that is set not visible.
+				\item An enrolled student must not be able to view course material, course assignments, or course assessment content or course which is not made visible by the owner of the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to choose to permanently remove a piece of content from a course owned by them.
+				\item A teacher must be able to permanently remove a piece of content from a course owned by them.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -326,7 +327,9 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student must be able to enroll within a course that is set visible by the owner of that course.
+% STUDENT BUSINESS EVENTS (4)
+
+	\item A student enrolls within a course that is set visible by the owner of that course.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
@@ -357,7 +360,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student must be able to view all grades assigned to them for all assignments and quizzes for all courses in which the student is enrolled.
+	\item A student checks all the grades assigned to them for all submitted student assignments and student quizzes for all courses in which the student is enrolled.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
@@ -385,7 +388,35 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student must be able to view all assignments within a course in which they are enrolled provided that the owner of the course has marked them visible to be all students.
+	\item A student submits a file in response to a course assignment only if the course assignment was made visible to all students and if a submission was allowed for that course assignment.
+	\begin{enumerate}[{VP2}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item A
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+	\item A student must be able to view all course assignments within a course in which they are enrolled provided that the owner of the course has marked them visible to be all students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
@@ -413,33 +444,7 @@ For example, if you wish to organization by business events:
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student must be able to submit a file in response to a manual-evaluational content only if the manual evaluational content was made visible to all students and if a submission was allowed for that student.
-	\begin{enumerate}[{VP2}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
+% SCHOOL ADMINISTRATION BUSINESS EVENTS (4)
 
 	\item The school administration must be able to add a Teacher or a Student account or delete an existing Teacher or Student account.
 	\begin{enumerate}[{VP1}.1]
