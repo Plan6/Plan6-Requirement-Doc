@@ -145,19 +145,19 @@ users.
   \item [User Role] Categorization of the user into a set of possible
     institutional roles (administration, teacher, student).
 
-	\item [Course] A collection of \textbf{course content}, \textbf{student content} and student grades.
+	\item [Course] A collection of course content, student content and student grades.
 
-	\item [Course Content] Content that is one of three types; \textbf{course material}, \textbf{course assignment} or \textbf{course assessment}.
+	\item [Course Content] Content that is one of three types; course material, course assignment or course assessment.
 
-	\item [Student Content] Content that is one of two types; \textbf{student assignment}, \textbf{student assessment}
+	\item [Student Content] Content that is one of two types; student assignment, student assessment
 
-	\item [Course Material] All course content to which students cannot submit content in reply. This type of course content typically consists of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time.
+	\item [Course Material] All course content to which students cannot submit content in reply. This type of course content typically consists of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time. Non-evaluational content and course material are synonymous.
 
-	\item [Course Assignment] Course content to which students may submit content in reply. Content submitted in reply is called a submitted \textbf{student assignment}. Course assignments are typically of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time.
+	\item [Course Assignment] Course content to which students may submit content in reply. Content submitted in reply is called a submitted student assignment. Course assignments are typically of .pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible for a specified duration of time. Manual-evaluational content and course assignment are synonymous.
 
-	\item [Course Assessment] Course content which students may submit. A submitted Course Assessment is called a \textbf{student assessment}. Course assessments are specialized .txt
+	\item [Course Assessment] Course content which students may submit. A submitted Course Assessment is called a student assessment. Course assessments may be in the form of text files. Automated-evaluational content and course assessment are synonymous.
 
-	\item [Student Assignment] Content that the student submits in reply to a Course Assignment type content.
+	\item [Student Assignment] Content that the student submits in reply to a course assignment type content.
 
 	\item [Student Assessment] Content in which a download option is not provided. This type of content typically consists of a questionnaire in which every question has at least two possibly correct choices. Students answer the questionnaire by picking at least on of the available options and submit before a specified time or submit automatically after a specified amount of time. The results are evaluated by the system and a student performance is recorded.
 
@@ -322,6 +322,9 @@ This section is void.
 
 \section{Functional Requirements}
 \label{sec:functional_requirements}
+
+Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a definitions of \textbf{key} terms.
+
 % TEACHER BUSINESS EVENTS (5)
 
 \begin{enumerate}[{BE}1.]
@@ -333,16 +336,16 @@ This section is void.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to choose to unenroll a student from a course that the teacher owns.
+				\item A teacher must be able to choose to unenrol a student from a course that the teacher owns.
 				\item A teacher is not enrolled in a course.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item \*\*\*\*\* Should a parent wish to see course progress or student performance, they are required to use the child's student account.
+				\item Should a parent wish to see course progress or student performance, they are required to use the child's student account.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration  choose to either allow students and teachers to create their own accounts, or create accounts for all students and teachers.
+				\item The school administration choose to either allow students and teachers to create their own accounts, or create accounts for all students and teachers.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -350,8 +353,7 @@ This section is void.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item All courses, course content, and any teacher student communication
-          held on the \underline{CMS} must be made visible to the School Board.
+				\item All courses, course content, student content and any teacher student communication held on the on the system must be made visible to the school board.
 			\end{enumerate}
 	\end{enumerate}
 
@@ -360,15 +362,16 @@ This section is void.
 		\item Student Viewpoint
 			\begin{enumerate}
 				\item A student enrolled in a course must be able to view any content within the course provided the content is set visible by the owner of that course.
-				\item A student must be able to submit an \textbf{student assignment}; a piece of content uploaded in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course.
-				\item A student must be able to submit an automated evaluational content provided it is set visible by the owner of that course.
+				\item A student must be able to submit a \textbf{student assignment}; a piece of content uploaded in response to a manual-evaluational content provided the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
+				\item A student must be able to submit an automated-evaluational content provided it is set visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Non-evaluational content is any content for which students are given only the option to view the content.
-				\item Manual-evaluational content is any content where, in addition to viewing, students must be able to post their own content in response, called a submitted assignment, to the content posted by the teacher.
-				\item Automated-evaluational content is any content that when accessed by students, allows students to interact with that content and the result of their interaction is marked by a previously defined success criteria defined by the owner of the course.
-				\item The student's performance in the exploration of automated-evaluational content is recorded and saved for future reference by the student and the teacher.
+				\item Non-evaluational content is any content for which students are given only the option to view the content or download the content.
+				\item Manual-evaluational content is any content where, in addition to viewing, students must be able to post their own content in response, called a \textbf{student assignemnt}, to the content posted by the teacher provided file submission for that manual-evaluational content is enabled.
+				\item If file submission for a manual-evalational content is enabled, the teacher must specify also a time period for which file submission is accepted by the manual-evaluational piece of content.
+				\item Automated-evaluational content is any content that when accessed by students, allows students to interact with that content and the result of their interaction is marked by a previously defined success criteria specified by the owner of the course.
+				\item The student's performance in the exploration of automated-evaluational content is recorded and saved for future reference by the student, teacher and school administration.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -388,15 +391,19 @@ This section is void.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher views a submitted student assignment.
+	\item A teacher views a submitted \textbf{student assignment}.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Students must be able to submit assignments multiple times in response to a manual-evaluational content posted by the course owner.
+				\item A Student must be able to submit a \textbf{student assignment} multiple times in response to a manual-evaluational content posted by the course owner provided the manual-evaluational content is set visible by the course owner and file submission is enabled for that manual-evaluational content.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to assign either a numerical or letter grade to the assignment.
+				\item A teacher must be able to assign a numerical decimal weight between 0.001 to 1.0 and either a numerical or letter grade to the \textbf{student assignment}.
+				\item A teacher must be able to change an assigned weight or grade to a \textbf{student assignment}.
+				\item A teacher is given a warning if the numerical weights assigned for manual-evaluational content exceeds 1.0.
+				\item A teacher must be able to leave a comment regarding the assigned grade.
+				\item The teacher must define the numerical value of each letter grade. The values of each letter grade can be redefined by the teacher.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -416,15 +423,17 @@ This section is void.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher adds a quiz or deletes an existing quiz.
+	\item A teacher adds automated-evaluational content or deletes an existing automated-evaluational content.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Quizzes are made visible to students only if they are set visible by the owner of the course.
+				\item Automated-evaluational content is made visible to students only if the automated-evaluational content is set visible by the owner of the course.
+				\item Automated-evaluational content made visible for students can be opened by students for a predefined period of time specified by the course owner.
+				\item Opened automated-evaluational content can be submitted either within the predefined period of time specified by the course owner or automatically at the end of the predefined period of time specified by the course owner.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A quiz is set visible for a time period specified by the owner of the course. A quiz is set not visible otherwise.
+				\item Automated-evaluational content is set visible for a time period specified by the owner of the course. A quiz is set not visible otherwise.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -444,16 +453,16 @@ This section is void.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The owner of a course specifies a time period for which course material, course assignments, course assessments or a course is set visible for all enrolled students.
+	\item The owner of a course specifies a time period for which non-evaluational content, manual-evaluational content, automated-evaluational content or a course is set visible for all enrolled students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
 				\item A student is unenrolled from a course that is set not visible.
-				\item An enrolled student must not be able to view course material, course assignments, or course assessment content or course which is not made visible by the owner of the course.
+				\item An enrolled student must not be able to view a course or \textbf{course content} which is not made visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to permanently remove a piece of content from a course owned by them.
+				\item A teacher must be able to permanently remove \textbf{course content} from a course owned by them.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -475,18 +484,49 @@ This section is void.
 
 % STUDENT BUSINESS EVENTS (4)
 
-	\item A student enrolls within a course that is set visible by the owner of that course.
+	\item A student enrols within a course that is set visible by the owner of that course.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student must be able view all courses to which they are enrolled.
+				\item A student must be able view all courses in which they are enrolled.
 				\item A student must not be able to self withdraw from a course in which he or she is enrolled.
-				\item A student that is dismissed from a course is not longer enrolled in that course.
-				\item A student whom is not enrolled in a course has no access to content found within that course.
+				\item A student that is dismissed from a course is no longer enrolled in that course.
+				\item A dismissed student cannot self enroll in a course from which he or she was dismissed.
+				\item A student whom is not enrolled in a course has no access to \textbf{course content} found within that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to dismiss an enrolled student from a course owned by the teacher.
+				\item A teacher must be able to dismiss an enrolled student from a course owned by that teacher.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The school administration must be able to dismiss an enrolled student from a course.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+	\item A student checks all the grades assigned to them for all submitted student assignments and student assessments for all courses in which the student is enrolled.
+	\begin{enumerate}[{VP2}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item The system calculates and displays an overall grade for a given course and an overall grade point average for all courses.
+				\item If no grades are assigned, the system does not display an overall grade for a given course.
+				\item if the student is not enrolled in any courses or no grades are assigned for every course the student is enrolled in, an overall grade point average for all courses is not displayed.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item None
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -506,15 +546,15 @@ This section is void.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student checks all the grades assigned to them for all submitted student assignments and student quizzes for all courses in which the student is enrolled.
+	\item A student enrolled in a course submits a \textbf{student assignment} in response to manual-evaluational content made visible to all students enrolled in that course and if a submission was allowed for that manual-evaluational content.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item None
+				\item The student must be able to submit a \textbf{student assignment} multiple times provided the manual-evaluational content is set visible by the owner of that course and file submission for that manual-evaluational content is enabled.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item None
+				\item A views the latest submission of the \textbf{student assignment}.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -534,39 +574,11 @@ This section is void.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student submits a file in response to a course assignment only if the course assignment was made visible to all students and if a submission was allowed for that course assignment.
+	\item A student enrolled within a course views all \textbf{course content} provided that the owner of the course has marked them visible to all students.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item A
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
-
-	\item A student must be able to view all course assignments within a course in which they are enrolled provided that the owner of the course has marked them visible to be all students.
-	\begin{enumerate}[{VP2}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item None
+				\item The system displays the time remaining untill a manual-evaluational content file submission expires.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -863,7 +875,7 @@ to describe the function of the button
 \begin{enumerate}[{PR}1. ]
 	\item The application show the user an error when and unknown file format is submitted
 	\item The application shall show the users local content when internet connect is not present
-	\item The application shall not crash when internet is not available 
+	\item The application shall not crash when internet is not available
 \end{enumerate}
 % End SubSubSection
 
@@ -1077,7 +1089,7 @@ team member. This sheet must be signed by all team members.
   \item [Kelvin Lin] foo
     \\\\\\
 
-  \item [Danish Khan] bar
+  \item [Danish Khan] Functional Requirements
     \\\\\\
 
   \item [Puru Jetly] baz
