@@ -462,11 +462,11 @@ the manual-evaluational piece of content for manual-evaluational content.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher views a submitted \textbf{student assignment}.
+	\item A teacher views a submitted \underline{student assignment}.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student shall be able to submit a \textbf{student assignment}
+				\item A student shall be able to submit a \underline{student assignment}
 multiple times in response to a manual-evaluational content posted by the course
 owner when the manual-evaluational content is set visible by the course
 owner and file submission is enabled for that manual-evaluational content.
@@ -474,11 +474,12 @@ owner and file submission is enabled for that manual-evaluational content.
 		\item Teacher Viewpoint
 			\begin{enumerate}
 				\item A teacher shall be able to assign a numerical decimal weight between
-0.001 to 1.0 and either a numerical or letter grade to the \textbf{student
+0.001 to 1.0 and either a numerical or letter grade to the \underline{student
 assignment}.
 				\item A teacher shall be able to change an assigned weight or grade to a
-\textbf{student assignment}.
-				\item A teacher shall be given a warning if the numerical weights assigned for
+\underline{student assignment}.
+				\item A teacher shall be given a warning if the numerical weights assigned 
+for
 manual-evaluational content exceeds 1.0.
 				\item A teacher shall be able to leave a comment regarding the assigned
 grade.
@@ -503,14 +504,16 @@ values of each letter grade can be redefined by the teacher.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A teacher adds automated-evaluational content or deletes an existing
-automated-evaluational content.
+	\item A teacher adds automated-evaluational content.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Automated-evaluational content shall be made visible to students only if the
+				\item Automated-evaluational content shall be made visible to students only 
+if the
 automated-evaluational content is set visible by the owner of the course.
-				\item Students shall be able to open automated-evaluational content for a predefined period of time specified by the course owner when the content is made visible.
+				\item Students shall be able to open automated-evaluational content for a 
+predefined period of time specified by the course owner when the content is made 
+visible.
 				\item Opened automated-evaluational content shall be submitted within
 the predefined period of time specified by the course owner or automatically at
 the end of the predefined period of time specified by the course owner.
@@ -518,7 +521,8 @@ the end of the predefined period of time specified by the course owner.
 		\item Teacher Viewpoint
 			\begin{enumerate}
 				\item Automated-evaluational content shall set visible for a time period
-specified by the owner of the course. Otherwise, the content shall not be visible.
+specified by the owner of the course. Otherwise, the content shall not be 
+visible.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -651,21 +655,21 @@ is set visible for all enrolled students.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student enrolled in a course submits a \textbf{student assignment} in
-response to manual-evaluational content made visible to all students enrolled in
-that course and if a submission was allowed for that manual-evaluational
-content.
+	\item A student enrolled in a course submits a \underline{student assignment}.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student must be able to submit a \textbf{student assignment}
-multiple times provided the manual-evaluational content is set visible by the
+				\item The student shall be able to submit a \underline{student assignment}
+multiple times when the manual-evaluational content is set visible by the
 owner of that course and file submission for that manual-evaluational content is
 enabled.
+\item Students shall not be able to submit a \underline{student assignment} when 
+the content is set to not visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A views the latest submission of the \textbf{student assignment}.
+				\item Teachers shall see the latest submission of the \underline{student 
+assignment}.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -685,12 +689,13 @@ enabled.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student enrolled within a course views all \textbf{course content}
-provided that the owner of the course has marked them visible to all students.
+	\item A student enrolled within a course wants to view \underline{course 
+content}
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The system displays the time remaining untill a manual-evaluational
+				\item The system displays shall the time remaining untill a 
+manual-evaluational
 content file submission expires.
 			\end{enumerate}
 		\item Teacher Viewpoint
@@ -717,43 +722,30 @@ content file submission expires.
 
 % SCHOOL ADMINISTRATION BUSINESS EVENTS (4)
 
-	\item The school administration adds a Teacher or a Student account or deletes
-an existing Teacher or Student account.
+	\item The school administration wants to add a Teacher or a Student account.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The student receives a Student ID and password to access their
+				\item The student shall receive a Student ID and password to access their
 personal if a new student account.
-				\item The student must choose a new password upon first signing into the
+				\item The student shall choose a new password upon first signing into the
 system.
-				\item If a student account is deleted, they are unenrolled from all courses.
-Furthermore, all grades, submitted student assignments and submitted student
-assessments are also deleted.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item The teacher receives a Teacher ID and password to access their
+				\item The teacher shall receive a Teacher ID and password to access their
 personal teacher account.
-				\item The teacher must choose a new password upon first signing into the
+				\item The teacher shall choose a new password upon first signing into the
 system.
-				\item If a teacher account is deleted, students enrolled in courses owned by
-the teacher are unenrolled from the courses owned by that teacher. Furthermore,
-all courses owned by them are also deleted, and all course material, course
-assignment and course assessment content within courses owned by that teacher
-are also deleted.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should the parent require access to their child's account, the child
-is expected to login through their student account to allow the parent to
-inspect course progress or student performance.
+				\item None
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The School Administration must be able to create a set of usernames
-and passwords from a CSV file.
-				\item The passwords for the students and teachers are generated as follows
-DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
+				\item The School Administration shall be able to create a set of usernames
+and passwords from an external file.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -761,26 +753,26 @@ DDMMYYYY where DDMMYYYY refers to the date of birth of the student or teacher.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is expected that the responsibilities of monitoring communication
-is forwarded to the school administration. All enquiries are assumed to be
-forwarded to the school administration that are expected to use special access
-privileges to investigate issues regarding content or communication.
-				\item Should any content malign against board policies, the school
-administration are given access and privileges to hide, remove or track the
-origin of a piece of content or course.
+				\item The school administration shall monitor communication. 
+				\item All enquiries shall be
+forwarded to the school administration.
+				\item The school
+administration shall be given access and privileges to hide, remove or track the
+origin of a piece of content or course when any content malign against board 
+policies is uploaded to the system.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item The school administration views a course owned by a Teacher or deletes an
-existing course owned by a Teacher.
+	\item The school administration deletes a course.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student is unenrolled from a course that is deleted.
+				\item All students shall be unenrolled from the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher does not own a deleted course.
+				\item A teacher shall not own a deleted course.
+				\item{All content shall be deleted from the system.}
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -788,16 +780,11 @@ existing course owned by a Teacher.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item A course is deleted when all students enrolled in that course are
-unenrolled from that course and all course material, course assignment, course
-assessment, student assignment, and student assessment content within that
-course is also deleted.
-				\item The school administration account is given a warning after a course
-deletion request is made. The course is deleted if and only if a course deletion
+				\item The school administration account shall be given a warning after a 
+course
+deletion request is made. 
+\item The course shall deleted only if a course deletion
 request is made a second time following the warning.
-				\item Course material, course assignment, course assessment, student
-assignment, and student assessment content within that course and student grades
-are all visible to the School Administration account.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -805,70 +792,9 @@ are all visible to the School Administration account.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item It is assumed that the school administration will consult policies and
-procedures regarding the handling of student data.
+				\item None
 			\end{enumerate}
 	\end{enumerate}
-
-% 	\item The school administration views all UNICODE communication that occurs
-within the system between student and teachers, between student and
-% school administration or between school administration and teachers.
-% 	\begin{enumerate}[{VP1}.1]
-% 		\item Student Viewpoint
-% 			\begin{enumerate}
-% 				\item All uploaded content or other forms of communication the student
-% produces must be visible to all school administration accounts.
-% 			\end{enumerate}
-% 		\item Teacher Viewpoint
-% 			\begin{enumerate}
-% 				\item All uploaded content or other forms of communication the teacher
-% produces must be visible to all school administration accounts.
-% 			\end{enumerate}
-% 		\item Parent Viewpoint
-% 			\begin{enumerate}
-% 				\item None
-% 			\end{enumerate}
-% 		\item School Administration Viewpoint
-% 			\begin{enumerate}
-% 				\item None
-% 			\end{enumerate}
-% 		\item Information Technology Team Viewpoint
-% 			\begin{enumerate}
-% 				\item None
-% 			\end{enumerate}
-% 		\item Government \& School Board Viewpoint
-% 			\begin{enumerate}
-% 				\item None
-% 			\end{enumerate}
-% 	\end{enumerate}
-
-	% \item Description of Business Event
-	% \begin{enumerate}[{VP1}.1]
-	% 	\item Student Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% 	\item Teacher Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% 	\item Parent Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% 	\item School Administration Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% 	\item Information Technology Team Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% 	\item Government \& School Board Viewpoint
-	% 		\begin{enumerate}
-	% 			\item None
-	% 		\end{enumerate}
-	% \end{enumerate}
 
 \end{enumerate}
 
@@ -1278,4 +1204,5 @@ This section is void.
 
 \end{document}
 %------------------------------------------------------------------------------
+
 
