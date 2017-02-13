@@ -80,9 +80,9 @@ designers and developers of this project.
 \label{sub:scope}
 This project will produce the following software products:
 \begin{itemize}
-  \item \underline{Android} Client Application
-  \item Back-end Web Server
-  \item Back-end Database Server
+  \item \underline{Android} client application
+  \item Back-end web server
+  \item Back-end database server
 \end{itemize}
 
 \noindent The aforementioned products preform the following:
@@ -130,17 +130,16 @@ users.
     institutions.
 
   \item [Mechanism of Assessment] Assignments, quizzes, and other ways of
-    assessing and evaluating a students knowledge
+    assessing and evaluating a students knowledge.
 
   \item [Metric of Success] Means of measuring a student's knowledge (grades,
-    points, stars, percentage, etc.)
+    points, stars, percentage, etc.).
 
   \item [Permissions] The set of allowed actions a user is able to perform.
 
   \item [Smartphone] An embedded electronic device capable of serving as a
     general purpose, internet-enabled computer in addition to providing mobile
-telephone
-    functionality such as phone calls and text messaging.
+    telephone functionality such as phone calls and text messaging.
 
   \item [Teaching Methods] Ways of teaching including but not limited to
     assignments, examinations and tests.
@@ -148,47 +147,49 @@ telephone
   \item [User Role] Categorization of the user into a set of possible
     institutional roles (administration, teacher, student).
 
-	\item [Course] A collection of course content, student content and student
-grades.
+  \item [Course] A collection of course content, student content and student
+    grades.
 
-	\item [Course Content] Content that is one of three types; course material,
-course assignment or course assessment.
+  \item [Course Content] Content that is one of three types: course material,
+    course assignment or course assessment.
 
-	\item [Student Content] Content that is one of two types; student assignment,
-student assessment
+  \item [Student Content] Content that is one of two types: student assignment
+    or student assessment.
 
-	\item [Course Material] All course content to which students cannot submit
-content in reply. This type of course content consists of but is not limited to
-.pdf, .tex, .ppt, .txt file types. This content may be set visible or invisible
-for a specified duration of time. Non-evaluational content and course material
-are synonymous.
+  \item [Course Material] All course content to which students cannot submit
+    content in reply. This type of course content consists of but is not
+    limited to .pdf, .ppt or .txt file types. This content may be set visible
+    or invisible for a specified duration of time. Non-evaluational content and
+    course material are synonymous.
 
-	\item [Course Assignment] Course content to which students may submit content
-in reply. Content submitted in reply is called a submitted student assignment.
-Course assignments are of but is not limited to .pdf, .tex, .ppt, .txt file
-types. This content may be set visible or invisible for a specified duration of
-time. Manual-evaluational content and course assignment are synonymous.
+  \item [Course Assignment] Course content to which students may submit content
+    in reply. Content submitted in reply is called a submitted student
+    assignment.  Course assignments are of but is not limited to .pdf, .ppt or
+    .txt file types. This content may be set visible or invisible for a
+    specified duration of time (including infinitely long). Manual-evaluational
+    content and course assignment are synonymous.
 
-	\item [Course Assessment] Course content which students may submit. A submitted
-Course Assessment is called a student assessment. Course assessments may be in
-the form of text files. Automated-evaluational content and course assessment are
-synonymous.
+  \item [Course Assessment] Course content which students may submit. A
+    submitted Course Assessment is called a student assessment. Course
+    assessments may be in the form of, but not limited to, .pdf or .txt.
+    Automated-evaluational content and course assessment are synonymous.
 
-	\item [Student Assignment] Content that the student submits in reply to a
-course assignment type content.
+  \item [Student Assignment] Content that the student submits in reply to a
+    course assignment type content.
 
-	\item [Student Assessment] Content in which a download option is not provided.
-This type of content typically consists of a questionnaire in which every
-question has at least two possibly correct choices. Students answer the
-questionnaire by picking at least on of the available options and submit before
-a specified time or submit automatically after a specified amount of time. The
-results are evaluated by the system and a student performance is recorded.
+  \item [Student Assessment] Content in which a download option is not
+    provided.  This type of content typically consists of a questionnaire in
+    which every question has at least two possibly correct choices. Students
+    answer the questionnaire by picking at least on of the available options or
+    inputting a textual response and submit before a specified time or submit
+    automatically after a specified amount of time. The results are evaluated
+    by the system and a student performance is recorded.
 
-	\item [Visible] An attribute that can be assigned to a course, course content
-or student content. If assigned to a a course, that course becomes open to all
-students for enrolment. If assigned to course content or student content, that
-content is then made available to be viewed to all students enrolled within that
-course.
+  \item [Visible] An attribute that can be assigned to a course, course content
+    or student content. If assigned to a course, that course becomes open to
+    all students for enrolment. If assigned to course content or student
+    content, that content is then made available to be viewed to all students
+    enrolled within that course.
 
 \end{description}
 
@@ -207,7 +208,7 @@ The other sections are organized into logical subsections. Specifically, section
 2 outlines the overall product description with various subsections. Then the
 following sections list the requirements. The functional requirements are
 organized by business events and viewpoints. Non-functional requirements are
-organized, also, into logical subsections.
+organized into various subcategories.
 
 
 % End Section
@@ -233,12 +234,15 @@ systems, such as McMaster's Avenue2Learn; however, Erudite will focus on
 providing a Learning Management System for early learners and educators with
 low levels of technical expertise.
 
-A block diagram denoting the major components of system as well as their
-external interfaces follow:
+Figure 1 on the next page shows an overview of the major system components of
+the system as well as their external interfaces.
 
-\begin{center}
-\includegraphics[scale=0.7]{A1_Assets/2-1_Product_Perspective_Diagram.jpg}
-\end{center}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.7]{A1_Assets/2-1_Product_Perspective_Diagram.jpg}
+  \caption{Major components of the system and their external interfaces.}
+\end{figure}
+
 
 % End SubSection
 
@@ -251,12 +255,12 @@ with common classroom operations.
 As a \underline{LMS}, Erudite will allow teachers to upload a variety of
 documents for
 the purpose of education. Teachers are then able to set the duration that the
-documents are available, as well as the the \underline{access rights} users
+documents are available, as well as the \underline{access rights} users
 have over the document.
 
 Moreover, Erudite will allow teachers to create virtual mechanisms of
-assessment including but not limited to quizzes, and electronic assignment
-submission boxes. With virtual quizzes, teachers will be allowed to create their
+assessment including but not limited to quizzes and electronic assignment
+submission boxes. With virtual quizzes, teachers will be able to create their
 own questions and solutions.
 
 Teachers will also be able to configure settings related to these mechanisms of
@@ -270,13 +274,12 @@ based on primitive assessment schemes provided by the teacher.
 
 Erudite will allow teachers to view statistics associated with each
 \underline{mechanism of assessment}. It will create visualizations of data
-generated from
-the results of the assessment scheme and display them to the teacher. Statistics
-to be displayed to the teacher include but is not limited to the statistical
-mean, the statistical mode, the variance, the standard deviation, the point
-biserial, and the discrimination index. \color{blue}
-An innovative feature of Erudite is that it will also keep track of the number
-of students who have yet to submit relevant work to each mechanism of assessment
+generated from the results of the assessment scheme and display them to the
+teacher. Statistics to be displayed to the teacher include but is not limited
+to the statistical mean, the statistical mode, the variance, the standard
+deviation, the point biserial, and the discrimination index. \color{blue} An
+innovative feature of Erudite is that it will also keep track of the number of
+students who have yet to submit relevant work to each mechanism of assessment
 so that teachers may be able to contact the class to remind them of the due
 date, or extend the due date.\color{black}
 
@@ -290,16 +293,20 @@ appropriate information in order to successfully complete the mechanism of
 assessment. The LMS will show the student a \underline{metric of success} when
 authorized by the teacher.
 
-\color{blue}Erudite will allow students and teachers to customize their own user
+\color{blue}
+
+Erudite will allow students and teachers to customize their own user
 interface such that information each user considers relevant will be displayed
 in a convenient location. Users will also have the option of adding other data
 including but not limited to weather information, traffic information, and the
-current time.\color{black}
+current time.
+
+\color{black}
 
 Finally, Erudite will allow administration to add or remove students from
 certain domains. The LMS will allow administration to modify the
-\underline{user roles} and to control what \underline{permissions} each role has
-over the system.
+\underline{user roles} and to control what \underline{permissions} each role
+has over the system.
 % End SubSection
 
 \subsection{User Characteristics}
@@ -311,20 +318,22 @@ administration.
 Teachers are assumed to be adult users with the functional capacity of an
 average person who is between the ages of 16 and 80. Teachers are assumed to be
 fluent in written English, and have at least a basic understanding of
-mathematics and statistics. Moreover, teachers are assumed to have a strong
-understanding of \underline{teaching methods}; however, teachers are not assumed
-to be
+mathematics and statistics if they would be interested using the various
+mathematical/statical data visualization features provided by the system.
+Moreover, teachers are assumed to have a strong understanding of
+\underline{teaching methods}; however, teachers are not assumed to be
 well-versed in technology. Teachers should know how to use an Android platform
 - including typing and selecting elements on the screen - however, they are not
-expected to know how to know advanced features of the phone.
+expected to know how to know advanced features of the Android platform.
 
 Students are assumed to be child users of ages 6 to 13, who are enrolled in a
-Canadian, American, or equivalent elementary school. Students are assumed to
-understand basic written English at the Ontario Senior Kindergarten/Grade 1
-level. Students are expected to have vision and are able to use the basic
-functions of the Android platform, albeit at a lower level than teachers and
-administrations. At a minimum, students are assumed to know how to select
-elements on the screen. No other prior knowledge is assumed of the student.
+Canadian, American, or culturally equivalent elementary school. Students are
+assumed to understand basic written English at the Ontario Senior
+Kindergarten/Grade 1 level. Students are expected to have vision and are able
+to use the basic functions of the Android platform, albeit at a lower level
+than teachers and administrations. At a minimum, students are assumed to know
+how to select elements on the screen. No other prior knowledge is assumed of
+the student.
 
 The administration is assumed to be adult users with the functional capacity of
 an average person who is between the ages of 16 to 80. The administration is
@@ -366,8 +375,8 @@ This section is void.
 \section{Functional Requirements}
 \label{sec:functional_requirements}
 
-Please refer to \textbf{Definitions, Acronyms, and Abbreviations} for a
-definitions of \textbf{key} terms.
+Please refer to \textbf{Section 1.3 Definitions, Acronyms, and Abbreviations}
+for a definitions of \textbf{key} terms used herein.
 
 % TEACHER BUSINESS EVENTS (5)
 
@@ -992,9 +1001,7 @@ readability.
 \subsubsection{Precision or Accuracy Requirements}
 \label{ssub:precision_or_accuracy_requirements}
 % Begin SubSubSection
-\begin{enumerate}[{PR}1. ]
-	\item none
-\end{enumerate}
+This section is void.
 % End SubSubSection
 
 \subsubsection{Reliability and Availability Requirements}
@@ -1065,7 +1072,7 @@ add new features.
 \label{ssub:requirements_for_interfacing_with_adjacent_systems}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item The application shall interface with itself and on the android platform.
+	\item The application shall interface with itself and on the Android platform.
 	\item The application shall interface with the server provided by the school.
 	\item The application will interface with the Internet through Wi-fi and mobile network.
 \end{enumerate}
@@ -1226,9 +1233,7 @@ countries that purchase it.
 \subsubsection{Standards Requirements}
 \label{ssub:standards_requirements}
 % Begin SubSubSection
-\begin{enumerate}[{LR}1. ]
-	\item Void
-\end{enumerate}
+This section is void.
 % End SubSubSection
 
 % End SubSection
@@ -1240,58 +1245,34 @@ countries that purchase it.
 \appendix
 \section{Division of Labour}
 \label{sec:division_of_labour}
-Include a Division of Labour sheet which indicates the contributions of each
-team member. This sheet must be signed by all team members.
 \begin{description}
-  \item [Kelvin Lin]
-     \item{Created Section 2.1}
-     \item{Created Section 2.2}
-     \item{Created Section 2.3}
-     \item{Created Section 2.4}
-     \item{Created Section 2.5}
-     \item{Created Section 2.6}
-     \item{Contributed to list of abbreviations and definitions}
+  \item [Kelvin Lin ]
+  \item{Section 2 Overall Description}
+  \item{Contributed to list of abbreviations and definitions}
+  \hfill \rule{2in}{0.1pt}
+  \\\\
 
-
-  \item [Danish Khan] Functional Requirements
-    \\\\\\
+  \item [Danish Khan]
+  \item{Section 3 Functional Requirements}
+  \hfill \rule{2in}{0.1pt}
+  \\\\
 
   \item [Puru Jetly]
-     \item{Created Section 4.4}
-     \item{Created Section 4.5}
-     \item{Created Section 4.6}
-     \item{Created Section 4.7}
-     \item{Created Section 4.8}
+  \item{Sections 4.4-4.8 of Non-Functional Requirements}
+  \hfill \rule{2in}{0.1pt}
+  \\\\
 
   \item [Terrance Yip]
-     \item{Created Section 4.1}
-     \item{Created Section 4.2}
-     \item{Created Section 4.3}
+  \item{Sections 4.1-4.3 of Non-Functional Requirements}
+  \hfill \rule{2in}{0.1pt}
+  \\\\
 
-  \item [Varun Hooda] Introduction
+  \item [Varun Hooda]
+  \item{Section 1 Introduction}
+  \item{Contributed to document formatting}
+  \hfill \rule{2in}{0.1pt}
+  \\\\
 \end{description}
-
-
-\newpage
-\section*{IMPORTANT NOTES}
-\begin{itemize}
-	\item Be sure to include all sections of the template in your document
-regardless whether you have something to write for each or not
-	\begin{itemize}
-		\item If you do not have anything to write in a section, indicate this by the
-\emph{N/A}, \emph{void}, \emph{none}, etc.
-	\end{itemize}
-	\item Uniquely number each of your requirements for easy identification and
-cross-referencing
-	\item Highlight terms that are defined in Section~1.3 (\textbf{Definitions,
-Acronyms, and Abbreviations}) with \textbf{bold}, \emph{italic} or
-\underline{underline}
-	\item For Deliverable 1, please highlight, in some fashion, all (you may have
-more than one) creative and innovative features. Your creative and innovative
-features will generally be described in Section~2.2 (\textbf{Product
-Functions}), but it will depend on the type of creative or innovative features
-you are including.
-\end{itemize}
 
 
 \end{document}
