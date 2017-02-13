@@ -105,9 +105,8 @@ This project will produce the following software products:
 
 \noindent These software products will combine to provide a content management
 system for teachers and students in an educational environment. Benefits include quick
-accesses to educational content, efficient management of content, portability
-and ease of access to content, and ease of grading assessable content
-(quizzes). The goals of this project include providing students and teachers with a familiar
+access to educational content, efficient management of content, portability, ease of access to content, and ease of assessing student-submitted material
+(i.e. quizzes, assignments, etc). The goals of this project include providing students and teachers with a familiar
 interface to access and add content, all the while reducing any additional
 overhead of maintaining a system, and providing easy accessibility to all
 users.
@@ -119,7 +118,7 @@ users.
 \begin{description}
   \item [Access Rights] See Permissions.
 
-  \item [Android] a Unix-based operating system developed by Google Inc. for
+  \item [Android] An Unix-based operating system developed by Google Inc. for
     electronic devices including but not limited to touch-enabled
     \underline{smartphones},
     tablets, and other portable computing devices.
@@ -209,7 +208,7 @@ The rest of this documents contains detailed descriptions of this projects
 design decisions: assumptions, functionality, functional requirements and
 non-functional requirements.
 
-The other sections are organized into logical subsections. Specifically, section
+The other sections are organized into logical subsections. Specifically, Section
 2 outlines the overall product description with various subsections. Then the
 following sections list the requirements. The functional requirements are
 organized by business events and viewpoints. Non-functional requirements are
@@ -223,10 +222,8 @@ organized into various subcategories.
 \label{sec:overall_description}
 % Begin Section
 
-This section of the SRS should describe the general factors that affect the
-product and its requirements. It does not state specific requirements; it
-provides a background for those requirements and makes them easier to
-understand.
+This section of the document describes the general factors that affect the
+product and its requirements, providing context for the requirements in the following sections.
 
 \subsection{Product Perspective}
 \label{sub:product_perspective}
@@ -384,28 +381,27 @@ for a definitions of \textbf{key} terms used herein.
 % TEACHER BUSINESS EVENTS (5)
 
 \begin{enumerate}[{BE}1.]
-	\item A teacher creates a course and owns it or deletes an existing course the
-teacher owns.
+	\item A teacher creates a course.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item Students must be able to enrol in an existing course owned by the
+				\item Students shall be able to enrol in an existing course owned by the
 teacher provided the course is set visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item A teacher must be able to choose to unenrol a student from a course
+			    \item The teacher shall own the created course.
+				\item A teacher shall be able to choose to unenroll a student from a course
 that the teacher owns.
-				\item A teacher is not enrolled in a course.
+				\item A teacher shall not be enrolled in a course.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Should a parent wish to see course progress or student performance,
-they are required to use the child's student account.
+				\item Parents shall be able to view the course's progress or student performance through their child's account.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration choose to either allow students and teachers
+				\item The school administration shall be allowed to choose to whether to allow students and teachers
 to create their own accounts, or create accounts for all students and teachers.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
@@ -415,7 +411,7 @@ to create their own accounts, or create accounts for all students and teachers.
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
 				\item All courses, course content, student content and any teacher student
-communication held on the on the system must be made visible to the school
+communication held on the on the system shall be made visible to the school
 board.
 			\end{enumerate}
 	\end{enumerate}
@@ -425,14 +421,14 @@ automated-evaluational content to a course owned by that teacher.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student enrolled in a course must be able to view any content within
-the course provided the content is set visible by the owner of that course.
-				\item A student must be able to submit a \textbf{student assignment}; a
-piece of content uploaded in response to a manual-evaluational content provided
+				\item A student enrolled in a course shall be able to view any content within
+the course when the content is set visible by the owner of that course.
+				\item A student shall be able to submit an \underline{assignment}; a
+piece of content uploaded in response to a manual-evaluational content when
 the manual-evaluational content is set visible by the owner of that course and
 file submission is enabled.
-				\item A student must be able to submit an automated-evaluational content
-provided it is set visible by the owner of that course.
+				\item A student shall be able to submit an automated-evaluational content
+when it is set visible by the owner of that course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
@@ -1008,7 +1004,7 @@ This section is void.
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be available for use 24 hours per day, throughout
+	\item The application shall be available for use at least 21 hours per day, throughout
 the school year.
 	\item The application shall achieve 95\% up time.
 \end{enumerate}
@@ -1018,7 +1014,7 @@ the school year.
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application show the user an error when and unknown file format is
+	\item The application shall show the user an error when and unknown file format is
 submitted.
 	\item The application shall show the users local content when internet connect
 is not present.
@@ -1064,7 +1060,7 @@ add new features.
 \label{ssub:expected_physical_environment}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item The application is to be used under climate controlled conditions.
+	\item The application shall be used under climate controlled conditions.
 \end{enumerate}
 % End SubSubSection
 
@@ -1074,7 +1070,7 @@ add new features.
 \begin{enumerate}[{OE}1. ]
 	\item The application shall interface with itself and on the Android platform.
 	\item The application shall interface with the server provided by the school.
-	\item The application will interface with the Internet through Wi-fi and mobile network.
+	\item The application shall interface with the internet through the wi-fi protocol and mobile networks.
 \end{enumerate}
 % End SubSubSection
 
@@ -1091,9 +1087,9 @@ add new features.
 \label{ssub:release_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
-	\item The software will be released on the Google Play store.
+	\item The software shall be released on the Google Play store.
 	\item New releases of the product shall be produced in conjunction with user feedback.
-	\item New releases will be automatically installed to the users’ devices through updating procedures.
+	\item New releases shall be automatically installed onto the users’ devices through updating procedures.
 \end{enumerate}
 % End SubSubSection
 
@@ -1107,10 +1103,10 @@ add new features.
 \label{ssub:maintenance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item The software will not be in maintenance for more than 3 hours.
+	\item The software shall not be in maintenance for more than 3 hours per day.
 \end{enumerate}
 \begin{enumerate}[{MS}2. ]
-	\item The software will be maintained at night time to effect the least amount
+	\item The software shall be maintained at night time to affect the least amount
 of users.
 \end{enumerate}
 % End SubSubSection
@@ -1119,7 +1115,7 @@ of users.
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item Every registered user will have access to our help site via the Internet.
+	\item Every registered user shall have access to our help site via the Internet.
 	\item A brief tutorial on the functionalities behind the application shall be
 presented when first loading the software and made available at all times after.
 
@@ -1130,7 +1126,7 @@ presented when first loading the software and made available at all times after.
 \label{ssub:adaptability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item  The software is expected to run on an Android environment.
+	\item  The software shall run on an Android environment.
 \end{enumerate}
 % End SubSubSection
 
@@ -1144,7 +1140,7 @@ presented when first loading the software and made available at all times after.
 \label{ssub:access_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The student, teacher, and school administration will have access to this
+	\item The student, teacher, and school administration shall have access to this
 software.
 \end{enumerate}
 % End SubSubSection
@@ -1153,8 +1149,7 @@ software.
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item Only school administration can add students
-	to teacher's classroom.
+	\item The system shall ensure that persistent changes to the data are only made by authorized users.
 \end{enumerate}
 % End SubSubSection
 
@@ -1162,7 +1157,7 @@ software.
 \label{ssub:privacy_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The software will not allow other students to see marks of their
+	\item The software shall not allow other students to see marks of their
 colleagues.
 \end{enumerate}
 \begin{enumerate}[{SR}2. ]
@@ -1178,7 +1173,7 @@ colleagues.
 the status of its security mechanisms.
 \end{enumerate}
 \begin{enumerate}[{SR}2. ]
-	\item There will be a log of authenticated access, non-authenticated access,
+	\item There shall be a log of authenticated access, non-authenticated access,
 authorised access, and non-authorised access.
 \end{enumerate}
 % End SubSubSection
@@ -1210,7 +1205,7 @@ associated user if it detects a harmful program during a scan.
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item The software will not use any text, images, or media that will offend the
+	\item The software shall not use any text, images, or media that will offend the
 countries that purchase it.
 
 \end{enumerate}
@@ -1226,7 +1221,7 @@ countries that purchase it.
 \label{ssub:compliance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{LR}1. ]
-	\item  This software will comply to the Data Protection Act.
+	\item  This software shall comply with the Data Protection Act.
 \end{enumerate}
 % End SubSubSection
 
