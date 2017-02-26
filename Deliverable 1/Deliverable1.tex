@@ -104,11 +104,11 @@ This project will produce the following software products:
 \end{itemize}
 
 \noindent These software products will combine to provide a content management
-system for teachers and students in an educational environment. Benefits include 
+system for teachers and students in an educational environment. Benefits include
 quick
-access to educational content, efficient management of content, portability, 
+access to educational content, efficient management of content, portability,
 ease of access to content, and ease of assessing student-submitted material
-(i.e. quizzes, assignments, etc). The goals of this project include providing 
+(i.e. quizzes, assignments, etc). The goals of this project include providing
 students and teachers with a familiar
 interface to access and add content, all the while reducing any additional
 overhead of maintaining a system, and providing easy accessibility to all
@@ -226,7 +226,7 @@ organized into various subcategories.
 % Begin Section
 
 This section of the document describes the general factors that affect the
-product and its requirements, providing context for the requirements in the 
+product and its requirements, providing context for the requirements in the
 following sections.
 
 \subsection{Product Perspective}
@@ -401,12 +401,12 @@ that the teacher owns.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
-				\item Parents shall be able to view the course's progress or student 
+				\item Parents shall be able to view the course's progress or student
 performance through their child's account.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration shall be allowed to choose to whether to 
+				\item The school administration shall be allowed to choose to whether to
 allow students and teachers
 to create their own accounts, or create accounts for all students and teachers.
 			\end{enumerate}
@@ -426,23 +426,17 @@ board.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item A student enrolled in a course shall be able to view any content 
-within
-the course when the content is set visible by the owner of that course.
-				\item A student shall be able to submit an \underline{assignment}; a
-piece of content uploaded in response to a manual-evaluational content when
-the manual-evaluational content is set visible by the owner of that course and
-file submission is enabled.
-				\item A student shall be able to submit an automated-evaluational content
-when it is set visible by the owner of that course.
+        \item A student enrolled in a course shall be able to view any content within the course when the content is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to view any content set visible by the course owner.
+        \item A student shall be able to submit an \underline{assignment}; a piece of content uploaded in response to a manual-evaluational content when the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
+        \item The system shall provide interface elements that allow the student to submit an assignment in response to manual-evaltional content.
+        \item A student shall be able to submit an automated-evaluational content when it is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to open and submit automated-evaluational content that is set visible by the owner of the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Teachers shall be allowed to set permissions that students have over 
-each file.
-				\item The
-teacher shall specify a time period for which file submission is accepted by
-the manual-evaluational piece of content for manual-evaluational content.
+				\item Teachers shall be allowed to set permissions that students have over each file.
+				\item The teacher shall specify a time period for which file submission is accepted by the manual-evaluational piece of content for manual-evaluational content.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -478,7 +472,7 @@ owner and file submission is enabled for that manual-evaluational content.
 assignment}.
 				\item A teacher shall be able to change an assigned weight or grade to a
 \underline{student assignment}.
-				\item A teacher shall be given a warning if the numerical weights assigned 
+				\item A teacher shall be given a warning if the numerical weights assigned
 for
 manual-evaluational content exceeds 1.0.
 				\item A teacher shall be able to leave a comment regarding the assigned
@@ -679,12 +673,12 @@ values of each letter grade can be redefined by the teacher.
 multiple times when the manual-evaluational content is set visible by the
 owner of that course and file submission for that manual-evaluational content is
 enabled.
-\item Students shall not be able to submit a \underline{student assignment} when 
+\item Students shall not be able to submit a \underline{student assignment} when
 the content is set to not visible.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Teachers shall see the latest submission of the \underline{student 
+				\item Teachers shall see the latest submission of the \underline{student
 assignment}.
 			\end{enumerate}
 		\item Parent Viewpoint
@@ -705,12 +699,12 @@ assignment}.
 			\end{enumerate}
 	\end{enumerate}
 
-	\item A student enrolled within a course wants to view \underline{course 
+	\item A student enrolled within a course wants to view \underline{course
 content}
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-				\item The system displays shall the time remaining untill a 
+				\item The system displays shall the time remaining untill a
 manual-evaluational
 content file submission expires.
 			\end{enumerate}
@@ -769,12 +763,12 @@ and passwords from an external file.
 			\end{enumerate}
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
-				\item The school administration shall monitor communication. 
+				\item The school administration shall monitor communication.
 				\item All enquiries shall be
 forwarded to the school administration.
 				\item The school
 administration shall be given access and privileges to hide, remove or track the
-origin of a piece of content or course when any content malign against board 
+origin of a piece of content or course when any content malign against board
 policies is uploaded to the system.
 			\end{enumerate}
 	\end{enumerate}
@@ -796,9 +790,9 @@ policies is uploaded to the system.
 			\end{enumerate}
 		\item School Administration Viewpoint
 			\begin{enumerate}
-				\item The school administration account shall be given a warning after a 
+				\item The school administration account shall be given a warning after a
 course
-deletion request is made. 
+deletion request is made.
 \item The course shall deleted only if a course deletion
 request is made a second time following the warning.
 			\end{enumerate}
@@ -861,7 +855,7 @@ classroom/professional environments.
 accessible.
 	\item The application shall allow the user to get to the important information
 with no more than 2 taps of the screen.
-	\item The application shall have the main features on the main screen where 
+	\item The application shall have the main features on the main screen where
 they are easy to access.
 	\item Returning to the main screen shall take no more than 2 taps.
 	\item The application shall be easy for adults to use.
@@ -944,7 +938,7 @@ This section is void.
 \label{ssub:reliability_and_availability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall be available for use at least 21 hours per day, 
+	\item The application shall be available for use at least 21 hours per day,
 throughout
 the school year.
 	\item The application shall achieve 95\% up time.
@@ -955,7 +949,7 @@ the school year.
 \label{ssub:robustness_or_fault_tolerance_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{PR}1. ]
-	\item The application shall show the user an error when and unknown file format 
+	\item The application shall show the user an error when and unknown file format
 is
 submitted.
 	\item The application shall show the users local content when internet connect
@@ -1012,7 +1006,7 @@ add new features.
 \begin{enumerate}[{OE}1. ]
 	\item The application shall interface with itself and on the Android platform.
 	\item The application shall interface with the server provided by the school.
-	\item The application shall interface with the internet through the wi-fi 
+	\item The application shall interface with the internet through the wi-fi
 protocol and mobile networks.
 \end{enumerate}
 % End SubSubSection
@@ -1031,9 +1025,9 @@ protocol and mobile networks.
 % Begin SubSubSection
 \begin{enumerate}[{OE}1. ]
 	\item The software shall be released on the Google Play store.
-	\item New releases of the product shall be produced in conjunction with user 
+	\item New releases of the product shall be produced in conjunction with user
 feedback.
-	\item New releases shall be automatically installed onto the users’ devices 
+	\item New releases shall be automatically installed onto the users’ devices
 through updating procedures.
 \end{enumerate}
 % End SubSubSection
@@ -1060,7 +1054,7 @@ of users.
 \label{ssub:supportability_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{MS}1. ]
-	\item Every registered user shall have access to our help site via the 
+	\item Every registered user shall have access to our help site via the
 Internet.
 	\item A brief tutorial on the functionalities behind the application shall be
 presented when first loading the software and made available at all times after.
@@ -1095,7 +1089,7 @@ software.
 \label{ssub:integrity_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{SR}1. ]
-	\item The system shall ensure that persistent changes to the data are only made 
+	\item The system shall ensure that persistent changes to the data are only made
 by authorized users.
 \end{enumerate}
 % End SubSubSection
@@ -1152,7 +1146,7 @@ associated user if it detects a harmful program during a scan.
 \label{ssub:political_requirements}
 % Begin SubSubSection
 \begin{enumerate}[{CP}1. ]
-	\item The software shall not use any text, images, or media that will offend 
+	\item The software shall not use any text, images, or media that will offend
 the
 countries that purchase it.
 
@@ -1220,5 +1214,3 @@ This section is void.
 
 \end{document}
 %------------------------------------------------------------------------------
-
-
