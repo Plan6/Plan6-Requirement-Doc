@@ -89,20 +89,17 @@ This section should provide an analysis class diagram for your application.
 \section{Architectural Design}
 \label{sec:architectural_design}
 % Begin Section
-This section should provide an overview of the overall architectural design of 
-your application. You overall architecture should show the division of the 
-system into subsystems with high cohesion and low coupling.
 
 \subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Identify and explain the overall architecture of your system
-	\item Be sure to clearly state the name of the architecture
-	\item Provide the reasoning and justification of the choice
-	\item Provide a structural architecture diagram showing the relationship among 
-the subsystems (if appropriate)
-\end{enumerate}
+Erudite will be built using the MVC-II architecture, where the system will be decomposed into views, controllers, models, and a database.
+
+The MVC-II architecture was chosen because Erudite contains 3 main components: views, controllers (i.e. business logic), and data models. The MVC-II architecture allows for the separation of the 3 aforementioned components. This separation of concerns will allow for a seamless implementation of the application at the development phase, as different team members can be assigned to create different components of the overall system.
+
+Furthermore, Erudite is used by 2 classes of users: teachers and students. Both classes of users use the same data; however, the way each class sees the data is different. For instance, students should only see their own grades, whereas teachers should see all of their students' grades. The MVC-II architecture allows for the different views to be implemented with the same set of data: the representation of the data does not need to change.  Moreover, additional views can be added without changing the rest of the system. Accordingly, the MVC-II architecture will be used.
+
+%Add a structural architecture diagram here
 % End SubSection
 
 \subsection{Subsystems}
@@ -175,7 +172,7 @@ This section should contain all of your CRC cards.
 \newpage
 \section*{IMPORTANT NOTES}
 \begin{itemize}
-%	\item You do \underline{NOT} need to provide a text explanation of each 
+	\item You do \underline{NOT} need to provide a text explanation of each 
 diagram; the diagram should speak for itself
 	\item Please document any non-standard notations that you may have used
 	\begin{itemize}
