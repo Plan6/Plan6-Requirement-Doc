@@ -16,57 +16,80 @@
 
 % Header and Footer
 %------------------------------------------------------------------------------
-\pagestyle{plain}  
-\renewcommand\headrulewidth{0.4pt}                                      
-\renewcommand\footrulewidth{0.4pt}                                    
+\pagestyle{plain}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
 %------------------------------------------------------------------------------
 
 % Title Details
 %------------------------------------------------------------------------------
-\title{Deliverable \#2 Template}
+\title{
+  Erudite\\
+  \large \emph{An educational content management system}\\
+  \vspace{1em}
+  High-Level Architectural Design
+}
 \author{SE 3A04: Software Design II -- Large System Design}
-\date{}                               
+\date{}
 %------------------------------------------------------------------------------
 
 % Document
 %------------------------------------------------------------------------------
 \begin{document}
 
-\maketitle	
+\maketitle
 
 \section{Introduction}
 \label{sec:introduction}
-% Begin Section
+This section outlines the purpose and provides a system description of the
+Erudite project; along with an overview of the contents and organization of
+this high-level architectural design document.
 
-This section should provide an brief overview of the entire document.
 
 \subsection{Purpose}
 \label{sub:purpose}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Delineate the purpose of the document
-	\item Specify the intended audience for the document
-\end{enumerate}
-% End SubSection
+The purpose of this document to define the use cases, layout the Analysis Class
+Diagram, describe the Architectural Design, and finally document the class
+responsibilities through collaboration cards. This document builds on top of
+and extends the Software Requirements Specification document in that this
+document describes the way in which the system will interact with the outside
+world and how the subsystems will be architecturally and logically arranged.
+
+The target audience for this document are the stakeholders (Dr. Ridha Khedri,
+Andrew Le Clair and Michael Liut), and any current or future architects,
+designers and developers of this project.
+
 
 \subsection{System Description}
 \label{sub:system_description}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Give a brief description of the system. This could be a paragraph or two to give some context to this document.
-\end{enumerate}
-% End SubSection
+The Erudite application is intended to be a educational content management
+system for use in elementary school classrooms. The primary interface between
+the user and the software system is through a device running the Android
+operating system. This document defines the way in which the users will be
+expected to interact with the system and how the application will be decomposed
+into smaller subsystems to reduce the complexity and improve the
+maintainability, flexibility of this system.
+
+Specifically, the users of this system (application) are expected to perform a
+set of events that will prompt the system to react. The decomposition will then
+show how the subsystems will communicate among one another in order to
+efficiently distribute the work and perform the required actions in response to
+the user's actions.
 
 \subsection{Overview}
 \label{sub:overview}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Describe what the rest of the document contains 
-	\item Explain how the document is organised
-\end{enumerate}
-% End SubSection
+The remainder of the document is organized into 4 sections: Use Case Diagram --
+how the users and system will interact, Analysis Class Diagram -- the
+subsystems that compose this entire application, Architectural Design -- the
+layout of the subsystems into a well-understood software architecture, and
+Class responsibility collaboration Cards -- description of the interactions
+between the subsystems. Each section uses an appropriate notation and diagrams
+to document the design decision and describe the details of the high-level
+design of this system.
+
 
 % End Section
+
 
 \section{Use Case Diagram}
 \label{sec:use_case_diagram}
