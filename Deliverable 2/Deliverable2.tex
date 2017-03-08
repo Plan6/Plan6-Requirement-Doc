@@ -233,10 +233,123 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		
+		Knows Main Controller & \\
+		\hline
+		Knows Database Controller & \\
+		\hline
+		Knows Grades Entity & \\
+		\hline
+		Know Authentication Token Entity & \\
+		\hline
+		Knows Content Entity & \\
+		\hline
+		Knows Quiz Entity & \\
+		\hline
+		Receive encrypted username and password & Main Controller \\
+		\hline 
+		Send to Database Handler & Database Controller \\
+		\hline
+		Receive response object from Database Handler & Database Controller \\
+		\hline
+		Send response object from Database and return to Main Controller & Main \\
+		\hline
+		Receive authentication token storage request & Main Controller \\ 
+		\hline
+		Store authentication token & Authentication Token Entity \\
+		\hline
+		Receive content request & Main \\
+		\hline
+		Get authentication token & Authentication Token Entity \\
+		\hline
+		Send content request and authentication token & Database Controller \\
+		\hline
+		Receive content response & Database Controller \\
+		\hline
+		Send content response & Main Controller \\ 
+		\hline
+		Receive quiz request & Main Controller \\
+		\hline 
+		Get authentication token & Authentication Token Entity \\
+		\hline
+		Send quiz request and authentication token & Database Controller\\
+		\hline
+		Receive quiz response & Database Controller \\
+		\hline
+		Send quiz response & Main Controller \\
+		\hline 
+		Receive quiz solution request & Main Controller \\
+		\hline
+		Get authentication token & Authentication Token Entity \\
+		\hline
+		Send quiz solution request and authentication token & Database Controller \\
+		\hline
+		Receive quiz grade response & Database Controller \\
+		\hline 
+		Send quiz grade response & Main \\
+		\hline
+		Receive grades request & Main \\
+		\hline
+		Get authentication token & Authentication Model \\
+		\hline
+		Send grades request and authentication token & Database Controller \\
+		\hline
+		Receive grades response & Database Controller \\
+		\hline
+		Send grades response & Main \\
+		\hline
 		\vspace{1in} & \\
 		\hline
 		\end{tabular}
+		
+		%Database Controller
+		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\hline 
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Database Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Model Controller & \\
+		\hline
+		Knows Database Entity & \\
+		\hline
+		Receive encrypted username and password from model handler & Model Handler \\
+		\hline
+		Verify username and password with the database & Database \\
+		\hline
+		Send response object to the model handler & Model Controller \\
+		\hline
+		Receive content request and authentication token & Model Controller \\
+		\hline
+		Grab content from database & Database \\
+		\hline
+		Send content response & Model Controller \\
+		\hline
+		Receive quiz request and authentication token & Model Controller \\
+		\hline
+		Grab quiz from database & Database \\
+		\hline
+		Send quiz response & Model Controller \\
+		\hline
+		Receive quiz solution request and authentication token & Model 		Controller \\
+		\hline
+		Grab quiz solution from database & Database \\
+		\hline
+		Send quiz solution response & Model Controller \\
+		\hline
+		Receive grade update request and authentication token & Model Controller \\
+		\hline
+		Update grades from database & Database \\
+		\hline
+		Receive grade request and authentication token & Model 	Controller \\
+		\hline
+		Grab grades from database & Database \\
+		\hline
+		Send grades response & Model Controller \\
+		\hline
+
+		\vspace{1in} & \\
+		\hline
+		\end{tabular}		
 		
 	\end{table}
 	
