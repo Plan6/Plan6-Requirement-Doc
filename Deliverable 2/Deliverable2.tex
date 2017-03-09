@@ -251,7 +251,7 @@ This section should contain all of your CRC cards.
     \hline
     Requests to render QuizView & ViewController \\
     \hline
-    Handles keyboard input & \\
+    Handles keyboard input & Void \\
     \hline
     Send login request to ViewController & ViewController \\
     \hline
@@ -280,15 +280,15 @@ This section should contain all of your CRC cards.
     \hline
     Requests to render QuizView & ViewController \\
     \hline
-    Handles keyboard input & \\
+    Handles keyboard input & Void\\
     \hline
     Send course-content request to ViewController & ViewController \\
     \hline
     Send specific-file request to ViewController & ViewController \\
     \hline
-    Display course content list & \\
+    Display course content list & Void\\
     \hline
-    Display specific file content list & \\
+    Display specific file content list & Void\\
     \hline
     Request view change & ViewController \\
     \hline
@@ -311,11 +311,11 @@ This section should contain all of your CRC cards.
     \hline
     Requests to render QuizView & ViewController \\
     \hline
-    Handles keyboard input & \\
+    Handles keyboard input & Void \\
     \hline
-    Display current course grades list & \\
+    Display current course grades list & Void\\
     \hline
-    Display current cumulative grade point average list & \\
+    Display current cumulative grade point average list & Void\\
     \hline
     Request view change & ViewController \\
     \hline
@@ -338,17 +338,17 @@ This section should contain all of your CRC cards.
     \hline
     Requests to render GradeView & ViewController \\
     \hline
-    Handles keyboard input & \\
+    Handles keyboard input & Void\\
     \hline
     Request course quiz list & ViewController \\
     \hline
     Request specific quiz & ViewController \\
     \hline
-    Display course quiz list & \\
+    Display course quiz list & Void\\
     \hline
-    Display selected quiz & \\
+    Display selected quiz & Void\\
     \hline
-    Handles user answer selection & \\
+    Handles user answer selection & Void\\
     \hline
     Send quiz answers & ViewController \\
     \hline
@@ -366,7 +366,7 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Main Controller & \\
+		Knows Main Controller & Void\\
 		\hline
 		Receive quiz request from Main Controller & Main Controller \\
 		\hline
@@ -382,7 +382,7 @@ This section should contain all of your CRC cards.
 		\hline
 		Receive solutions from Main Controller & Main Controller \\
 		\hline
-		Mark quiz according to solution & \\
+		Mark quiz according to solution & Void\\
 		\hline
 		Send grade of quiz to Main Controller & Main Controller \\
 		\hline
@@ -400,7 +400,7 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Know Main Controller \\
+		Know Main Controller & Void \\
 		\hline
 		Receive grade request from Main Controller & Main Controller \\
 		\hline
@@ -408,7 +408,7 @@ This section should contain all of your CRC cards.
 		\hline
 		Receive grades from Main Controller & Main Controller \\
 		\hline
-		Process grades & \\
+		Process grades & Void\\
 		\hline
 		Send grades to Main Controller & Main Controller \\
 		\hline
@@ -425,17 +425,17 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Main Controller & \\
+		Knows Main Controller & Void\\
 		\hline
-		Knows Database Controller & \\
+		Knows Database Controller & Void\\
 		\hline
-		Knows Grades Entity & \\
+		Knows Grades Entity & Void \\
 		\hline
-		Know Authentication Token Entity & \\
+		Know Authentication Token Entity & Void \\
 		\hline
-		Knows Content Entity & \\
+		Knows Content Entity & Void\\
 		\hline
-		Knows Quiz Entity & \\
+		Knows Quiz Entity & Void \\
 		\hline
 		Receive encrypted username and password & Main Controller \\
 		\hline
@@ -502,9 +502,9 @@ This section should contain all of your CRC cards.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Knows Model Controller & \\
+		Knows Model Controller & Void\\
 		\hline
-		Knows Database Entity & \\
+		Knows Database Entity & Void\\
 		\hline
 		Receive encrypted username and password from model handler & Model Handler \\
 		\hline
@@ -542,6 +542,112 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
+	
+	 %View Controller
+
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: View Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Main Controller & Void\\
+		\hline
+		Requests Login View & Login View\\
+		\hline
+		Receive requests & Login View, Grade View, Quiz View, Content View\\
+		\hline
+		Forward requests & Main Controller \\
+		\hline
+		Receive and Send username and password pair to Main Controller & Login View, Main Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Main Controller
+
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Initiate app & Master View \\
+		\hline
+		Receive and send username and password pair to Login Controller & View Controller, Login Controller
+		\\
+		\hline
+		Receive and send encrypted username and password to model handler & Login Controller, Model Controller \\
+		\hline
+		Receive and send authentication object & Model Controller, Logic Controller
+        \\
+		\hline
+		Receive and send verified authentication object & Login Controller \\
+		\hline
+		Decide next state & Void \\
+		\hline
+		Send view update object & View Controller \\
+		\hline
+	    Receive and forward  requests & View Controller, Quiz Controller, Grade Controller, Model Controller  \\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Login Controller
+
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Login Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Main Controller & Void\\
+		\hline
+		Receive username and password pair  & Main Controller \\
+		\hline
+		Encrypt username and password & Void
+		\\
+		\hline
+		Send encrypted username and password to Main Controller & Main Controller \\
+		\hline
+		Receive Authentication Object & Main Controller 
+        \\
+		\hline
+		Verify that the response code from the Authentication object is successful & Void \\
+		\hline
+		Prompt Main Controller if successful or not successful & Main Controller \\
+		\hline
+		Request to store session token locally. Send to Main Controller & Main Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+    %Content Controller
+
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Content Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Knows Main Controller & Void\\
+		\hline
+		Receive content request from Main Controller & Main Controller\\
+		\hline
+		Send content response to Main Controller & Main Controller\\
+		\hline
+		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
 
 \end{enumerate}
 % End Section
@@ -566,7 +672,8 @@ This section should contain all of your CRC cards.
   \\\\
 
   \item [Puru Jetly]
-  \item{Baz}
+  \item{CRC Cards}
+  \item{General editing and formatting}
   \hfill \rule{2in}{0.1pt}
   \\\\
 
@@ -931,4 +1038,7 @@ deletion request is made after the warning.
 
 \end{document}
 %------------------------------------------------------------------------------
+
+
+
 
