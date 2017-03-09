@@ -144,11 +144,11 @@ The following diagram is an analysis class diagram for Erudite.\\
 % Begin SubSection
 Erudite will be built following the PAC architecture, where the system will be decomposed into a hierarchy of control modules, abstraction modules, and presentation modules.
 
-The PAC architecture was chosen because Erudite is composed with multiple subsystems with interactive requirements. Each subsystem requires a view to display information, data which it processes for different users, and a controller to determine the sequence of events. 
+The PAC architecture was chosen because Erudite is composed with multiple subsystems with interactive requirements. Each subsystem requires a view to display information, data which it processes for different users, and a controller to determine the sequence of events.
 
 The main advantages of choosing the PAC architecture is it separates the different subsystems, and this allows for different people to implement the different subsystems independently of each other. Moreover, each component of the subsystem can also be separated so that each component can be implemented independently of each other.
 
-Furthermore, the PAC architecture allows for high cohesion and low coupling systems. Each subsystem only interacts with the main controller, and all of the components of the subsystem are needed in order for the subsystem to fulfil its function. 
+Furthermore, the PAC architecture allows for high cohesion and low coupling systems. Each subsystem only interacts with the main controller, and all of the components of the subsystem are needed in order for the subsystem to fulfil its function.
 
 
 %Add a structural architecture diagram here
@@ -163,7 +163,7 @@ Furthermore, the PAC architecture allows for high cohesion and low coupling syst
 \label{sub:subsystems}
 % Begin SubSection
 \begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its 
+	\item Provide a brief description of each subsystem. Be sure to document its
 purpose and relationship to other subsystems.
 \end{enumerate}
 
@@ -176,7 +176,7 @@ WRITE SOMETHING HERE
 \subsubsection{The Grade Management System}
 WRITE SOMETHING HERE
 
-\subsubsection{The Authentication System} 
+\subsubsection{The Authentication System}
 WRITE SOMETHING HERE
 % End SubSection
 
@@ -316,7 +316,7 @@ This section should contain all of your CRC cards.
 	%quiz controller
 	\begin{table}[H]
 	\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz Controller}} \\
 		\hline
@@ -350,7 +350,7 @@ This section should contain all of your CRC cards.
 
 	\begin{table}[H]
 	\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade Controller}} \\
 		\hline
@@ -375,7 +375,7 @@ This section should contain all of your CRC cards.
 
 	\begin{table}[H]
 	\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Model Controller}} \\
 		\hline
@@ -452,7 +452,7 @@ This section should contain all of your CRC cards.
 
 	\begin{table}[H]
 	\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
+		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Database Controller}} \\
 		\hline
@@ -525,7 +525,8 @@ This section should contain all of your CRC cards.
   \\\\
 
   \item [Terrance Yip]
-  \item{Qux}
+   \item{CRC Cards}
+  \item{Analysis Class Diagram}
   \hfill \rule{2in}{0.1pt}
   \\\\
 
@@ -535,6 +536,305 @@ This section should contain all of your CRC cards.
   \hfill \rule{2in}{0.1pt}
   \\\\
 \end{description}
+
+\newpage
+\section{Apportioning of Requirements}
+The following business events will not be addressed in the future deliverables.
+
+\begin{enumerate}[{BE}1.]
+	\item A teacher wants to create a course.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item Students shall be able to enrol in an existing course owned by the
+teacher provided the course is set visible.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+			    \item The teacher shall own the created course.
+				\item A teacher shall be able to choose to unenroll a student from a course
+that the teacher owns.
+				\item A teacher shall not be enrolled in a course.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item Parents shall be able to view the course's progress or student
+performance through their child's account.
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The school administration shall be allowed to choose to whether to
+allow students and teachers
+to create their own accounts, or create accounts for all students and teachers.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item All courses, course content, student content and any teacher student
+communication held on the on the system shall be made visible to the school
+board.
+			\end{enumerate}
+	\end{enumerate}
+
+	\item A teacher wants to add content to a course they own.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+        \item A student enrolled in a course shall be able to view any content within the course when the content is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to view any content set visible by the course owner.
+        \item A student shall be able to submit an \underline{assignment}; a piece of content uploaded in response to a manual-evaluational content when the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
+        \item The system shall provide interface elements that allow the student to submit an assignment in response to manual-evaltional content.
+        \item A student shall be able to submit an automated-evaluational content when it is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to open and submit automated-evaluational content that is set visible by the owner of the course.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item Teachers shall be allowed to set permissions that students have over each file.
+        \item The system shall provide interface elements that allow the teacher to set permissions that students have over each file.
+				\item The teacher shall specify a time period for which file submission is accepted by the manual-evaluational piece of content for manual-evaluational content.
+        \item The system shall provide interface elements that allow the teacher to speicify the time period for which file submission is accepted by manual-evaluational content.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+	\item A teacher wants to add automated-evaluational content.
+	\begin{enumerate}[{VP2}.1]
+
+		\item Student Viewpoint
+			\begin{enumerate}
+        \item Students shall be able to view the automated-evaluational content
+          only if the teacher sets the visibility of the content to be viewable
+          by students.
+
+        \item Students shall be able to open automated-evaluational content for
+          a predefined period of time specified by the course owner when the
+          content is made visible.
+
+        \item Automated-evaluational content that has been opened and viewed by
+          a student shall be submitted manually by the student or automatically
+          before or at the end of predefined time (as specified by the teacher)
+          respectively.
+			\end{enumerate}
+
+		\item Teacher Viewpoint
+			\begin{enumerate}
+        \item The teacher shall specify the visibility of the
+          automated-evaluational content or it will default to "not visible to
+          students".
+			\end{enumerate}
+
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+	\end{enumerate}
+
+  \item The owner of a course specifies a time period in which non-evaluational
+    content, manual-evaluational content, automated-evaluational content or a
+    course is set visible for all enrolled students.
+	\begin{enumerate}[{VP2}.1]
+
+		\item Student Viewpoint
+			\begin{enumerate}
+        \item Students shall be unenrolled from a course that is set to not
+          visible.
+
+        \item Students shall not be able to view a course or
+          \textbf{course content} which is not made visible to them.
+			\end{enumerate}
+
+		\item Teacher Viewpoint
+			\begin{enumerate}
+        \item The teacher shall be able to permanently remove \textbf{course
+          content} from a course owned by them.
+			\end{enumerate}
+
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+  \item A student attempts to enroll in a course.
+	\begin{enumerate}[{VP2}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+        \item A student shall not be able to enroll in a course that is not
+          visible to them.
+        \item A student shall be able view all courses in which they are
+          enrolled.
+        \item A student shall not be able to self withdraw from a course in
+          which he or she is enrolled.
+        \item A student that is dismissed from a course shall no longer be
+          enrolled in that course.
+        \item A dismissed student shall not self enroll in a course from which
+          he or she was dismissed.
+        \item A student whom is not enrolled in a course shall have no access
+          to \textbf{course content} found within that course.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+        \item A teacher shall be able to dismiss an enrolled student from a
+          course owned by that teacher.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+        \item The school administration shall be able to dismiss an enrolled
+          student from a course.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+
+	\item The school administration wants to add a Teacher or a Student account.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item The student shall receive a Student ID and password to access their
+personal if a new student account.
+				\item The system shall allow the student to access their personal account when given the correct student id and password.
+				\item The student shall choose a new password upon first signing into the
+system.
+				\item The system shall prompt new users to change their password.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item The teacher shall receive a Teacher ID and password to access their
+personal teacher account.
+				\item The system shall allow a teacher to access their personal account given the correct login credentials.
+				\item The teacher shall choose a new password upon first signing into the
+system.
+				\item The system shall prompt new users to change their password.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The School Administration shall be able to create a set of usernames
+and passwords from an external file.
+				\item The system shall store a set of usernames and passwords.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item The school administration shall monitor communication.
+				\item The system shall provide functionality for the school administration to monitor communication
+				\item All enquiries shall be
+forwarded to the school administration.
+				\item The system shall forward all enquiries to the school administration.
+				\item The school
+administration shall be given access and privileges to hide, remove or track the
+origin of a piece of content or course when any content malign against board
+policies is uploaded to the system.
+				\item The system shall have privileges that are provided to the school administration to remove and track origins of a piece of content or course.
+			\end{enumerate}
+	\end{enumerate}
+
+	\item The school administration wants to delete a course.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item All students shall be unenrolled from the course.
+				\item The system shall allow student to be unenrolled from courses.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item A teacher shall not own a deleted course.
+				\item The system shall check that no teachers have a deleted course.
+				\item{All content shall be deleted from the system.}
+				\item The system shall delete all the content from a deleted course.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The school administration account shall be given a warning after a
+course
+deletion request is made.
+				\item The system shall alert the school administration when deletion request is made.
+\item The course shall deleted only if a course deletion
+request is made a second time following the warning.
+\item The system shall only allow the course to be deleted after another deletion request is made after the warning.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+
+
 
 
 % \newpage
