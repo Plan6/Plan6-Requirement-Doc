@@ -116,7 +116,7 @@ The following diagram is an use case diagram for Erudite.\\
 
 {
   \centering
-  \includegraphics[scale=0.40]{"A2_Assets/Use Case Diagram"}
+  \includegraphics[scale=0.40]{A2_Assets/Use_Case_Diagram_v1.jpg}
 }
 
 \newpage
@@ -136,32 +136,48 @@ The following diagram is an analysis class diagram for Erudite.\\
 \label{sec:architectural_design}
 % Begin Section
 
+
+
+
+\subsection{System Architecture}
+\label{sub:system_architecture}
+% Begin SubSection
+Erudite will be built following the PAC architecture, where the system will be decomposed into a hierarchy of control modules, abstraction modules, and presentation modules.
+
+The PAC architecture was chosen because Erudite is composed with multiple subsystems with interactive requirements. Each subsystem requires a view to display information, data which it processes for different users, and a controller to determine the sequence of events. 
+
+The main advantages of choosing the PAC architecture is it separates the different subsystems, and this allows for different people to implement the different subsystems independently of each other. Moreover, each component of the subsystem can also be separated so that each component can be implemented independently of each other.
+
+Furthermore, the PAC architecture allows for high cohesion and low coupling systems. Each subsystem only interacts with the main controller, and all of the components of the subsystem are needed in order for the subsystem to fulfil its function. 
+
+
+%Add a structural architecture diagram here
 {
   \centering
     \includegraphics[scale=0.5]{A2_Assets/Structural_Class_Diagram_v2.jpg}
   \centerline{Structural Class Diagram}
 }
-System description.
-
-\subsection{System Architecture}
-\label{sub:system_architecture}
-% Begin SubSection
-Erudite will be built using the MVC-II architecture, where the system will be decomposed into views, controllers, models, and a database.
-
-The MVC-II architecture was chosen because Erudite contains 3 main components: views, controllers (i.e. business logic), and data models. The MVC-II architecture allows for the separation of the 3 aforementioned components. This separation of concerns will allow for a seamless implementation of the application at the development phase, as different team members can be assigned to create different components of the overall system.
-
-Furthermore, Erudite is used by 2 classes of users: teachers and students. Both classes of users use the same data; however, the way each class sees the data is different. For instance, students should only see their own grades, whereas teachers should see all of their students' grades. The MVC-II architecture allows for the different views to be implemented with the same set of data: the representation of the data does not need to change.  Moreover, additional views can be added without changing the rest of the system. Accordingly, the MVC-II architecture will be used.
-
-%Add a structural architecture diagram here
 % End SubSection
 
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
 \begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its
+	\item Provide a brief description of each subsystem. Be sure to document its 
 purpose and relationship to other subsystems.
 \end{enumerate}
+
+\subsubsection{The Content Management System}
+The content management system is responsible for receiving and displaying content to the users. It is connected to the control system which dictates when this system is active, and it sends requests to the main control to be forwarded to the model for data processing, and to the view for display.
+
+\subsubsection{The Quiz Management System}
+WRITE SOMETHING HERE
+
+\subsubsection{The Grade Management System}
+WRITE SOMETHING HERE
+
+\subsubsection{The Authentication System} 
+WRITE SOMETHING HERE
 % End SubSection
 
 % End Section
