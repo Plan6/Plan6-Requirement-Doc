@@ -155,13 +155,13 @@ Furthermore, Erudite is used by 2 classes of users: teachers and students. Both 
 \label{sub:subsystems}
 % Begin SubSection
 \begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its 
+	\item Provide a brief description of each subsystem. Be sure to document its
 purpose and relationship to other subsystems.
 \end{enumerate}
 % End SubSection
 
 % End Section
-	
+
 \section{Class Responsibility Collaboration (CRC) Cards}
 \label{sec:class_responsibility_collaboration_crc_cards}
 % Begin Section
@@ -169,25 +169,135 @@ This section should contain all of your CRC cards.
 
 \begin{enumerate}[a)]
 	\item Provide a CRC Card for each identified class
-	\item Please use the format outlined in tutorial, i.e., 
-	\begin{table}[H]
+	\item Please use the format outlined in tutorial, i.e.,
+
+  \begin{table}[ht]
 		\centering
-		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
-		 \multicolumn{2}{|l|}{\textbf{Class Name:}} \\
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} LoginView} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		\vspace{1in} & \\
-		\hline
+    Handles self-render request & ViewController \\
+    \hline
+    Requests to render ContentView & ViewController \\
+    \hline
+    Requests to render GradeView & ViewController \\
+    \hline
+    Requests to render QuizView & ViewController \\
+    \hline
+    Handles keyboard input & \\
+    \hline
+    Send login request to ViewController & ViewController \\
+    \hline
+    Send username and password pair to ViewController & ViewController \\
+    \hline
+    Prompt user if login request fails & ViewController \\
+    \hline
+    Request view change & ViewController \\
+    \hline
 		\end{tabular}
 	\end{table}
-	
+
+  \begin{table}[ht]
+		\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name:} ContentView} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+    Handles self-render request & ViewController \\
+    \hline
+    Requests to render LoginView & ViewController \\
+    \hline
+    Requests to render GradeView & ViewController \\
+    \hline
+    Requests to render QuizView & ViewController \\
+    \hline
+    Handles keyboard input & \\
+    \hline
+    Send course-content request to ViewController & ViewController \\
+    \hline
+    Send specific-file request to ViewController & ViewController \\
+    \hline
+    Display course content list & \\
+    \hline
+    Display specific file content list & \\
+    \hline
+    Request view change & ViewController \\
+    \hline
+		\end{tabular}
+	\end{table}
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{9cm}|p{3cm}|}
+    \hline
+     \multicolumn{2}{|l|}{\textbf{Class Name:} GradeView} \\
+    \hline
+    \textbf{Responsibility:} & \textbf{Collaborators:} \\
+    \hline
+    Handles self-render request & ViewController \\
+    \hline
+    Requests to render LoginView & ViewController \\
+    \hline
+    Requests to render ContentView & ViewController \\
+    \hline
+    Requests to render QuizView & ViewController \\
+    \hline
+    Handles keyboard input & \\
+    \hline
+    Display current course grades list & \\
+    \hline
+    Display current cumulative grade point average list & \\
+    \hline
+    Request view change & ViewController \\
+    \hline
+    \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+    \centering
+    \begin{tabular}{|p{9cm}|p{3cm}|}
+    \hline
+     \multicolumn{2}{|l|}{\textbf{Class Name:} QuizView} \\
+    \hline
+    \textbf{Responsibility:} & \textbf{Collaborators:} \\
+    \hline
+    Handles self-render request & ViewController \\
+    \hline
+    Requests to render LoginView & ViewController \\
+    \hline
+    Requests to render ContentView & ViewController \\
+    \hline
+    Requests to render GradeView & ViewController \\
+    \hline
+    Handles keyboard input & \\
+    \hline
+    Request course quiz list & ViewController \\
+    \hline
+    Request specific quiz & ViewController \\
+    \hline
+    Display course quiz list & \\
+    \hline
+    Display selected quiz & \\
+    \hline
+    Handles user answer selection & \\
+    \hline
+    Send quiz answers & ViewController \\
+    \hline
+    Request view change & ViewController \\
+    \hline
+    \end{tabular}
+  \end{table}
+
 	%quiz controller
-	\begin{table}[H]
+	\begin{table}[ht]
 	\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
+		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
@@ -200,7 +310,7 @@ This section should contain all of your CRC cards.
 		\hline
 		Receive quiz result from Main Controller & Main Controller \\
 		\hline
-		Process quiz result from Main Controller & Main Controller \\ 
+		Process quiz result from Main Controller & Main Controller \\
 		\hline
 		Receive student answer from Main Controller & Main Controller \\
 		\hline
@@ -209,19 +319,19 @@ This section should contain all of your CRC cards.
 		Receive solutions from Main Controller & Main Controller \\
 		\hline
 		Mark quiz according to solution & \\
-		\hline 
+		\hline
 		Send grade of quiz to Main Controller & Main Controller \\
 		\hline
 
 		\end{tabular}
 	\end{table}
-	
+
 	%Grade Controller
-	
-	\begin{table}[H]
+
+	\begin{table}[ht]
 	\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
+		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
@@ -232,7 +342,7 @@ This section should contain all of your CRC cards.
 		\hline
 		Send grade response to Main Controller & Main Controller \\
 		\hline
-		Receive grades from Main Controller & Main Controller \\ 
+		Receive grades from Main Controller & Main Controller \\
 		\hline
 		Process grades & \\
 		\hline
@@ -240,13 +350,13 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
-	
+
 		%Model Controller
-		
-	\begin{table}
+
+	\begin{table}[ht]
 	\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
+		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Model Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
@@ -264,14 +374,14 @@ This section should contain all of your CRC cards.
 		Knows Quiz Entity & \\
 		\hline
 		Receive encrypted username and password & Main Controller \\
-		\hline 
+		\hline
 		Send to Database Handler & Database Controller \\
 		\hline
 		Receive response object from Database Handler & Database Controller \\
 		\hline
 		Send response object from Database and return to Main Controller & Main \\
 		\hline
-		Receive authentication token storage request & Main Controller \\ 
+		Receive authentication token storage request & Main Controller \\
 		\hline
 		Store authentication token & Authentication Token Entity \\
 		\hline
@@ -283,10 +393,10 @@ This section should contain all of your CRC cards.
 		\hline
 		Receive content response & Database Controller \\
 		\hline
-		Send content response & Main Controller \\ 
+		Send content response & Main Controller \\
 		\hline
 		Receive quiz request & Main Controller \\
-		\hline 
+		\hline
 		Get authentication token & Authentication Token Entity \\
 		\hline
 		Send quiz request and authentication token & Database Controller\\
@@ -294,7 +404,7 @@ This section should contain all of your CRC cards.
 		Receive quiz response & Database Controller \\
 		\hline
 		Send quiz response & Main Controller \\
-		\hline 
+		\hline
 		Receive quiz solution request & Main Controller \\
 		\hline
 		Get authentication token & Authentication Token Entity \\
@@ -302,7 +412,7 @@ This section should contain all of your CRC cards.
 		Send quiz solution request and authentication token & Database Controller \\
 		\hline
 		Receive quiz grade response & Database Controller \\
-		\hline 
+		\hline
 		Send quiz grade response & Main \\
 		\hline
 		Receive grades request & Main \\
@@ -317,13 +427,13 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
-	
+
 		%Database Controller
-		
-	\begin{table}[H]
+
+	\begin{table}[ht]
 	\centering
 		\begin{tabular}{|p{5cm}|p{5cm}|}
-		\hline 
+		\hline
 		 \multicolumn{2}{|l|}{\textbf{Class Name: Database Controller}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
@@ -366,9 +476,9 @@ This section should contain all of your CRC cards.
 		\hline
 		Send grades response & Model Controller \\
 		\hline
-		\end{tabular}		
+		\end{tabular}
 	\end{table}
-	
+
 \end{enumerate}
 % End Section
 
@@ -384,7 +494,7 @@ This section should contain all of your CRC cards.
   \\\\
 
   \item [Danish Khan]
-  \item{Bar}
+  \item{CRC Cards}
   \hfill \rule{2in}{0.1pt}
   \\\\
 
@@ -409,31 +519,30 @@ This section should contain all of your CRC cards.
 \newpage
 \section*{IMPORTANT NOTES}
 \begin{itemize}
-	\item You do \underline{NOT} need to provide a text explanation of each 
+	\item You do \underline{NOT} need to provide a text explanation of each
 diagram; the diagram should speak for itself
 	\item Please document any non-standard notations that you may have used
 	\begin{itemize}
-		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the 
+		\item \emph{Rule of Thumb}: if you feel there is any doubt surrounding the
 meaning of your notations, document them
 	\end{itemize}
 	\item Some diagrams may be difficult to fit into one page
 	\begin{itemize}
-		\item It is OK if the text is small but please ensure that it is readable when 
+		\item It is OK if the text is small but please ensure that it is readable when
 printed
-		\item If you need to break a diagram onto multiple pages, please adopt a 
-system of doing so and thoroughly explain how it can be reconnected from one 
+		\item If you need to break a diagram onto multiple pages, please adopt a
+system of doing so and thoroughly explain how it can be reconnected from one
 page to the next; if you are unsure about this, please ask about it
 	\end{itemize}
 	\item Please submit the latest version of Deliverable 1 with Deliverable 2
 	\begin{itemize}
-		\item It does not have to be a freshly printed version; the latest marked 
+		\item It does not have to be a freshly printed version; the latest marked
 version is OK
 	\end{itemize}
-	\item If you do \underline{NOT} have a Division of Labour sheet, your 
+	\item If you do \underline{NOT} have a Division of Labour sheet, your
 deliverable will \underline{NOT} be marked
 \end{itemize}
 
 
 \end{document}
 %------------------------------------------------------------------------------
-
