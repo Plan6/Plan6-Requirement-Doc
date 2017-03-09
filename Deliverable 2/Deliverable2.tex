@@ -148,8 +148,9 @@ The PAC architecture was chosen because Erudite is composed with multiple subsys
 
 The main advantages of choosing the PAC architecture is it separates the different subsystems, and this allows for different people to implement the different subsystems independently of each other. Moreover, each component of the subsystem can also be separated so that each component can be implemented independently of each other.
 
-Furthermore, the PAC architecture allows for high cohesion and low coupling systems. Each subsystem only interacts with the main controller, and all of the components of the subsystem are needed in order for the subsystem to fulfil its function.
+Furthermore, the PAC architecture allows for high cohesion and low coupling systems. The PAC architecture ensures high cohesion because each subsystem can only interact with the related components, and the main controller. This ensures that only relevant components are grouped together, and other components are grouped in other subsystems. Moreover, each of the systems only has a single connection to the main controller, and not to any other subsystems. Aside from the main controller, all of the subsystems are loosely coupled with each other, and the internal implementation of each subsystem can be changed with minimal modifications to the other subsystems.
 
+Finally, the main controller in the PAC architecture allows Erudite to be extensible. New features can be added to the system with minimal modification: only a new Controller-Abstraction-Presentation needs to be added. Accordingly, Erudite will be based off the PAC architecture because of its ability to support multiple interactive subsystems while ensuring important software design principles such as high cohesion and low coupling.
 
 %Add a structural architecture diagram here
 {
@@ -833,10 +834,6 @@ request is made a second time following the warning.
 			\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
-
-
-
-
 
 % \newpage
 % \section*{IMPORTANT NOTES}
