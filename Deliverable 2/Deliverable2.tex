@@ -142,15 +142,37 @@ The following diagram is an analysis class diagram for Erudite.\\
 \subsection{System Architecture}
 \label{sub:system_architecture}
 % Begin SubSection
-Erudite will be built following the PAC architecture, where the system will be decomposed into a hierarchy of control modules, abstraction modules, and presentation modules.
+Erudite will be built following the PAC architecture, where the system will be 
+decomposed into a hierarchy of control modules, abstraction modules, and 
+presentation modules.
 
-The PAC architecture was chosen because Erudite is composed with multiple subsystems with interactive requirements. Each subsystem requires a view to display information, data which it processes for different users, and a controller to determine the sequence of events.
+The PAC architecture was chosen because Erudite is composed with multiple 
+subsystems with interactive requirements. Each subsystem requires a view to 
+display information, data which it processes for different users, and a 
+controller to determine the sequence of events.
 
-The main advantages of choosing the PAC architecture is it separates the different subsystems, and this allows for different people to implement the different subsystems independently of each other. Moreover, each component of the subsystem can also be separated so that each component can be implemented independently of each other.
+The main advantages of choosing the PAC architecture is it separates the 
+different subsystems, and this allows for different people to implement the 
+different subsystems independently of each other. Moreover, each component of 
+the subsystem can also be separated so that each component can be implemented 
+independently of each other.
 
-Furthermore, the PAC architecture allows for high cohesion and low coupling systems. The PAC architecture ensures high cohesion because each subsystem can only interact with the related components, and the main controller. This ensures that only relevant components are grouped together, and other components are grouped in other subsystems. Moreover, each of the systems only has a single connection to the main controller, and not to any other subsystems. Aside from the main controller, all of the subsystems are loosely coupled with each other, and the internal implementation of each subsystem can be changed with minimal modifications to the other subsystems.
+Furthermore, the PAC architecture allows for high cohesion and low coupling 
+systems. The PAC architecture ensures high cohesion because each subsystem can 
+only interact with the related components, and the main controller. This ensures 
+that only relevant components are grouped together, and other components are 
+grouped in other subsystems. Moreover, each of the systems only has a single 
+connection to the main controller, and not to any other subsystems. Aside from 
+the main controller, all of the subsystems are loosely coupled with each other, 
+and the internal implementation of each subsystem can be changed with minimal 
+modifications to the other subsystems.
 
-Finally, the main controller in the PAC architecture allows Erudite to be extensible. New features can be added to the system with minimal modification: only a new Controller-Abstraction-Presentation needs to be added. Accordingly, Erudite will be based off the PAC architecture because of its ability to support multiple interactive subsystems while ensuring important software design principles such as high cohesion and low coupling.
+Finally, the main controller in the PAC architecture allows Erudite to be 
+extensible. New features can be added to the system with minimal modification: 
+only a new Controller-Abstraction-Presentation needs to be added. Accordingly, 
+Erudite will be based off the PAC architecture because of its ability to support 
+multiple interactive subsystems while ensuring important software design 
+principles such as high cohesion and low coupling.
 
 %Add a structural architecture diagram here
 {
@@ -163,22 +185,34 @@ Finally, the main controller in the PAC architecture allows Erudite to be extens
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
-\begin{enumerate}[a)]
-	\item Provide a brief description of each subsystem. Be sure to document its
-purpose and relationship to other subsystems.
-\end{enumerate}
-
 \subsubsection{The Content Management System}
-The content management system is responsible for receiving and displaying non-evaluational content to the users. It is connected to the control system which dictates when this system is active, and it sends requests to the main control to be forwarded to the model for data processing, and to the view for display.
+The content management system is responsible for receiving and displaying 
+content to the users. It is connected to the control system which dictates when 
+this system is active, and it sends requests to the main control to be forwarded 
+to the model for data processing, and to the view for display.
 
 \subsubsection{The Quiz Management System}
-The quiz management system is responsibile for recieving and displaying automated-evaluational content to the users. This system randomly selects multiple-choice questions from a question bank, shuffles answers and displays them to the user. It is connected to the control system which dictates when this system is active, and it sends requests to the main control to be forwarded to the model for data processing, and to the view for display.
+The quiz management system is responsible for receiving and displaying 
+automated-evaluational content to the users. This system randomly selects 
+multiple-choice questions from a question bank, shuffles answers and displays 
+them to the user. It is connected to the control system which dictates when this 
+system is active, and it sends requests to the main control to be forwarded to 
+the model for data processing, and to the view for display.
 
 \subsubsection{The Grade Management System}
-The grade management system is responsibile for recieving and displaying student grades to the users according to user type. The system displays only grades relevant to the student if a student accesses grades and displays all assigned grades to a teacher should a teacher access course grades. This system is connected to the control system which dictates when this system is active, and it sends requests to the main control to be forwarded to the model for data processing, and to the view for display.
+The grade management system is responsible for receiving and displaying student 
+grades to the users according to user type. The system displays only grades 
+relevant to the student if a student accesses grades and displays all assigned 
+grades to a teacher should a teacher access course grades. This system is 
+connected to the control system which dictates when this system is active, and 
+it sends requests to the main control to be forwarded to the model for data 
+processing, and to the view for display.
 
 \subsubsection{The Authentication System}
-The authentication system authenticates users login credentials. This system is connected to the control system which dictates when this system is active, and it sends requests to the main control to be forwarded to the model for data processing, and to the view for display.
+The authentication system authenticates users login credentials. This system is 
+connected to the control system which dictates when this system is active, and 
+it sends requests to the main control to be forwarded to the model for data 
+processing, and to the view for display.
 
 % End SubSection
 
@@ -516,8 +550,8 @@ This section should contain all of your CRC cards.
   \\\\
 
   \item [Danish Khan]
-  \item{CRC Cards, Structural Class Diagram}
-  \item{Appendix B: Apportioning of Requirements, 4.1 Subsystems /w Kelvin}
+  \item{CRC Cards}
+  \item{Structural Class Diagram}
   \hfill \rule{2in}{0.1pt}
   \\\\
 
@@ -585,19 +619,34 @@ board.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-        \item A student enrolled in a course shall be able to view any content within the course when the content is set visible by the owner of that course.
-        \item The system shall provide interface elements that allow the student to view any content set visible by the course owner.
-        \item A student shall be able to submit an \underline{assignment}; a piece of content uploaded in response to a manual-evaluational content when the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
-        \item The system shall provide interface elements that allow the student to submit an assignment in response to manual-evaltional content.
-        \item A student shall be able to submit an automated-evaluational content when it is set visible by the owner of that course.
-        \item The system shall provide interface elements that allow the student to open and submit automated-evaluational content that is set visible by the owner of the course.
+        \item A student enrolled in a course shall be able to view any content 
+within the course when the content is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student 
+to view any content set visible by the course owner.
+        \item A student shall be able to submit an \underline{assignment}; a 
+piece of content uploaded in response to a manual-evaluational content when the 
+manual-evaluational content is set visible by the owner of that course and file 
+submission is enabled.
+        \item The system shall provide interface elements that allow the student 
+to submit an assignment in response to manual-evaltional content.
+        \item A student shall be able to submit an automated-evaluational 
+content when it is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student 
+to open and submit automated-evaluational content that is set visible by the 
+owner of the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Teachers shall be allowed to set permissions that students have over each file.
-        \item The system shall provide interface elements that allow the teacher to set permissions that students have over each file.
-				\item The teacher shall specify a time period for which file submission is accepted by the manual-evaluational piece of content for manual-evaluational content.
-        \item The system shall provide interface elements that allow the teacher to speicify the time period for which file submission is accepted by manual-evaluational content.
+				\item Teachers shall be allowed to set permissions that students have over 
+each file.
+        \item The system shall provide interface elements that allow the teacher 
+to set permissions that students have over each file.
+				\item The teacher shall specify a time period for which file submission is 
+accepted by the manual-evaluational piece of content for manual-evaluational 
+content.
+        \item The system shall provide interface elements that allow the teacher 
+to speicify the time period for which file submission is accepted by 
+manual-evaluational content.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -754,7 +803,8 @@ board.
 			\begin{enumerate}
 				\item The student shall receive a Student ID and password to access their
 personal if a new student account.
-				\item The system shall allow the student to access their personal account when given the correct student id and password.
+				\item The system shall allow the student to access their personal account 
+when given the correct student id and password.
 				\item The student shall choose a new password upon first signing into the
 system.
 				\item The system shall prompt new users to change their password.
@@ -763,7 +813,8 @@ system.
 			\begin{enumerate}
 				\item The teacher shall receive a Teacher ID and password to access their
 personal teacher account.
-				\item The system shall allow a teacher to access their personal account given the correct login credentials.
+				\item The system shall allow a teacher to access their personal account 
+given the correct login credentials.
 				\item The teacher shall choose a new password upon first signing into the
 system.
 				\item The system shall prompt new users to change their password.
@@ -785,7 +836,8 @@ and passwords from an external file.
 		\item Government \& School Board Viewpoint
 			\begin{enumerate}
 				\item The school administration shall monitor communication.
-				\item The system shall provide functionality for the school administration to monitor communication
+				\item The system shall provide functionality for the school administration 
+to monitor communication
 				\item All enquiries shall be
 forwarded to the school administration.
 				\item The system shall forward all enquiries to the school administration.
@@ -793,7 +845,8 @@ forwarded to the school administration.
 administration shall be given access and privileges to hide, remove or track the
 origin of a piece of content or course when any content malign against board
 policies is uploaded to the system.
-				\item The system shall have privileges that are provided to the school administration to remove and track origins of a piece of content or course.
+				\item The system shall have privileges that are provided to the school 
+administration to remove and track origins of a piece of content or course.
 			\end{enumerate}
 	\end{enumerate}
 
@@ -820,10 +873,12 @@ policies is uploaded to the system.
 				\item The school administration account shall be given a warning after a
 course
 deletion request is made.
-				\item The system shall alert the school administration when deletion request is made.
+				\item The system shall alert the school administration when deletion request 
+is made.
 \item The course shall deleted only if a course deletion
 request is made a second time following the warning.
-\item The system shall only allow the course to be deleted after another deletion request is made after the warning.
+\item The system shall only allow the course to be deleted after another 
+deletion request is made after the warning.
 			\end{enumerate}
 		\item Information Technology Team Viewpoint
 			\begin{enumerate}
@@ -866,3 +921,4 @@ request is made a second time following the warning.
 
 \end{document}
 %------------------------------------------------------------------------------
+
