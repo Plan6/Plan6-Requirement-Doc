@@ -30,7 +30,8 @@
 %------------------------------------------------------------------------------
 \title{
   Erudite\\
-  \large \emph{An educational content management system}
+  \large \emph{An educational content management system}  \\
+    \color{red} NOT FOR REMARKING
 }
 
 \author{
@@ -371,19 +372,6 @@ that is internet enabled.
 \subsection{Apportioning of Requirements}
 \label{sub:apportioning_of_requirements}
 % Begin SubSection
-This section is void.
-% End SubSection
-
-% End Section
-
-\section{Functional Requirements}
-\label{sec:functional_requirements}
-
-Please refer to \textbf{Section 1.3 Definitions, Acronyms, and Abbreviations}
-for a definitions of \textbf{key} terms used herein.
-
-% TEACHER BUSINESS EVENTS (5)
-
 \begin{enumerate}[{BE}1.]
 	\item A teacher wants to create a course.
 	\begin{enumerate}[{VP1}.1]
@@ -426,56 +414,34 @@ board.
 	\begin{enumerate}[{VP1}.1]
 		\item Student Viewpoint
 			\begin{enumerate}
-        \item A student enrolled in a course shall be able to view any content within the course when the content is set visible by the owner of that course.
-        \item The system shall provide interface elements that allow the student to view any content set visible by the course owner.
-        \item A student shall be able to submit an \underline{assignment}; a piece of content uploaded in response to a manual-evaluational content when the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
-        \item The system shall provide interface elements that allow the student to submit an assignment in response to manual-evaltional content.
-        \item A student shall be able to submit an automated-evaluational content when it is set visible by the owner of that course.
-        \item The system shall provide interface elements that allow the student to open and submit automated-evaluational content that is set visible by the owner of the course.
+        \item A student enrolled in a course shall be able to view any content 
+within the course when the content is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student 
+to view any content set visible by the course owner.
+        \item A student shall be able to submit an \underline{assignment}; a 
+piece of content uploaded in response to a manual-evaluational content when the 
+manual-evaluational content is set visible by the owner of that course and file 
+submission is enabled.
+        \item The system shall provide interface elements that allow the student 
+to submit an assignment in response to manual-evaltional content.
+        \item A student shall be able to submit an automated-evaluational 
+content when it is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student 
+to open and submit automated-evaluational content that is set visible by the 
+owner of the course.
 			\end{enumerate}
 		\item Teacher Viewpoint
 			\begin{enumerate}
-				\item Teachers shall be allowed to set permissions that students have over each file.
-        \item The system shall provide interface elements that allow the teacher to set permissions that students have over each file.
-				\item The teacher shall specify a time period for which file submission is accepted by the manual-evaluational piece of content for manual-evaluational content.
-        \item The system shall provide interface elements that allow the teacher to speicify the time period for which file submission is accepted by manual-evaluational content.
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
-
-	\item A teacher views a submitted \underline{student assignment}.
-	\begin{enumerate}[{VP2}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item A student shall be able to submit a \underline{student assignment} multiple times in response to a manual-evaluational content posted by the course owner when the manual-evaluational content is set visible by the course owner and file submission is enabled for that manual-evaluational content.
-        \item The system shall allow the student to submit a \underline{student assignment} multiple times in response to a visible manual-evaluational content and for which file submission is enabled.
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item A teacher shall be able to assign a numerical decimal weight between 0.001 to 1.0 and either a numerical or letter grade to the \underline{student assignment}.
-        \item The system shall provide interface elements that allow the teacher to assign numerical decimal weight between 0.001 and 1.0 or a letter grade to the \underline{student assignment}.
-				\item A teacher shall be able to change an assigned weight or grade to a \underline{student assignment}.
-        \item The system shall provide interface elements that allow the teacher to change an assigned grade to a \underline{student assignment}.
-				\item The system shall warn the teacher if the numerical weights assigned for manual-evaluational content exceeds 1.0.
-				\item A teacher shall be able to leave a comment regarding the assigned grade.
-        \item The system shall provide interface elements that allow the teacher to leave comments regarding an assigned grade to a \underline{student assignment}.
-				\item The teacher shall define the numerical value of each letter grade. The values of each letter grade can be redefined by the teacher.
-        \item The system shall provide interface elements that allow the teacher to define the numerical value of each letter grade within a course.
+				\item Teachers shall be allowed to set permissions that students have over 
+each file.
+        \item The system shall provide interface elements that allow the teacher 
+to set permissions that students have over each file.
+				\item The teacher shall specify a time period for which file submission is 
+accepted by the manual-evaluational piece of content for manual-evaluational 
+content.
+        \item The system shall provide interface elements that allow the teacher 
+to speicify the time period for which file submission is accepted by 
+manual-evaluational content.
 			\end{enumerate}
 		\item Parent Viewpoint
 			\begin{enumerate}
@@ -584,8 +550,6 @@ board.
 			\end{enumerate}
 	\end{enumerate}
 
-% STUDENT BUSINESS EVENTS (4)
-
   \item A student attempts to enroll in a course.
 	\begin{enumerate}[{VP2}.1]
 		\item Student Viewpoint
@@ -626,6 +590,184 @@ board.
 				\item None
 			\end{enumerate}
 	\end{enumerate}
+
+
+	\item The school administration wants to add a Teacher or a Student account.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item The student shall receive a Student ID and password to access their
+personal if a new student account.
+				\item The system shall allow the student to access their personal account 
+when given the correct student id and password.
+				\item The student shall choose a new password upon first signing into the
+system.
+				\item The system shall prompt new users to change their password.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item The teacher shall receive a Teacher ID and password to access their
+personal teacher account.
+				\item The system shall allow a teacher to access their personal account 
+given the correct login credentials.
+				\item The teacher shall choose a new password upon first signing into the
+system.
+				\item The system shall prompt new users to change their password.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The School Administration shall be able to create a set of usernames
+and passwords from an external file.
+				\item The system shall store a set of usernames and passwords.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item The school administration shall monitor communication.
+				\item The system shall provide functionality for the school administration 
+to monitor communication
+				\item All enquiries shall be
+forwarded to the school administration.
+				\item The system shall forward all enquiries to the school administration.
+				\item The school
+administration shall be given access and privileges to hide, remove or track the
+origin of a piece of content or course when any content malign against board
+policies is uploaded to the system.
+				\item The system shall have privileges that are provided to the school 
+administration to remove and track origins of a piece of content or course.
+			\end{enumerate}
+	\end{enumerate}
+
+	\item The school administration wants to delete a course.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item All students shall be unenrolled from the course.
+				\item The system shall allow student to be unenrolled from courses.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item A teacher shall not own a deleted course.
+				\item The system shall check that no teachers have a deleted course.
+				\item{All content shall be deleted from the system.}
+				\item The system shall delete all the content from a deleted course.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item The school administration account shall be given a warning after a
+course
+deletion request is made.
+				\item The system shall alert the school administration when deletion request 
+is made.
+\item The course shall deleted only if a course deletion
+request is made a second time following the warning.
+\item The system shall only allow the course to be deleted after another 
+deletion request is made after the warning.
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+% End SubSection
+
+% End Section
+
+\section{Functional Requirements}
+\label{sec:functional_requirements}
+
+Please refer to \textbf{Section 1.3 Definitions, Acronyms, and Abbreviations}
+for a definitions of \textbf{key} terms used herein.
+
+% TEACHER BUSINESS EVENTS (5)
+
+\begin{enumerate}[{BE}1.]	
+	\item A teacher wants to add content to a course.
+	\begin{enumerate}[{VP1}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+        \item A student enrolled in a course shall be able to view any content within the course when the content is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to view any content set visible by the course owner.
+        \item A student shall be able to submit an \underline{assignment}; a piece of content uploaded in response to a manual-evaluational content when the manual-evaluational content is set visible by the owner of that course and file submission is enabled.
+        \item The system shall provide interface elements that allow the student to submit an assignment in response to manual-evaltional content.
+        \item A student shall be able to submit an automated-evaluational content when it is set visible by the owner of that course.
+        \item The system shall provide interface elements that allow the student to open and submit automated-evaluational content that is set visible by the owner of the course.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item Teachers shall be allowed to upload a electronic document.
+        \item The system shall provide interface elements that allow the teacher to upload the document.
+				\item The teacher shall terminate a time period for which content is available by deleting the file.
+        \item The system shall provide interface elements that allow the teacher to delete the file.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+	\item A teacher views a submitted \underline{student assignment}.
+	\begin{enumerate}[{VP2}.1]
+		\item Student Viewpoint
+			\begin{enumerate}
+				\item A student shall be able to submit a \underline{student assignment} multiple times in response to a manual-evaluational content posted by the course owner when the manual-evaluational content is set visible by the course owner and file submission is enabled for that manual-evaluational content.
+        \item The system shall allow the student to submit a \underline{student assignment} multiple times in response to a visible manual-evaluational content and for which file submission is enabled.
+			\end{enumerate}
+		\item Teacher Viewpoint
+			\begin{enumerate}
+				\item A teacher shall be able to change an assigned weight or grade to a \underline{student assignment}.
+        \item The system shall provide interface elements that allow the teacher to change an assigned grade to a \underline{student assignment}.
+				\item The teacher shall define the numerical value of each letter grade. The values of each letter grade can be redefined by the teacher.
+        \item The system shall provide interface elements that allow the teacher to define the numerical value of each letter grade within a course.
+			\end{enumerate}
+		\item Parent Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item School Administration Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Information Technology Team Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+		\item Government \& School Board Viewpoint
+			\begin{enumerate}
+				\item None
+			\end{enumerate}
+	\end{enumerate}
+
+
+% STUDENT BUSINESS EVENTS (4)
 
   \item A student wants to check their grades.
 	\begin{enumerate}[{VP2}.1]
@@ -727,96 +869,7 @@ content file submission expires.
 			\end{enumerate}
 	\end{enumerate}
 
-% SCHOOL ADMINISTRATION BUSINESS EVENTS (4)
-
-	\item The school administration wants to add a Teacher or a Student account.
-	\begin{enumerate}[{VP1}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item The student shall receive a Student ID and password to access their
-personal if a new student account.
-				\item The system shall allow the student to access their personal account when given the correct student id and password. 
-				\item The student shall choose a new password upon first signing into the
-system.
-				\item The system shall prompt new users to change their password.
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item The teacher shall receive a Teacher ID and password to access their
-personal teacher account.
-				\item The system shall allow a teacher to access their personal account given the correct login credentials.
-				\item The teacher shall choose a new password upon first signing into the
-system.
-				\item The system shall prompt new users to change their password.
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item The School Administration shall be able to create a set of usernames
-and passwords from an external file.
-				\item The system shall store a set of usernames and passwords.
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item The school administration shall monitor communication.
-				\item The system shall provide functionality for the school administration to monitor communication
-				\item All enquiries shall be
-forwarded to the school administration.
-				\item The system shall forward all enquiries to the school administration.
-				\item The school
-administration shall be given access and privileges to hide, remove or track the
-origin of a piece of content or course when any content malign against board
-policies is uploaded to the system.
-				\item The system shall have privileges that are provided to the school administration to remove and track origins of a piece of content or course.
-			\end{enumerate}
-	\end{enumerate}
-
-	\item The school administration wants to delete a course.
-	\begin{enumerate}[{VP1}.1]
-		\item Student Viewpoint
-			\begin{enumerate}
-				\item All students shall be unenrolled from the course.
-				\item The system shall allow student to be unenrolled from courses.
-			\end{enumerate}
-		\item Teacher Viewpoint
-			\begin{enumerate}
-				\item A teacher shall not own a deleted course.
-				\item The system shall check that no teachers have a deleted course.
-				\item{All content shall be deleted from the system.}
-				\item The system shall delete all the content from a deleted course.
-			\end{enumerate}
-		\item Parent Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item School Administration Viewpoint
-			\begin{enumerate}
-				\item The school administration account shall be given a warning after a
-course
-deletion request is made.
-				\item The system shall alert the school administration when deletion request is made.
-\item The course shall deleted only if a course deletion
-request is made a second time following the warning.
-\item The system shall only allow the course to be deleted after another deletion request is made after the warning.
-			\end{enumerate}
-		\item Information Technology Team Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-		\item Government \& School Board Viewpoint
-			\begin{enumerate}
-				\item None
-			\end{enumerate}
-	\end{enumerate}
-
-\end{enumerate}
+ \end{enumerate}
 
 % End Section
 

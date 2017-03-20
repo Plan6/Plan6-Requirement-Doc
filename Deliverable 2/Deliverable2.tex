@@ -193,34 +193,32 @@ principles such as high cohesion and low coupling.
 \subsection{Subsystems}
 \label{sub:subsystems}
 % Begin SubSection
+\subsubsection{The Main Control Subsystem}
+The purpose of this subsystem is to determine when each of the other subsystems is active, and displays the active subsystem's view to the main view. It receives view information from each of the 4 subsystems, and it is responsible for routing information between different systems.
+
 \subsubsection{The Content Management System}
-The content management system is responsible for receiving and displaying 
-content to the users. It is connected to the control system which dictates when 
-this system is active, and it sends requests to the main control to be forwarded 
-to the model for data processing, and to the view for display.
+The purpose of the content management system is to receive and display content to the users. It sends view information to the main controller to be displayed, and it receives messages from the main control system in order to determine when to activate. 
 
 \subsubsection{The Quiz Management System}
-The quiz management system is responsible for receiving and displaying 
+The purpose of the quiz management system is to receive and display 
 automated-evaluational content to the users. This system randomly selects 
 multiple-choice questions from a question bank, shuffles answers and displays 
-them to the user. It is connected to the control system which dictates when this 
+them to the user. It is connected to the main control system which dictates when this 
 system is active, and it sends requests to the main control to be forwarded to 
-the model for data processing, and to the view for display.
+ to the main view for display.
 
 \subsubsection{The Grade Management System}
 The grade management system is responsible for receiving and displaying student 
 grades to the users according to user type. The system displays only grades 
 relevant to the student if a student accesses grades and displays all assigned 
 grades to a teacher should a teacher access course grades. This system is 
-connected to the control system which dictates when this system is active, and 
-it sends requests to the main control to be forwarded to the model for data 
-processing, and to the view for display.
+connected to the main control system which dictates when this system is active, and 
+it sends requests to the main control to be forwarded to the main view for display.
 
 \subsubsection{The Authentication System}
-The authentication system authenticates users login credentials. This system is 
+The authentication system authenticates the users' login credentials. This system is 
 connected to the control system which dictates when this system is active, and 
-it sends requests to the main control to be forwarded to the model for data 
-processing, and to the view for display.
+it sends requests to the main control to be forwarded view for display.
 
 % End SubSection
 
@@ -239,7 +237,7 @@ This section should contain all of your CRC cards.
 		\centering
 		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name:} LoginView} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: LoginView}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -268,7 +266,7 @@ This section should contain all of your CRC cards.
 		\centering
 		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name:} ContentView} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: ContentView}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -299,7 +297,7 @@ This section should contain all of your CRC cards.
     \centering
     \begin{tabular}{|p{9cm}|p{3cm}|}
     \hline
-     \multicolumn{2}{|l|}{\textbf{Class Name:} GradeView} \\
+     \multicolumn{2}{|l|}{\textbf{Class Name: GradeView}} \\
     \hline
     \textbf{Responsibility:} & \textbf{Collaborators:} \\
     \hline
@@ -326,7 +324,7 @@ This section should contain all of your CRC cards.
     \centering
     \begin{tabular}{|p{9cm}|p{3cm}|}
     \hline
-     \multicolumn{2}{|l|}{\textbf{Class Name:} QuizView} \\
+     \multicolumn{2}{|l|}{\textbf{Class Name: QuizView}} \\
     \hline
     \textbf{Responsibility:} & \textbf{Collaborators:} \\
     \hline
