@@ -36,38 +36,53 @@
 
 \section{Introduction}
 \label{sec:introduction}
-% Begin Section
+This section outlines the purpose and provides a system description of the
+Erudite project; along with an overview of the contents and organization of
+this detailed design document.
 
-This section should provide an brief overview of the entire document.
 
 \subsection{Purpose}
 \label{sub:purpose}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Delineate the purpose of the document
-	\item Specify the intended audience for the document
-\end{enumerate}
-% End SubSection
+The purpose of this document is to give outline the detailed design of the
+Erudite system; including a description of the system's behaviour, interactions
+of the subsystems and components, and finally a detailed outline of all the
+classes that will compose this system as a whole.
+
+The target audience for this document are the stakeholders (Dr. Ridha Khedri,
+Andrew Le Clair and Michael Liut), and any current or future architects,
+designers and developers of this project.
+
 
 \subsection{System Description}
 \label{sub:system_description}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Give a brief description of the system. This could be a paragraph or two to give some context to this document.
-\end{enumerate}
-% End SubSection
+The Erudite application is intended to be an educational content management
+system for use in elementary school classrooms. The primary interface between
+the user and the software system is through a device running the Android
+operating system. This document defines the way in which the users will be
+expected to interact with the system and how the application will be decomposed
+into smaller subsystems to reduce the complexity and improve the
+maintainability, flexibility of this system.
+
+Specifically, the users of this system (application) are expected to perform a
+set of events that will prompt the system to react. The decomposition will then
+show how the subsystems will communicate among one another in order to
+efficiently distribute the work and perform the required actions in response to
+the user's actions.
+
 
 \subsection{Overview}
 \label{sub:overview}
-% Begin SubSection
-\begin{enumerate}[a)]
-	\item Describe what the rest of the document contains
-	\item Explain how the document is organised
-\end{enumerate}
+The remainder of this document is organized into 3 sections: State Charts for
+Controller Classes -- defining the behaviour of the controller classes,
+Sequence Diagrams -- outlining the sequence of interactions between different
+subsystems for various \underline{\bf scenarios/business events??}, and
+Detailed Class Diagram -- specifying the classes that will compose the system,
+the relations between classes and the methods each class provides. Each section
+uses appropriate UML diagrams to describe and document the design details.
 
-% End SubSection
 
 % End Section
+
 
 \section{State Charts for Controller Classes}
 \label{sec:state_charts_for_controller_classes}
