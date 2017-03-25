@@ -646,6 +646,217 @@ This section should contain all of your CRC cards.
 		\hline
 		\end{tabular}
 	\end{table}
+	
+	 %New CRC
+	 
+    %login view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Login view}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		requestLogin (username, password) & Login Controller\\
+		\hline
+		Receive isAuthenticated & Logic Controller\\
+		\hline
+		Render isAuthenticated & Void\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %login controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Login Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    requestLogin (username, password) & Login Abstraction\\
+		\hline
+		Receive and send isAuthenticated & Main Controller\\
+		\hline
+		Send isAuthenticated & Login View\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %login abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Login Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    requestLogin (username, password) & Login Controller\\
+		\hline
+		Receive content request from Main Controller & Main Controller\\
+		\hline
+		Send content response to Main Controller & Main Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Main Controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Receive requestLogin (username, password) & Login Controller\\
+		\hline
+	    Send requestLogin (username, password) & Main Abstraction\\
+		\hline
+		Receive Login Request & Main Abstraction\\
+		\hline
+		Send authenticate (loginRequest) & Server \\
+		\hline
+		Receive isAuthenticated & Server\\
+		\hline 
+		Send isAuthenticated & Login Controller\\
+		\hline
+		Receive quiz request & Quiz Controller\\
+		\hline
+		Send quiz request & Main Abstraction \\
+		\hline
+		Receive quiz data request & Main Abstraction\\
+		\hline
+		Send quiz data request & Server\\
+		\hline
+		Receive Quiz Data & Server\\
+		\hline
+		Send Quiz data & Quiz Controller\\
+		\hline
+		Receive quiz submission & Quiz Controller\\
+		\hline
+		Send quiz submission request & Main Abstraction\\
+		\hline
+		Receive quiz submission data request & Main Abstraction\\
+		\hline
+		Send quiz submission data request & Server\\
+		\hline
+		Receive is submitted message & Server\\
+		\hline
+		Send is submitted message & Quiz Abstraction\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Main Abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+
+		\end{tabular}
+	\end{table}
+	
+	%Main view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main view}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    requestLogin (username, password) & Login Controller\\
+		\hline
+		Receive content request from Main Controller & Main Controller\\
+		\hline
+		Send content response to Main Controller & Main Controller\\
+		\hline
+		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %quiz view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz view}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Request Quiz & Quiz Controller\\
+		\hline
+	    Receive quiz data & Quiz Controller\\
+	    \hline
+	    Display Quiz data & Void\\
+	    \hline 
+	    Request to submit quiz & Quiz Controller\\
+	    \hline
+	    Receive is submitted message & Quiz Controller\\
+	    \hline
+	    Display is submitted message & Void\\
+	    \hline
+		\end{tabular}
+	\end{table}
+	
+	 %quiz controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Request Quiz & Quiz Abstraction\\
+		\hline
+		Receive Quiz & Quiz Abstraction\\
+		\hline
+	    Send Request Quiz & Main Controller\\
+		\hline
+		Receive quiz data & Main Controller\\
+		\hline
+		Send quiz data & Quiz View\\
+		\hline
+		Send and receive quiz submission & Quiz Abstraction\\
+		\hline
+		Send quiz submission & Main Controller\\
+		\hline
+		Receive is submitted message & Main Controller\\
+		\hline
+		Send is submitted message & Quiz View\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %quiz abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Receive request quiz  & Quiz Controller\\
+		\hline
+		Send request quiz & Quiz Controller\\
+		\hline
+		Send content response to Main Controller & Main Controller\\
+		\hline
+		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
+		\hline
+		\end{tabular}
+	\end{table}
 
 \end{enumerate}
 % End Section
