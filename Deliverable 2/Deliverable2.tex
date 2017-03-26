@@ -288,6 +288,10 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		Forward status code to indicate submission status & Quiz Controller\\
 		\hline
+		Receive content & Main Abstraction\\
+		\hline
+		Forward content & Content Controller\\
+		\hline
 		\end{tabular}
 	\end{table}
 	
@@ -438,19 +442,17 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Request quiz questions & Quiz Controller\\
+		Receive request for content from user & Content Controller\\
 		\hline
-	    Receive quiz questions & Quiz Controller\\
+	    Receive content & Content Controller\\
 	    \hline
-	    Display quiz questions & Void\\
+	    Display content & Void\\
 	    \hline 
-	    Request user attempt & Quiz Controller\\
+	    Receive request for formatted content from user & Content Controller\\
 	    \hline
-	    Request to submit quiz from user& Quiz Controller\\
+	    Receive formatted content & Content Controller\\
 	    \hline
-	    Receive submission status & Quiz Controller\\
-	    \hline
-	    Display submission status & Void\\
+	    Display formatted content & Void\\
 	    \hline
 		\end{tabular}
 	\end{table}
@@ -464,21 +466,17 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Refactor quiz questions & Quiz Abstraction\\
+	    Refactor content & Content Abstraction\\
 		\hline
-		Refactor submission notification & Quiz Abstraction\\
+		Refactor formatted content & Content Abstraction\\
 		\hline
-	    Send request for quiz questions & Main Controller\\
+	    Send request for content & Main Controller\\
 		\hline
-		Receive quiz questions & Main Controller\\
+		Receive content & Main Controller\\
 		\hline
-		Forward quiz questions & Quiz View\\
+		Forward content & Content View\\
 		\hline
-		Send quiz submission notification & Main Controller\\
-		\hline
-		Receive submission status & Main Controller\\
-		\hline
-		Forward submission status & Quiz View\\
+		Forward formatted content & Content View\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -492,9 +490,9 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Know how to represent quiz questions  & Void\\
+	    Know how to represent content  & Void\\
 		\hline
-		Know how to represent quiz submission & Void\\
+		Know how to represented formatted content & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
