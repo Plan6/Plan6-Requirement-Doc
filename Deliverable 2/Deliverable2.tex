@@ -368,17 +368,19 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Request Quiz & Quiz Controller\\
+		Request quiz questions & Quiz Controller\\
 		\hline
-	    Receive quiz data & Quiz Controller\\
+	    Receive quiz questions & Quiz Controller\\
 	    \hline
-	    Display Quiz data & Void\\
+	    Display quiz questions & Void\\
 	    \hline 
-	    Request to submit quiz & Quiz Controller\\
+	    Request user attempt & Quiz Controller\\
 	    \hline
-	    Receive is submitted message & Quiz Controller\\
+	    Request to submit quiz from user& Quiz Controller\\
 	    \hline
-	    Display is submitted message & Void\\
+	    Receive submission status & Quiz Controller\\
+	    \hline
+	    Display submission status & Void\\
 	    \hline
 		\end{tabular}
 	\end{table}
@@ -392,23 +394,21 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Request Quiz & Quiz Abstraction\\
+	    Refactor quiz questions & Quiz Abstraction\\
 		\hline
-		Receive Quiz & Quiz Abstraction\\
+		Refactor submission notification & Quiz Abstraction\\
 		\hline
-	    Send Request Quiz & Main Controller\\
+	    Send request for quiz questions & Main Controller\\
 		\hline
-		Receive quiz data & Main Controller\\
+		Receive quiz questions & Main Controller\\
 		\hline
-		Send quiz data & Quiz View\\
+		Forward quiz questions & Quiz View\\
 		\hline
-		Send and receive quiz submission & Quiz Abstraction\\
+		Send quiz submission notification & Main Controller\\
 		\hline
-		Send quiz submission & Main Controller\\
+		Receive submission status & Main Controller\\
 		\hline
-		Receive is submitted message & Main Controller\\
-		\hline
-		Send is submitted message & Quiz View\\
+		Forward submission status & Quiz View\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -422,13 +422,9 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Receive request quiz  & Quiz Controller\\
+	    Know how to represent quiz questions  & Void\\
 		\hline
-		Send request quiz & Quiz Controller\\
-		\hline
-		Send content response to Main Controller & Main Controller\\
-		\hline
-		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
+		Know how to represent quiz submission & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
