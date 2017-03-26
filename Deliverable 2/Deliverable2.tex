@@ -276,11 +276,11 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Knows how to represent a user's username & Void\\
+	    Know how to represent a user's username & Void\\
 		\hline
-		Knows how to represent a user's password & Void\\
+		Know how to represent a user's password & Void\\
 		\hline
-		Knows how to represent a username/password pair & Void\\
+		Know how to represent a username/password pair & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -294,41 +294,29 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Receive requestLogin (username, password) & Login Controller\\
+	    Receive request to validate login credentials & Login Controller\\
 		\hline
-	    Send requestLogin (username, password) & Main Abstraction\\
+	    Handle login validation requests & Main Abstraction\\
 		\hline
-		Receive Login Request & Main Abstraction\\
+		Receive authentication status information & Main Abstraction\\
 		\hline
-		Send authenticate (loginRequest) & Server \\
+		Forward authentication status information & Login Controller\\
 		\hline
-		Receive isAuthenticated & Server\\
-		\hline 
-		Send isAuthenticated & Login Controller\\
+		Receive request for quiz questions & Quiz Controller\\
 		\hline
-		Receive quiz request & Quiz Controller\\
+		Retrieve quiz questions & Main Abstraction \\
 		\hline
-		Send quiz request & Main Abstraction \\
+		Receive quiz questions & Main Abstraction\\
 		\hline
-		Receive quiz data request & Main Abstraction\\
-		\hline
-		Send quiz data request & Server\\
-		\hline
-		Receive Quiz Data & Server\\
-		\hline
-		Send Quiz data & Quiz Controller\\
+		Forward quiz questions & Quiz Controller\\
 		\hline
 		Receive quiz submission & Quiz Controller\\
 		\hline
-		Send quiz submission request & Main Abstraction\\
+		Send request to grade quiz submission & Main Abstraction\\
 		\hline
-		Receive quiz submission data request & Main Abstraction\\
+		Receive quiz results & Main Abstraction\\
 		\hline
-		Send quiz submission data request & Server\\
-		\hline
-		Receive is submitted message & Server\\
-		\hline
-		Send is submitted message & Quiz Abstraction\\
+		Forward status code to indicate submission status & Quiz Controller\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -342,7 +330,8 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-
+		Know how to access central data repository & Void\\
+		\hline
 		\end{tabular}
 	\end{table}
 	
@@ -355,13 +344,17 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    requestLogin (username, password) & Login Controller\\
+	    Display Login View & Login View, Login Controller, Main Controller\\
 		\hline
-		Receive content request from Main Controller & Main Controller\\
+		Display Content View & Content View, Content Controller, Main Controller \\
+		\hline
+		Display Quiz View & Quiz View, Quiz Controller, Main Controller\\
+		\hline
+		Display Grade View & Grade View, Grade Controller, Main Controller\\
+		\hline 
+		Displays data from Main Controller & Main Controller\\
 		\hline
 		Send content response to Main Controller & Main Controller\\
-		\hline
-		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
 		\hline
 		\end{tabular}
 	\end{table}
