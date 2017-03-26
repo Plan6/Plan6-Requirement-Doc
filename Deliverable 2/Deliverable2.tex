@@ -228,269 +228,6 @@ it sends requests to the main control to be forwarded view for display.
 \label{sec:class_responsibility_collaboration_crc_cards}
 % Begin Section
 The tables below show the Class Responsibility Collaboration cards for Erudite.
-
-  \begin{table}[H]
-		\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: LoginView}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-    Handles self-render request & ViewController \\
-    \hline
-    Requests to render ContentView & ViewController \\
-    \hline
-    Requests to render GradeView & ViewController \\
-    \hline
-    Requests to render QuizView & ViewController \\
-    \hline
-    Handles keyboard input & Void \\
-    \hline
-    Send login request to ViewController & ViewController \\
-    \hline
-    Send username and password pair to ViewController & ViewController \\
-    \hline
-    Prompt user if login request fails & ViewController \\
-    \hline
-    Request view change & ViewController \\
-    \hline
-		\end{tabular}
-	\end{table}
-
-  \begin{table}[H]
-		\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: ContentView}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-    Handles self-render request & ViewController \\
-    \hline
-    Requests to render LoginView & ViewController \\
-    \hline
-    Requests to render GradeView & ViewController \\
-    \hline
-    Requests to render QuizView & ViewController \\
-    \hline
-    Handles keyboard input & Void\\
-    \hline
-    Send course-content request to ViewController & ViewController \\
-    \hline
-    Send specific-file request to ViewController & ViewController \\
-    \hline
-    Display course content list & Void\\
-    \hline
-    Display specific file content list & Void\\
-    \hline
-    Request view change & ViewController \\
-    \hline
-		\end{tabular}
-	\end{table}
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{|p{9cm}|p{3cm}|}
-    \hline
-     \multicolumn{2}{|l|}{\textbf{Class Name: GradeView}} \\
-    \hline
-    \textbf{Responsibility:} & \textbf{Collaborators:} \\
-    \hline
-    Handles self-render request & ViewController \\
-    \hline
-    Requests to render LoginView & ViewController \\
-    \hline
-    Requests to render ContentView & ViewController \\
-    \hline
-    Requests to render QuizView & ViewController \\
-    \hline
-    Handles keyboard input & Void \\
-    \hline
-    Display current course grades list & Void\\
-    \hline
-    Display current cumulative grade point average list & Void\\
-    \hline
-    Request view change & ViewController \\
-    \hline
-    \end{tabular}
-  \end{table}
-
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{|p{9cm}|p{3cm}|}
-    \hline
-     \multicolumn{2}{|l|}{\textbf{Class Name: QuizView}} \\
-    \hline
-    \textbf{Responsibility:} & \textbf{Collaborators:} \\
-    \hline
-    Handles self-render request & ViewController \\
-    \hline
-    Requests to render LoginView & ViewController \\
-    \hline
-    Requests to render ContentView & ViewController \\
-    \hline
-    Requests to render GradeView & ViewController \\
-    \hline
-    Handles keyboard input & Void\\
-    \hline
-    Request course quiz list & ViewController \\
-    \hline
-    Request specific quiz & ViewController \\
-    \hline
-    Display course quiz list & Void\\
-    \hline
-    Display selected quiz & Void\\
-    \hline
-    Handles user answer selection & Void\\
-    \hline
-    Send quiz answers & ViewController \\
-    \hline
-    Request view change & ViewController \\
-    \hline
-    \end{tabular}
-  \end{table}
-
-	%quiz controller
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Quiz Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Knows Main Controller & Void\\
-		\hline
-		Receive quiz request from Main Controller & Main Controller \\
-		\hline
-		Send quiz request to Main Controller & Main Controller \\
-		\hline
-		Receive quiz result from Main Controller & Main Controller \\
-		\hline
-		Process quiz result from Main Controller & Main Controller \\
-		\hline
-		Receive student answer from Main Controller & Main Controller \\
-		\hline
-		Send request for solutions to Main Controller & Main Controller \\
-		\hline
-		Receive solutions from Main Controller & Main Controller \\
-		\hline
-		Mark quiz according to solution & Void\\
-		\hline
-		Send grade of quiz to Main Controller & Main Controller \\
-		\hline
-
-		\end{tabular}
-	\end{table}
-
-	%Grade Controller
-
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Know Main Controller & Void \\
-		\hline
-		Receive grade request from Main Controller & Main Controller \\
-		\hline
-		Send grade response to Main Controller & Main Controller \\
-		\hline
-		Receive grades from Main Controller & Main Controller \\
-		\hline
-		Process grades & Void\\
-		\hline
-		Send grades to Main Controller & Main Controller \\
-		\hline
-		\end{tabular}
-	\end{table}
-	
-	%Main Controller
-
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Initiate app & Master View \\
-		\hline
-		Receive and send username and password pair to Login Controller & View Controller, Login Controller
-		\\
-		\hline
-		Receive and send encrypted username and password to model handler & Login Controller, Model Controller \\
-		\hline
-		Receive and send authentication object & Model Controller, Logic Controller
-        \\
-		\hline
-		Receive and send verified authentication object & Login Controller \\
-		\hline
-		Decide next state & Void \\
-		\hline
-		Send view update object & View Controller \\
-		\hline
-	    Receive and forward  requests & View Controller, Quiz Controller, Grade Controller, Model Controller  \\
-		\hline
-		\end{tabular}
-	\end{table}
-	
-	%Login Controller
-
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Login Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Knows Main Controller & Void\\
-		\hline
-		Receive username and password pair  & Main Controller \\
-		\hline
-		Encrypt username and password & Void
-		\\
-		\hline
-		Send encrypted username and password to Main Controller & Main Controller \\
-		\hline
-		Receive Authentication Object & Main Controller 
-        \\
-		\hline
-		Verify that the response code from the Authentication object is successful & Void \\
-		\hline
-		Prompt Main Controller if successful or not successful & Main Controller \\
-		\hline
-		Request to store session token locally. Send to Main Controller & Main Controller \\
-		\hline
-		\end{tabular}
-	\end{table}
-	
-    %Content Controller
-
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Content Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Knows Main Controller & Void\\
-		\hline
-		Receive content request from Main Controller & Main Controller\\
-		\hline
-		Send content response to Main Controller & Main Controller\\
-		\hline
-		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
-		\hline
-		\end{tabular}
-	\end{table}
 	
 	 %New CRC
 	 
@@ -503,11 +240,11 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		requestLogin (username, password) & Login Controller\\
+		Request username and password pair from user & Login Controller\\
 		\hline
-		Receive isAuthenticated & Logic Controller\\
+		Receive authentication status & Logic Controller\\
 		\hline
-		Render isAuthenticated & Void\\
+		Display authentication status & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -521,11 +258,11 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    requestLogin (username, password) & Login Abstraction\\
+	    Refactor login credentials & Login Abstraction\\
 		\hline
-		Receive and send isAuthenticated & Main Controller\\
+		Forward authentication request for verification & Main Controller\\
 		\hline
-		Send isAuthenticated & Login View\\
+		Relay authentication status to the view & Login View\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -539,11 +276,11 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    requestLogin (username, password) & Login Controller\\
+	    Knows how to represent a user's username & Void\\
 		\hline
-		Receive content request from Main Controller & Main Controller\\
+		Knows how to represent a user's password & Void\\
 		\hline
-		Send content response to Main Controller & Main Controller\\
+		Knows how to represent a username/password pair & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
