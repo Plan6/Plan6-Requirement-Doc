@@ -294,6 +294,12 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		Forward user submitted content for storage & Main Abstraction\\
 		\hline
+		Receive request for user grades & Grade Controller\\
+		\hline
+		Receive user grades & Main Abstraction\\
+		\hline
+		Forward user grades & Grade Controller\\
+		\hline
 		\end{tabular}
 	\end{table}
 	
@@ -512,20 +518,12 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Request quiz questions & Quiz Controller\\
+		Request user grades and statistics & Grade Controller\\
 		\hline
-	    Receive quiz questions & Quiz Controller\\
+	    Receive user grades and statistics & Grade Controller\\
 	    \hline
-	    Display quiz questions & Void\\
+	    Display user grades and statistics& Void\\
 	    \hline 
-	    Request user attempt & Quiz Controller\\
-	    \hline
-	    Request to submit quiz from user& Quiz Controller\\
-	    \hline
-	    Receive submission status & Quiz Controller\\
-	    \hline
-	    Display submission status & Void\\
-	    \hline
 		\end{tabular}
 	\end{table}
 	
@@ -538,21 +536,17 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Refactor quiz questions & Quiz Abstraction\\
+	    Refactor grades & Grade Abstraction\\
 		\hline
-		Refactor submission notification & Quiz Abstraction\\
+		Refactor grade statistics & Grade Abstraction\\
 		\hline
-	    Send request for quiz questions & Main Controller\\
+	    Request user grades & Main Controller\\
 		\hline
-		Receive quiz questions & Main Controller\\
+		Receive user grades & Main Controller\\
 		\hline
-		Forward quiz questions & Quiz View\\
+		Forward user grades & Grade View\\
 		\hline
-		Send quiz submission notification & Main Controller\\
-		\hline
-		Receive submission status & Main Controller\\
-		\hline
-		Forward submission status & Quiz View\\
+		Forward user grades statistics & Grade View\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -566,9 +560,9 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Know how to represent quiz questions  & Void\\
+	    Know how to represent grades  & Void\\
 		\hline
-		Know how to represent quiz submission & Void\\
+		Know how to represent quiz statistics & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
