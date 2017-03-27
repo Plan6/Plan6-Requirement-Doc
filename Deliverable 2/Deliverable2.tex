@@ -117,7 +117,7 @@ The following diagram is an use case diagram for Erudite.\\
 {
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.40]{A2_Assets/Use_Case_Diagram_v1.jpg}
+  \includegraphics[scale=0.40]{A2_Assets/use_case_diagram.pdf}
   \caption{Use Case Diagram}
 \end{figure}
 }
@@ -230,13 +230,99 @@ it sends requests to the main control to be forwarded view for display.
 The tables below show the Class Responsibility Collaboration cards for Erudite.
 	
 	 %New CRC
-	 
-    %login view
+	
+	%Main view
 	\begin{table}[H]
 	\centering
 		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Login view}} \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main View}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Display Login View & Login View, Login Controller, Main Controller\\
+		\hline
+		Display Content View & Content View, Content Controller, Main Controller 	\\
+		\hline
+		Display Quiz View & Quiz View, Quiz Controller, Main Controller\\
+		\hline
+		Display Grade View & Grade View, Grade Controller, Main Controller\\
+		\hline 
+		Displays data from Main Controller & Main Controller\\
+		\hline
+		Send content response to Main Controller & Main Controller\\
+		\hline
+		\end{tabular}
+	\end{table}	
+	
+	%Main Controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Receive request to validate login credentials & Login Controller\\
+		\hline
+	    Handle login validation requests & Main Abstraction\\
+		\hline
+		Receive authentication status information & Main Abstraction\\
+		\hline
+		Forward authentication status information & Login Controller\\
+		\hline
+		Receive request for quiz questions & Quiz Controller\\
+		\hline
+		Retrieve quiz questions & Main Abstraction \\
+		\hline
+		Receive quiz questions & Main Abstraction\\
+		\hline
+		Forward quiz questions & Quiz Controller\\
+		\hline
+		Receive quiz submission & Quiz Controller\\
+		\hline
+		Send request to grade quiz submission & Main Abstraction\\
+		\hline
+		Receive quiz results & Main Abstraction\\
+		\hline
+		Forward status code to indicate submission status & Quiz Controller\\
+		\hline
+		Receive content & Main Abstraction\\
+		\hline
+		Forward content & Content Controller\\
+		\hline
+		Forward user submitted content for storage & Main Abstraction\\
+		\hline
+		Receive request for user grades & Grade Controller\\
+		\hline
+		Receive user grades & Main Abstraction\\
+		\hline
+		Forward user grades & Grade Controller\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Main Abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Know how to access central data repository & Void\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %login view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Login View}} \\
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
@@ -285,80 +371,6 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\end{tabular}
 	\end{table}
 	
-	%Main Controller
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Controller}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-	    Receive request to validate login credentials & Login Controller\\
-		\hline
-	    Handle login validation requests & Main Abstraction\\
-		\hline
-		Receive authentication status information & Main Abstraction\\
-		\hline
-		Forward authentication status information & Login Controller\\
-		\hline
-		Receive request for quiz questions & Quiz Controller\\
-		\hline
-		Retrieve quiz questions & Main Abstraction \\
-		\hline
-		Receive quiz questions & Main Abstraction\\
-		\hline
-		Forward quiz questions & Quiz Controller\\
-		\hline
-		Receive quiz submission & Quiz Controller\\
-		\hline
-		Send request to grade quiz submission & Main Abstraction\\
-		\hline
-		Receive quiz results & Main Abstraction\\
-		\hline
-		Forward status code to indicate submission status & Quiz Controller\\
-		\hline
-		\end{tabular}
-	\end{table}
-	
-	%Main Abstraction
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Main Abstraction}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-		Know how to access central data repository & Void\\
-		\hline
-		\end{tabular}
-	\end{table}
-	
-	%Main view
-	\begin{table}[H]
-	\centering
-		\begin{tabular}{|p{9cm}|p{3cm}|}
-		\hline
-		 \multicolumn{2}{|l|}{\textbf{Class Name: Main view}} \\
-		\hline
-		\textbf{Responsibility:} & \textbf{Collaborators:} \\
-		\hline
-	    Display Login View & Login View, Login Controller, Main Controller\\
-		\hline
-		Display Content View & Content View, Content Controller, Main Controller \\
-		\hline
-		Display Quiz View & Quiz View, Quiz Controller, Main Controller\\
-		\hline
-		Display Grade View & Grade View, Grade Controller, Main Controller\\
-		\hline 
-		Displays data from Main Controller & Main Controller\\
-		\hline
-		Send content response to Main Controller & Main Controller\\
-		\hline
-		\end{tabular}
-	\end{table}
-	
 	 %quiz view
 	\begin{table}[H]
 	\centering
@@ -368,17 +380,19 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-		Request Quiz & Quiz Controller\\
+		Request quiz questions & Quiz Controller\\
 		\hline
-	    Receive quiz data & Quiz Controller\\
+	    Receive quiz questions & Quiz Controller\\
 	    \hline
-	    Display Quiz data & Void\\
+	    Display quiz questions & Void\\
 	    \hline 
-	    Request to submit quiz & Quiz Controller\\
+	    Request user attempt & Quiz Controller\\
 	    \hline
-	    Receive is submitted message & Quiz Controller\\
+	    Request to submit quiz from user& Quiz Controller\\
 	    \hline
-	    Display is submitted message & Void\\
+	    Receive submission status & Quiz Controller\\
+	    \hline
+	    Display submission status & Void\\
 	    \hline
 		\end{tabular}
 	\end{table}
@@ -392,23 +406,21 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Request Quiz & Quiz Abstraction\\
+	    Refactor quiz questions & Quiz Abstraction\\
 		\hline
-		Receive Quiz & Quiz Abstraction\\
+		Refactor submission notification & Quiz Abstraction\\
 		\hline
-	    Send Request Quiz & Main Controller\\
+	    Send request for quiz questions & Main Controller\\
 		\hline
-		Receive quiz data & Main Controller\\
+		Receive quiz questions & Main Controller\\
 		\hline
-		Send quiz data & Quiz View\\
+		Forward quiz questions & Quiz View\\
 		\hline
-		Send and receive quiz submission & Quiz Abstraction\\
+		Send quiz submission notification & Main Controller\\
 		\hline
-		Send quiz submission & Main Controller\\
+		Receive submission status & Main Controller\\
 		\hline
-		Receive is submitted message & Main Controller\\
-		\hline
-		Send is submitted message & Quiz View\\
+		Forward submission status & Quiz View\\
 		\hline
 		\end{tabular}
 	\end{table}
@@ -422,19 +434,140 @@ The tables below show the Class Responsibility Collaboration cards for Erudite.
 		\hline
 		\textbf{Responsibility:} & \textbf{Collaborators:} \\
 		\hline
-	    Receive request quiz  & Quiz Controller\\
+	    Know how to represent quiz questions  & Void\\
 		\hline
-		Send request quiz & Quiz Controller\\
+		Know how to represent quiz submission & Void\\
 		\hline
-		Send content response to Main Controller & Main Controller\\
+		\end{tabular}
+	\end{table}
+
+	%Content view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
 		\hline
-		Receive content request, format content, send formatted content to Main Controller & Main Controller \\
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Content View}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Receive request for content from user & Content Controller\\
+		\hline
+	    Receive content & Content Controller\\
+	    \hline
+	    Display content & Void\\
+	    \hline 
+	    Receive request for formatted content from user & Content Controller\\
+	    \hline
+	    Receive file submissions from the user & Content Controller\\
+	    \hline
+	    Receive formatted content & Content Controller\\
+	    \hline
+	    Display formatted content & Void\\
+	    \hline
+		\end{tabular}
+	\end{table}
+	
+	 %Content controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Content Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Refactor content & Content Abstraction\\
+		\hline
+		Refactor formatted content & Content Abstraction\\
+		\hline
+	    Send request for content & Main Controller\\
+		\hline
+		Receive content & Main Controller\\
+		\hline
+		Forward content & Content View\\
+		\hline
+		Forward formatted content & Content View\\
+		\hline
+		Forward user submissions & Main Controller\\
+		\hline	
+		\end{tabular}
+	\end{table}
+	
+	 %Content abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Content Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Know how to represent content  & Void\\
+		\hline
+		Know how to represented formatted content & Void\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	%Grade view
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade View}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+		Request user grades and statistics & Grade Controller\\
+		\hline
+	    Receive user grades and statistics & Grade Controller\\
+	    \hline
+	    Display user grades and statistics& Void\\
+	    \hline 
+		\end{tabular}
+	\end{table}
+	
+	 %Grade controller
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade Controller}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Refactor grades & Grade Abstraction\\
+		\hline
+		Refactor grade statistics & Grade Abstraction\\
+		\hline
+	    Request user grades & Main Controller\\
+		\hline
+		Receive user grades & Main Controller\\
+		\hline
+		Forward user grades & Grade View\\
+		\hline
+		Forward user grades statistics & Grade View\\
+		\hline
+		\end{tabular}
+	\end{table}
+	
+	 %Grade abstraction
+	\begin{table}[H]
+	\centering
+		\begin{tabular}{|p{9cm}|p{3cm}|}
+		\hline
+		 \multicolumn{2}{|l|}{\textbf{Class Name: Grade Abstraction}} \\
+		\hline
+		\textbf{Responsibility:} & \textbf{Collaborators:} \\
+		\hline
+	    Know how to represent grades  & Void\\
+		\hline
+		Know how to represent quiz statistics & Void\\
 		\hline
 		\end{tabular}
 	\end{table}
 
 % End Section
-
 
 \newpage
 \appendix
